@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/roboto.min.css" rel="stylesheet">
+    <link href="css/material.min.css" rel="stylesheet">
+    <link href="css/ripples.min.css" rel="stylesheet">
+    <link href="css/seven.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Your site -->
+    <div class="container">
+        <div class="jumbotron" style="margin-top:30px">
+
+            <h4>create message</h4>
+            <div class="form-group" style="margin-top:20px">
+                <input type="text" class="form-control" id="Inputmessage" placeholder="message">
+            </div>
+            <div class="sample1">
+                <select class="form-control" placeholder="priority" id="priority">
+                    <option value="N">Normal</option>
+                    <option value="H">High</option>
+                </select>
+            </div>
+            <input type="submit" class="btn btn-success" id="submitbtn" value="send">
+
+        </div>
+    </div>
+
+
+
+    <!-- Your site ends -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ripples.min.js"></script>
+    <script src="js/material.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // This command is used to initialize some elements and make them work properly
+            $.material.init();
+            $("#submitbtn").on("click", function(e) {
+                var sessionid = localStorage.getItem('sessionid');
+                var groupid = localStorage.getItem('parentgroupid');
+                var payload = $("#Inputmessage").val();
+                var priority = $("#priority").val();
+                alert(sessionid + ' ' + groupid + ' ' + payload + ' ' + priority);
+                var url = "http://workingalert.tk/api/createmessage.php?sessionid=" + sessionid + "&groupid=" + groupid + "&msgpayload=" + payload + "&priority="+priority;
+                alert(url);
+                $.get(url, function(data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                    alert(JSON.stringify(data));
+                    document.location.href = "mainmenu.html";
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
