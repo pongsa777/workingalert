@@ -75,17 +75,14 @@
 
             });
 
-
             $("#loginbtn").on("click", function(e) {  
                 var email = $("#email").val();
                 var password = $("#pass").val();
                 var url = "http://workingalert.tk/authen.php?email=" + email + "&pass=" + password;
-                alert(url);
                 $.get(url, function(data, status) {
                     alert(JSON.stringify(data));
                     if (data.status == 'success') {
                         localStorage.setItem("sessionid", data.sessionid);
-                        alert(localStorage.getItem("sessionid"));
                         document.location.href = "mainmenu.html";
                     }
                 });

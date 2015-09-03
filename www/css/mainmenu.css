@@ -792,7 +792,7 @@ header{
 .group{
     width: 100%;
     height:122px;
-    background: cyan;
+    background: #fdfdfd;
     clear:both;
 }
 .listgroup .group:not(:first-child){
