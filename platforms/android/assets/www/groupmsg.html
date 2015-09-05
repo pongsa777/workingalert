@@ -66,9 +66,7 @@
             
             alert(groupid+' '+sessionid);
             var url = "http://workingalert.tk/api/getmessage.php?sessionid="+sessionid+"&groupid="+groupid;
-            alert(url);
             $.get(url, function(data, status) {
-                alert(JSON.stringify(data));
                 if (data.status == 'success') {
                     //insert group name to toolbar
                     document.getElementById('title').innerHTML = "<bold>"+data.groupname+"</bold>";

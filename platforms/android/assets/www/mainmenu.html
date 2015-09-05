@@ -10,9 +10,9 @@
 
 <body>
 
-    <header class="shadow-z-2">
+    <header class="shadow-z-1">
         <div id="hamburger-menu">
-            <img src="pic/hamburger-menu.png" class="sidebar-toggle" width="40px">
+            <img src="pic/hamburger-menu.png" class="sidebar-toggle" width="30px">
         </div>
         <div id="title">
             <bold>Your Groups</bold>
@@ -197,10 +197,10 @@
         $(document).ready(function() {
             sessionid = localStorage.getItem("sessionid");
             localStorage.removeItem('parentgroupid');
+            alert(localStorage.getItem("data title")+'  '+localStorage.getItem("data message"));
             var url = "http://workingalert.tk/api/getgroup.php?sessionid=" + sessionid;
             alert(url);
             $.get(url, function(data, status) {
-                alert(JSON.stringify(data));
                 if (data.status == 'success') {
                     for (var i = 0; i < data.group.length; i++) {
                         var groupid = data.group[i].id;

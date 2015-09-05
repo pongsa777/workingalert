@@ -42,10 +42,10 @@ var app = {
         });
         
         push.on('registration', function(data) {
-            alert("registration event");
+            //alert("registration event");
             //document.getElementById("regId").innerHTML = data.registrationId;
             //console.log(JSON.stringify(data));
-            alert(JSON.stringify(data));
+            //alert(JSON.stringify(data));
             sessionid = localStorage.getItem("sessionid");
             localStorage.setItem("registrationId",data.registrationId);
             var url2 = "http://workingalert.tk/api/registerpushid.php?sessionid="+sessionid+"&pushid="+data.registrationId;
@@ -58,6 +58,8 @@ var app = {
         push.on('notification', function(data) {
         	console.log("notification event");
             console.log(JSON.stringify(data));
+            localStorage.setItem("data title",data.title);
+            localStorage.setItem("data message",data.message);
             var cards = document.getElementById("cards");
             var push = '<div class="row">' +
 		  		  '<div class="col s12 m6">' +
