@@ -35,10 +35,13 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/ripples.min.js"></script>
     <script src="js/material.min.js"></script>
+    <script src="js/openfb.js"></script>
     <script>
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly
             $.material.init();
+            openFB.init({appId: '102368486782958', tokenStore: window.localStorage});
+            
             if (localStorage.getItem("sessionid") == null) {
                 document.location.href = "login.html";
             } else {

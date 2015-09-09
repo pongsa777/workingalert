@@ -37,48 +37,80 @@
     <script type="text/javascript" src="cordova_plugins.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
-
+    <script src="js/openfb.js"></script>
     <script src="js/ripples.min.js"></script>
     <script src="js/material.min.js"></script>
     <script>
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly
             $.material.init();
+            openFB.init({
+                appId: '102368486782958',
+                tokenStore: window.localStorage
+            });
+
             $("#fbloginbtn").on("click", function(e) {
-                facebookConnectPlugin.login(["email", "public_profile", "user_birthday"], function(response) {
-                    //user connected
-                    
-                    facebookConnectPlugin.api("/me", null,
-                        function(response) {
+                alert('fb login fn');
+
+                if(localStorage.getItem("fbtoken")==null){
+                    openFB.login(
+                    function(response) {
+                        if (response.status === 'connected') {
+                            alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+                            localStorage.setItem("fbtoken",response.authResponse.accessToken);
+                            getInfo();
+                        } else {
+                            alert('Facebook login failed: ' + response.error);
+                        }
+                    }, {
+                        scope: 'email'
+                    });
+                }else{
+                    getInfo();
+                };
+                
+                
+                function getInfo() {
+                    alert('getinfo');
+                    openFB.api({
+                        path: '/me',
+                        success: function(response) {
+                            alert('success');
                             alert(JSON.stringify(response));
-                            facebookConnectPlugin.api("/me/picture?redirect=0&height=200&type=normal", null,
-                                function(response) {
-                                    alert(JSON.stringify(response));
-                                    var imgurl = response.data.url;
-                                    alert(imgurl);
-                                    $(".container").append("<img src='" + imgurl + "'>");
-
-                                },
-                                function(response) {
-                                    alert("error");
-                                })
-
-
+                            var fbid = response.id;
+                            var url = "http://workingalert.tk/api/authenfb.php?fbid=" + fbid;
+                            alert(url);
+                            $.get(url, function(data, status) {
+                                alert(status);
+                                alert(JSON.stringify(data));
+                                if (data.status == 'success') {
+                                    localStorage.setItem("sessionid", data.sessionid);
+                                    document.location.href = "mainmenu.html";
+                                } else {
+                                    alert('go to register new acc');
+                                    localStorage.setItem("fbid", fbid);
+                                    var fullname = response.name;
+                                    var name = fullname.substr(0, fullname.indexOf(' '));
+                                    var surname = fullname.substr(fullname.indexOf(' ') + 1);
+                                    localStorage.setItem("name", name);
+                                    localStorage.setItem("surname", surname);
+                                    document.location.href = "registerfb.html";
+                                }
+                            });
                         },
-                        function(response) {
-                            alert("error");
-                        })
-                }, function(response) {
-                    //user canceled
-                    alert("canceled");
-                });
+                        error: function(data) {
+                            alert('failed');
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                }
 
             });
 
-            $("#loginbtn").on("click", function(e) {  
+            $("#loginbtn").on("click", function(e) {
                 var email = $("#email").val();
                 var password = $("#pass").val();
-                var url = "http://workingalert.tk/authen.php?email=" + email + "&pass=" + password;
+                var url = "http://workingalert.tk/api/authen.php?email=" + email + "&pass=" + password;
                 $.get(url, function(data, status) {
                     alert(JSON.stringify(data));
                     if (data.status == 'success') {

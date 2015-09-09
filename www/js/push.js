@@ -49,7 +49,6 @@ var app = {
             sessionid = localStorage.getItem("sessionid");
             localStorage.setItem("registrationId",data.registrationId);
             var url2 = "http://workingalert.tk/api/registerpushid.php?sessionid="+sessionid+"&pushid="+data.registrationId;
-            alert(url2);
             $.get(url2, function(data, status) {
                 alert(JSON.stringify(data));
             });

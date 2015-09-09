@@ -72,7 +72,6 @@
                     var url = "http://workingalert.tk/api/register.php?email=" + email + "&pass=" + password + "&repass=" + password2 + "&firstname=" + firstname + "&lastname=" + lastname + "&nickname=" + nickname + "&phone=" + phone;
                     alert(url);
                     $.get(url, function(data, status) {
-                        alert("Data: " + data + "\nStatus: " + status);
                         alert(JSON.stringify(data));
                         document.location.href = "index.html";
                     });

@@ -50,7 +50,6 @@
                 var groupid = localStorage.getItem('parentgroupid');
                 var payload = $("#Inputmessage").val();
                 var priority = $("#priority").val();
-                alert(sessionid + ' ' + groupid + ' ' + payload + ' ' + priority);
                 var url = "http://workingalert.tk/api/createmessage.php?sessionid=" + sessionid + "&groupid=" + groupid + "&msgpayload=" + payload + "&priority="+priority;
                 alert(url);
                 $.get(url, function(data, status) {

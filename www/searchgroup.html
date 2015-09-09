@@ -11,38 +11,37 @@
 
 <body>
 
-    <header class="shadow-z-2">
+    <header class="shadow-z-1">
         <div id="hamburger-menu">
-            <img src="pic/searchicn.png" class="sidebar-toggle" width="40px">
+            <img src="pic/searchicn.png" class="sidebar-toggle" width="30px">
         </div>
-        <div class="searchbar" style="display:inline-block">
-            <div class="form-group" style="margin-top:20px">
-                <input type="text" class="form-control" id="InputEmail" placeholder="">
-            </div>
+        <div id="title">
+            <bold>Search group</bold>
+
         </div>
     </header>
 
     <div style="margin-top:54px;z-index:1"></div>
-    <div class="sidebar-overlay"></div>
+    <div id="searchbar">
+        <input type="text" id="searchinput" placeholder="groupname">
+        <input type="button" value="search" id="searchbtn">
+    </div>
+
 
     <!--<div class="container">-->
-    <div class="listgroup">
+    <div class="listgroup" id="listgroup">
+        
         <div class="group">
             <div class="detail">
                 <h1>{Group name}</h1>
-                <h4>{datetime}</h4>
-            </div>
-            <div class="widget">
-                <p><img src="pic/star_inactive.png"></p>
-                <p><img src="pic/dot_menu.png"></p>
+                <input type="hidden" value="" id="msgid">
+                <input type="hidden" value="" id="groupid">
+                <h4>{detail}</h4>
             </div>
             <div style="clear:both;"></div>
             <div class="seperate"></div>
         </div>
-
-
-
-
+        
     </div>
     <!--</div listgroup>-->
 
@@ -53,11 +52,15 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/ripples.min.js"></script>
     <script src="js/material.min.js"></script>
+    <script src="js/searchgroup.js"></script>
     <script>
         $(document).ready(function() {
             // This command is used to initialize some elements and make them work properly
             $.material.init();
 
-        }); < /body>
+        });
 
-        < /html>
+    </script>
+
+</body>
+</html>

@@ -4,16 +4,27 @@
 
 ## Installation
 
-This requires phonegap 5.0+ ( current stable v1.0.0 )
+This requires phonegap/cordova CLI 5.0+ ( current stable v1.2.2 )
 
 ```
 phonegap plugin add phonegap-plugin-push
+```
+or 
+
+```
+cordova plugin add phonegap-plugin-push
 ```
 
 It is also possible to install via repo url directly ( unstable )
 
 ```
 phonegap plugin add https://github.com/phonegap/phonegap-plugin-push
+```
+
+or 
+
+```
+cordova plugin add https://github.com/phonegap/phonegap-plugin-push
 ```
 
 ## Supported Platforms
@@ -416,8 +427,7 @@ For advanced templates and usage, the notification object is included in [`data.
 
 ### Setting Toast Capable Option for Windows
 
-For your app to communicate through a toast notification, you must declare that it is Toast Capable in your app's manifest file. Cordova-windows 4.0.0 release adds this property to config.xml. You can use:
-`<preference name="WindowsToastCapable" value="true" />` in config.xml. However, you will need Cordova 5.1.1 which pins Cordova-windows 4.0.0.
+This plugin automatically sets the toast capable flag to be true for Cordova 5.1.1+. For lower versions, you must declare that it is Toast Capable in your app's manifest file. 
 
 ## Native Requirements
 

@@ -13,7 +13,27 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -60,7 +80,19 @@
                             "xml": "<service android:name=\"com.adobe.phonegap.push.GCMIntentService\" />",
                             "count": 1
                         }
-                    ]
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 3
+                        }
+                    ],
+                    "application": []
+                }
+            },
+            "res/values/facebookconnect.xml": {
+                "parents": {
+                    "/*": []
                 }
             }
         }
@@ -69,7 +101,22 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "tk.workingalert"
         },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "tk.workingalert"
+        },
+        "org.apache.cordova.file": {
+            "PACKAGE_NAME": "tk.workingalert"
+        },
+        "org.apache.cordova.file-transfer": {
+            "PACKAGE_NAME": "tk.workingalert"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "tk.workingalert"
+        },
         "phonegap-plugin-push": {
+            "PACKAGE_NAME": "tk.workingalert"
+        },
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "tk.workingalert"
         }
     },
