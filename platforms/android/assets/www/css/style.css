@@ -1,0 +1,20 @@
+
+.messagebox{
+	margin-top: 2%;
+    border-radius: 5px;
+    padding-top: 1%;
+    
+}
+.nav-search{
+	float: left;
+	
+}
+#group,#group1,#group2{
+	cursor: pointer;
+	color: white;
+}
+
+#group-menu,#group1-menu,#group2-menu{
+	display: none;
+}
+
