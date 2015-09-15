@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Group</title>
+</head>
+
+<body style="background-color:#E8E8E8">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">WorkingAlert </a>
+                </li>
+                <div class="col-lg-12">
+                     <div class="col-xs-2">
+                         <img src="../img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
+                    </div>
+                    <div class="col-md-10" style="text-align:right;">
+                        <h6 style="color:#FFFFFF"> Firstname  Lastname</h6>
+                        <a><small>View your profile</small></a>
+                        
+                    </div>
+                </div>
+               <br>
+                <li>
+                    <a id="dashboard" href="#" style="color:#FFFFFF;">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a id="group">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Group
+                    </a>
+                </li>
+                <li style="margin-left: 10%;">
+                    <a id="searchgroup">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Group
+                    </a>
+                </li>
+                <li style="margin-left: 10%;">
+                    <a id="creategroup">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create Group
+                    </a>
+                </li>
+                <li>
+                    <a id="setting" style="color:#FFFFFF;">
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Setting
+                    </a>
+                </li>
+                <li>
+                    <a id="logout" style="color:#FFFFFF;">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <nav class="navbar navbar-default navbar-static-top" style="
+    min-width: 1280px;background-color: #2C876A;position: fixed;">
+            <div class="col-xs-6">
+                <div class="navbar-header nav-search">
+                    <div class="col-md-3" style="margin-top:10%;margin-left:-30%">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid" style="min-width: 330px;">
+            <div class="col-md-12" style="">
+                <br>
+                <br>
+                <br>
+
+                
+            </div>
+            
+             <div class="col-md-12" style="box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);border-radius: 5px;padding: 1%; background-color:#FFFFFF;margin-top: 1%;">
+                 <h4 style="padding-left: 1%;"><img src="img/group.png" style="width: 20px;">Your Groups</h4>
+                 <hr style="margin-top:0%">
+                 
+                 <!-- list group-->
+                 <div class="panel-group" id="accordion">
+
+
+                    <!-- Start callapse 1-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading"> 
+                        <div class="panel-title" style="display: inline-block;">
+                            <h6 class="panel-title"><a href="#">Group #1 </a></h6>
+
+                            <div class="col-xs-12" style="margin-top: -15%;margin-left: 100%;display: inline-flex;">
+                                <div class="col-md-2">
+                                    <span class="badge" style="margin-left: 150%;">42</span>
+                                </div>
+                                <div class="col-md-2" style="margin-left: 14%;">
+                                    <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" role="button" style=""
+                                                data-toggle="collapse" 
+                                                data-parent="#accordion" 
+                                                href="#collapseOne">
+                                    </span>
+                                </div>
+                           </div>
+                   
+                        </div>
+                            
+
+                           
+
+                        </div>
+                        <!-- body callapse 1 lv0.1-->
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"> 
+                                        <div class="panel-title" style="display: inline-block;">
+                                            <h6 class="panel-title"><a href="#">Group #1-lv1 </a></h6>
+
+                                            <div class="col-xs-12" style="margin-top: -15%;margin-left: 90%;display: inline-flex;">
+                                                <div class="col-md-2">
+                                                    <span class="badge" style="margin-left: 150%;">42</span>
+                                                </div>
+                                                <div class="col-md-2" style="margin-left: 14%;">
+                                                    <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" role="button" style=""
+                                                        data-toggle="collapse" 
+                                                        data-parent="#collapseOne" 
+                                                        href="#collapseOnelv1-01">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                         </div>
+                                    </div>
+
+                                   
+                                    <div id="collapseOnelv1-01" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                           
+                                           <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <a role="button" 
+                                                        data-toggle="collapse" 
+                                                        data-parent="#collapseOnelv1-01" 
+                                                        href="#collapseOnelv2-01">
+                                                        Group #1-lv2
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseOnelv2-01" class="panel-collapse collapse in">
+                                                    <div class="panel-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- close callapse 1 lv0.1-->
+
+                            <!-- body callapse 1 lv0.2-->
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a role="button" 
+                                                data-toggle="collapse" 
+                                                data-parent="#collapseOne" 
+                                                href="#collapseOnelv1-02">
+                                                Group #1-lv1
+                                                </a>
+                                            </h4>
+                                        </div>
+
+                                    <div id="collapseOnelv1-02" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><!-- close callapse 1 lv0.2-->
+
+                        </div><!-- close callapse 1 lv0-->
+                        
+
+                        
+                    </div><!-- close callapse 1-->
+
+                    <!-- Start callapse 2-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a role="button" 
+                                    data-toggle="collapse" 
+                                    data-parent="#accordion" 
+                                    href="#collapse1">
+                                    Group #2
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                
+                            </div>
+                        </div>
+                    </div> <!-- close callapse 2-->
+
+
+
+                </div> <!-- close pannel large-->
+                    
+            </div> <!-- close div large-->
+        </div> <!-- close container-->
+
+                    
+                    
+    </div> <!-- close wrapper-->
+
+
+    <!-- Modal Create Group -->
+                <div class="modal fade" id="creatGroupModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- close -->
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <!-- Title -->
+
+                                <h4>Create Group</h4>
+                            </div>
+                            <div class="modal-body">
+                                
+                                <form class="form-horizontal">
+                                     <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputEmail3" placeholder="Group Name">
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Description</label>
+                                        <div class="col-sm-10">
+                                            <textarea class="form-control" rows="3" placeholder="Description..."></textarea>
+                                    </div>
+                                    </div>
+                                    
+
+                                    
+                                     <div class="form-group">
+                                        <label class="col-sm-2 control-label">Start Date</label>
+                                        <div class="col-sm-10">
+                                            <div class="input-group" id="datetimepicker4">
+                                                <input data-format="yyyy-MM-dd" type="text" class="form-control" placeholder="Start Date">
+                                                    <div class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                                    </div>
+                                                
+                                            </div>
+
+                                    
+                                         </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">End Date</label>
+                                        <div class="col-sm-10">
+                                            <div class="input-group" id="datetimepicker4">
+                                                <input data-format="yyyy-MM-dd" type="text" class="form-control" placeholder="End Date">
+                                                    <div class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                                    </div>
+                                                
+                                            </div>
+
+                                    
+                                         </div>
+                                    </div>
+                            </form>
+                        </div>
+                            
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"> Cancel</button>
+                            <button type="submit" class="btn btn-success"> Save</button>
+                        </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+
+    <!-- Modal Edit Profile -->
+                <div class="modal fade" id="editProfileModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- close -->
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <!-- Title -->
+
+                                <h4>Edit Profile</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <label for="exampleInputName2">Name</label>
+                                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Firstname" style="margin-left: 12%;">
+                                    
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail2"></label>
+                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Lastname" style="margin-top: 14%;">
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group" style="padding-top: 2%;">
+                                        
+                                        <label for="exampleInputEmail2">Nickname</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Nickname">
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group" style="padding-top: 2%;">
+                                        <label>Phone Number</label>
+                                        <input type="number" class="form-control" placeholder="000-0000-000">
+
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group" style="padding-top: 2%;">
+                                        <label>Email address</label>
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <br>
+
+  
+                                    <div class="form-group" style="padding-top: 2%;">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" placeholder="Password">
+                                    </div>
+
+                                    <br>
+                                    <div class="form-group" style="padding-top: 2%;">
+                                        <label for="exampleInputFile">Picture Profile</label>
+                                        <input type="file" id="exampleInputFile">
+                                        <p class="help-block">Example block-level help text here.</p>
+                                    </div>
+
+                                
+                                </form>
+                                
+                            
+                            </div>
+                            
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal"> Cancel</button>
+                            <button type="submit" class="btn btn-success"> Save</button>
+                            
+                        </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+    <!-- /#wrapper -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/navigatorbar.js"></script>
+    <script src="js/group.js"></script>
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,9 @@
-
+.grouping{
+	min-width: 420px;
+}
+div#wrapper {
+    overflow:hidden;
+}
 .messagebox{
 	margin-top: 2%;
     border-radius: 5px;
@@ -18,3 +23,132 @@
 	display: none;
 }
 
+.sidebar-brand > a:first-of-type{
+	width: 160px;
+    float: left;
+}
+
+.sidebar-brand .navbar-header.nav-search{
+	width: 60px;
+}
+
+.sidebar-brand .navbar-header.nav-search .col-md-3{
+	width: 80px;
+    margin-top: 12px;
+    text-indent: 0px;
+}
+
+.size-box{
+	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+	border-radius: 5px;padding: 1%; 
+	background-color:#FFFFFF;
+	margin-right: 25%;
+	margin-top: 1%;
+	margin-right: 18%;
+	width: 80%;
+}
+
+.box-sent{
+	margin-top: -5%;
+    text-align: right;
+}
+
+
+.bodylogin{
+	background-color:#E8E8E8;
+}
+
+.bodyloginsizebox{
+	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+	border-radius: 5px;
+	padding: 1%; 
+	background-color:#FFFFFF;
+}
+
+.textbox-dashboard{
+	margin-left: 1%;
+    
+}
+
+.groupbox{
+	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+    border-radius: 5px;
+    padding: 1%;
+    background-color: #FFFFFF;
+    margin-top: 1%;
+
+}
+
+.badge-position{
+	margin-left: 365%;
+}
+
+.triangle-position{
+	margin-left: 2%;
+    margin-top: 5%;
+}
+
+.badge-box{
+	margin-top: -15%;
+	margin-left: 470%;
+	display: inline-flex;
+}
+
+.subbadge-box{
+	padding-left: 7% !important; 
+}
+
+
+@media (max-width: 768px) {
+	.grouping {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+  	.grouping > .col-md-12{
+  		margin-left:0px !important;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	.size-box{
+		width: 80% !important;
+		margin-top: 3%;
+	}
+	.box-sent{
+		margin-top: -1%;
+	    margin-bottom: 1%;
+	    padding-right: 12%;
+	    padding-top: 5%;
+	}
+
+	.textbox-dashboard{
+		margin-left: 5% !important;
+	    text-align: center;
+	}
+	
+	.groupbox{
+		box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+	    border-radius: 5px;
+	    padding: 1%;
+	    background-color: #FFFFFF;
+	    margin-top: 1%;
+
+	}
+	.badge-position{
+		margin-left: -1%;
+    }
+	.triangle-position{
+		margin-left: -25%;
+	    margin-top: 5%;
+	}
+
+	.badge-box{
+		margin-top: -15%;
+		margin-left: 128%;
+		display: inline-flex;
+	}
+	
+	.subbadge-box{
+	padding-left: 1% !important; 
+    }
+}

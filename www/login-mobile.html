@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <title>Login</title>
+</head>
+
+<body class="bodylogin">
+    <!--start nav-->
+    <nav class="navbar navbar-default navbar-static-top" style="background-color: #2C876A;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="color:#FFFFFF;"> WorkingAlert </a>
+            </div>
+
+        </div>
+    </nav>
+    <!--End nav-->
+
+    <!--start content-->
+    <div class="container">
+        <div class="col-md-12 bodyloginsizebox">
+            <div class="modal-header">
+                <h4>Login</h4>
+            </div>
+
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                </div>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Password</label>
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                                </div>
+                                <input type="password" class="form-control" id="pass" placeholder="Password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-success" id="loginbtn">Sign in</button>
+                            <button type="button" class="btn btn-primary" id="fbloginbtn">Login with Facebook</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <h6>Forget password ?<a href="forgetpass.html"> Click here to reset</a></h6>
+                        <h6>New User ?<a href="register-new.html"> Click here to register</a></h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--end content-->
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/openfb.js"></script>
+    <script>
+        $(document).ready(function() {
+            // This command is used to initialize some elements and make them work properly
+            openFB.init({
+                appId: '102368486782958',
+                tokenStore: window.localStorage
+            });
+
+            $("#fbloginbtn").on("click", function(e) {
+                openFB.api({
+                    path: '/me',
+                    success: function(response) {
+                        var fbid = response.id;
+                        var url = "http://workingalert.tk/api/authenfb.php?fbid=" + fbid;
+                        $.get(url, function(data, status) {
+                            if (data.status == 'success') {
+                                localStorage.setItem("sessionid", data.sessionid);
+                                document.location.href = "dashboard.html";
+                            } else {
+                                localStorage.setItem("fbid", fbid);
+                                var fullname = response.name;
+                                var name = fullname.substr(0, fullname.indexOf(' '));
+                                var surname = fullname.substr(fullname.indexOf(' ') + 1);
+                                localStorage.setItem("name", name);
+                                localStorage.setItem("surname", surname);
+                                document.location.href = "registerfb.html";
+                            }
+                        });
+                    },
+                    error: function(data) {
+                        openFB.login(
+                            function(response) {
+                                if (response.status === 'connected') {
+                                    alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+                                    localStorage.setItem("fbtoken", response.authResponse.accessToken);
+                                } else {
+                                    alert('Facebook login failed: ' + response.error);
+                                }
+                            }, {
+                                scope: 'email'
+                            });
+                    }
+                });
+
+            });
+
+            $("#loginbtn").on("click", function(e) {
+                var email = $("#email").val();
+                var password = $("#pass").val();
+                var url = "http://workingalert.tk/api/authen.php?email=" + email + "&pass=" + password;
+                $.get(url, function(data, status) {
+                    if (data.status == 'success') {
+                        localStorage.setItem("sessionid", data.sessionid);
+                        document.location.href = "dashboard.html";
+                    } else {
+                        alert('error');
+                    }
+                });
+
+            });
+        });
+
+    </script>
+</body>
+
+</html>

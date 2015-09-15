@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../css/material.minn.css"> -->
+
+	<title>ForgetPass</title>
+</head>
+<body>
+	<div align="center" class="container">
+		
+		<div class="row" style="width:50%;height:50%;padding-top:20%;">
+			<div class="col-md-12">
+				<div class="form-group">
+					<h3> Forget Password</h3>
+
+    					<input type="email" class="form-control" id="inputEmail3" placeholder="Your Email">
+    			</div>	
+  			</div>
+
+  			
+  				<div class="col-md-12">
+  					
+  						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#forgetpassModal">Send Email</button>
+  					
+  				</div>
+  			
+
+		</div>
+	</div>
+<!-- Forget modal -->
+	<div class="modal fade" id="forgetpassModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+									<span aria-hidden="true">&times;</span>
+								</button>
+					<h4>Success</h4>
+
+				</div>
+			<div class="modal-body">
+				
+					<h3 style="margin-top: -1%;margin-left: 5%;"><small>Success, Please check your email</small></h3>
+				
+					
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-success">Ok</button>
+			</div>
+					
+			</div>
+			
+
+
+	</div>
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

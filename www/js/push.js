@@ -50,7 +50,9 @@ var app = {
             localStorage.setItem("registrationId",data.registrationId);
             var url2 = "http://workingalert.tk/api/registerpushid.php?sessionid="+sessionid+"&pushid="+data.registrationId;
             $.get(url2, function(data, status) {
-                alert(JSON.stringify(data));
+                if(status=='failed'){
+                    alert('GCM Register fail');    
+                }
             });
         });
 
