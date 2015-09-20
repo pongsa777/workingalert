@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div align="center" class="container-fluid" style="width: 80%;margin-top: 5%;">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+						Register
+					</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Firstname" style="">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSurname"></label>
+                                <input type="text" class="form-control" id="inputSurname" placeholder="Lastname" style="">
+                            </div>
+                            <br>
+
+                            <div class="form-group" style="padding-top: 2%;">
+
+                                <label for="InputNickname">Nickname</label>
+                                <input type="text" class="form-control" id="InputNickname" placeholder="ex.John">
+                            </div>
+                            <br>
+
+                            <div class="form-group" style="padding-top: 2%;">
+                                <label>Phone Number</label>
+                                <input type="number" id="mobileno" class="form-control" placeholder="xxx-xxxx-xxx">
+
+                            </div>
+                            <br>
+
+                            <div class="form-group" style="padding-top: 2%;">
+                                <label for="InputEmail">Email address</label>
+                                <input type="email" class="form-control" id="InputEmail" placeholder="exaple@wka.com">
+                            </div>
+                            <br>
+                        </form>
+                        <button type="button" id="regis" class="btn btn-success" style="margin-top: 10%">Submit</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function() {
+            document.getElementById('inputName').value = localStorage.getItem("name");
+            document.getElementById('inputSurname').value = localStorage.getItem("surname");
+            var fbid = localStorage.getItem("fbid");
+            $("#regis").on("click", function(e) {
+                var email = $("#InputEmail").val();
+                var firstname = $("#inputName").val();
+                var lastname = $("#inputSurname").val();
+                var nickname = $("#InputNickname").val();
+                var phone = $("#mobileno").val();
+                var url = "http://workingalert.tk/api/registerfb.php?email=" + email + "&fbid=" + fbid + "&firstname=" + firstname + "&lastname=" + lastname + "&nickname=" + nickname + "&phone=" + phone;
+                $.get(url, function(data, status) {
+                    document.location.href = "login-mobile.html";
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

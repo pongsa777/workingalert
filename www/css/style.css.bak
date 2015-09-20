@@ -129,22 +129,6 @@ div#wrapper {
     padding-bottom: 3%;
 }
 
-.choice-ingroup{
-	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
-	border-radius: 5px;
-	padding: 1%; 
-	background-color:#FFFFFF;
-	margin-right: 25%;
-	margin-top: 1%;
-	margin-right: 18%;
-	width: 80%;
-}
-.bookmark-position{
-	float: right !important; 
-    margin-right: 8%;
-    margin-top: -3%;
-}
-
 
 @media (max-width: 768px) {
 	.grouping {
@@ -161,7 +145,7 @@ div#wrapper {
 		width: 80% !important;
 		margin-top: 3%;
 		margin-right: 17%;
-		padding-top: 2%;
+		    padding-top: 2%;
 
 	}
 	.box-sent{
@@ -225,11 +209,6 @@ div#wrapper {
 	.btn-save{
 		padding-left: 45%;
     	padding-bottom: 3%;
-	}
-	.bookmark-position{
-		float: right !important; 
-	    margin-right: 8%;
-	    margin-top: -3%;
 }
 
 }

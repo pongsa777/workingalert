@@ -7,11 +7,10 @@ $(document).ready(function() {
                 var groupid = data.group[i].id;
                 var name = data.group[i].name;
                 var desc = data.group[i].description;
-                var date = data.group[i].date;
                 var div = document.createElement('div');
                 div.className = 'panel panel-default';
                 
-                div.innerHTML = '<div class="panel panel-default"><div class="panel-heading detail ' + i + '"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1">'+name+'</a></h4><input type="hidden" value="'+groupid+'" id="groupid' + i + '"></div><div id="collapse1" class="panel-collapse collapse in"><div class="panel-body">'+desc+'</div></div></div> <!-- close callapse 2-->';
+                div.innerHTML = '<div class="panel panel-default"><div class="panel-heading detail ' + i + '"><h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1">'+name+'</a></h4><input type="hidden" value="'+groupid+'" id="groupid' + i + '"></div><div id="collapse1" class="panel-collapse collapse in"><div class="panel-body">Description : '+desc+'<button class="btn-xs btn-primary vchild '+i+'" style="float:right"> view child</button></div></div></div>';
                 
                 document.getElementById('accordion').appendChild(div);
             }
@@ -21,9 +20,17 @@ $(document).ready(function() {
     $(document).on("click", ".detail", function () {
         var pos = $(this).attr("class").replace("panel-heading detail ", "");
         localStorage.setItem("parentgroupid", $(".detail." + pos + " #groupid" + pos).val());
-        alert(localStorage.getItem("parentgroupid"));
-        if(localStorage.getItem("parentgroupid")!="undefined")
-        document.location.href = "in-group.html";
+        if(localStorage.getItem("parentgroupid")!="undefined"){
+            document.location.href = "in-group.html";
+        }
     });
  
+    $(document).on("click", ".vchild", function () {
+        var pos2 = $(this).attr("class").replace("btn-xs btn-primary vchild ", "");
+        localStorage.setItem("parentgroupid", $("#groupid" + pos2).val());
+        if(localStorage.getItem("parentgroupid")!="undefined"){
+            document.location.href = "subgroup.html";
+        }
+    });
+    
 });

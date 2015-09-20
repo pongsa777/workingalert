@@ -98,6 +98,53 @@ div#wrapper {
 	padding-left: 7% !important; 
 }
 
+.div-search{
+	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+	border-radius: 5px;padding: 1%; 
+	background-color:#FFFFFF;
+	margin-top: 1%;
+	margin-right: 0%;
+	width: 80%;
+}
+.box-search{
+	padding-top: 1%;
+    width: 100%;
+}
+.btn-search{
+	margin-top: -5%;
+    text-align: center;
+}
+.btn-join{
+	float: right;
+    margin-top: -10%;
+}
+
+.head-page{
+    padding-top: 1%;
+    color: #FFFFFF;
+}
+
+.btn-save{
+	padding-left: 45%;
+    padding-bottom: 3%;
+}
+
+.choice-ingroup{
+	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+	border-radius: 5px;
+	padding: 1%; 
+	background-color:#FFFFFF;
+	margin-right: 25%;
+	margin-top: 1%;
+	margin-right: 18%;
+	width: 80%;
+}
+.bookmark-position{
+	float: right !important; 
+    margin-right: 8%;
+    margin-top: -3%;
+}
+
 
 @media (max-width: 768px) {
 	.grouping {
@@ -113,6 +160,9 @@ div#wrapper {
 	.size-box{
 		width: 80% !important;
 		margin-top: 3%;
+		margin-right: 17%;
+		padding-top: 2%;
+
 	}
 	.box-sent{
 		margin-top: -1%;
@@ -149,6 +199,37 @@ div#wrapper {
 	}
 	
 	.subbadge-box{
-	padding-left: 1% !important; 
+		padding-left: 1% !important; 
     }
+
+    .div-search{
+		width: 100% !important;
+		margin-top: 3%;
+	}
+
+	.btn-search{
+		margin-top: -1%;
+	    margin-bottom: 3%;
+	    padding-top: 5%;
+	}
+
+	.btn-join{
+		float: right;
+    	margin-top: -10%;
+	}
+	.head-page{
+    	padding-top: 1%;
+    	color: #FFFFFF;
+	}
+
+	.btn-save{
+		padding-left: 45%;
+    	padding-bottom: 3%;
+	}
+	.bookmark-position{
+		float: right !important; 
+	    margin-right: 8%;
+	    margin-top: -3%;
+}
+
 }

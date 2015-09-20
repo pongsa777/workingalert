@@ -1,10 +1,8 @@
 $(document).ready(function () {
-alert('extscrip is running');
     $("#searchbtn").on("click", function (e) {
         sessionid = localStorage.getItem("sessionid");
         var searchmsg = $("#searchinput").val();
         var url = "http://workingalert.tk/api/searchgroup.php?sessionid=" + sessionid + "&searchmsg=" + searchmsg;
-        alert(url);
         $.get(url, function (data, status) {
             alert(JSON.stringify(data));
             if (data.status == 'success') {

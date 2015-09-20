@@ -1,78 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<title>Register</title>
+    <title>Register</title>
 </head>
+
 <body>
-	<div align="center" class="container-fluid" style="width: 80%;margin-top: 5%;">
-	<div class="row">
-		<div class="col-xs-12">
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<h3 class="panel-title">
+    <div align="center" class="container-fluid" style="width: 80%;margin-top: 5%;">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
 						Register
 					</h3>
-				</div>
-				<div class="panel-body">
-					<form class="form-inline">
-									<div class="form-group">
-										<label for="exampleInputName2">Name</label>
-	    								<input type="text" class="form-control" id="exampleInputName2" placeholder="Firstname" style="margin-left: 12%;">
-									
-	  								</div>
-	  								<div class="form-group">
-	    								<label for="exampleInputEmail2"></label>
-	    								<input type="text" class="form-control" id="exampleInputEmail2" placeholder="Lastname" style="margin-top: 14%;">
-	  								</div>
-	  								<br>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="exampleInputName2">Name</label>
+                                <input id="InputFirstName" type="text" class="form-control" placeholder="Firstname">
 
-	  								<div class="form-group" style="padding-top: 2%;">
-	  									
-	    								<label for="exampleInputEmail2">Nickname</label>
-	    								<input type="text" class="form-control" id="exampleInputEmail2" placeholder="Nickname">
-	  								</div>
-	  								<br>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail2"></label>
+                                <input id="InputLastName" type="text" class="form-control" placeholder="Lastname">
+                            </div>
+                            <br>
 
-	  								<div class="form-group" style="padding-top: 2%;">
-    									<label>Phone Number</label>
-    									<input type="number" class="form-control" placeholder="000-0000-000">
+                            <div class="form-group" style="padding-top: 2%;">
 
-  									</div>
-  									<br>
+                                <label for="exampleInputEmail2">Nickname</label>
+                                <input type="text" class="form-control" id="InputNickName" placeholder="ex.John">
+                            </div>
+                            <br>
 
-  									<div class="form-group" style="padding-top: 2%;">
-    									<label>Email address</label>
-    									<input type="email" class="form-control" placeholder="Email">
-  									</div>
-  									<br>
+                            <div class="form-group" style="padding-top: 2%;">
+                                <label>Phone Number</label>
+                                <input id="InputPhone" type="number" class="form-control" placeholder="xxx-xxxx-xxx">
 
-  
-  									<div class="form-group" style="padding-top: 2%;">
-    									<label>Password</label>
-    									<input type="password" class="form-control" placeholder="Password">
-  									</div>
+                            </div>
+                            <br>
 
-	  							
-	  							</form>
-									<button type="button" class="btn btn-default" style="
-    margin-top: 10%;"> Back</button>
-									<button type="submit" class="btn btn-success"style="
-    margin-top: 10%"> Submit</button>
+                            <div class="form-group" style="padding-top: 2%;">
+                                <label>Email address</label>
+                                <input id="InputEmail" type="email" class="form-control" placeholder="exaple@wka.com">
+                            </div>
+                            <br>
 
-				</div>
-				
-			</div>
-		</div>
-	</div>
-</div>
-	
+
+                            <div class="form-group" style="padding-top: 2%;">
+                                <label>Password</label>
+                                <input id="InputPassword" type="password" class="form-control" placeholder="password"><br>
+                                <input id="InputPassword2" type="password" class="form-control" placeholder="password again">
+                            </div>
+
+
+                        </form>
+                        <button id="submitbtn" type="button" class="btn btn-success" style="margin-top: 10%">Register</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="cordova_plugins.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function() {
+            // start of backend script
+
+            $("#submitbtn").on("click", function(e) {
+                alert('eiei');
+                var email = $("#InputEmail").val();
+                var password = $("#InputPassword").val();
+                var password2 = $("#InputPassword2").val();
+                var firstname = $("#InputFirstName").val();
+                var lastname = $("#InputLastName").val();
+                var nickname = $("#InputNickName").val();
+                var phone = $("#InputPhone").val();
+                var url = "http://workingalert.tk/api/register.php?email=" + email + "&pass=" + password + "&repass=" + password2 + "&firstname=" + firstname + "&lastname=" + lastname + "&nickname=" + nickname + "&phone=" + phone;
+                $.get(url, function(data, status) {
+                    alert(JSON.stringify(data));
+                    document.location.href = "index.html";
+                });
+                }else{
+                    alert('password is not match');    
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

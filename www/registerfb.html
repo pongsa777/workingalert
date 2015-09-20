@@ -51,12 +51,12 @@
             // This command is used to initialize some elements and make them work properly
             $.material.init();
             // start of backend script
-            alert(localStorage.getItem("name")+' '+localStorage.getItem("surname")+' '+localStorage.getItem("fbid"));
+            //alert(localStorage.getItem("name")+' '+localStorage.getItem("surname")+' '+localStorage.getItem("fbid"));
             document.getElementById('InputFirstName').value = localStorage.getItem("name");
             document.getElementById('InputLastName').value = localStorage.getItem("surname");
 
             $("#submitbtn").on("click", function(e) {
-                alert('eiei');
+                //alert('eiei');
                 var email = $("#InputEmail").val();
                 var fbid = localStorage.getItem("fbid");
                 var firstname = $("#InputFirstName").val();

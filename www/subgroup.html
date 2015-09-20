@@ -84,6 +84,9 @@
                         </a>
                     </div>
                 </div>
+                <div id="groupname">
+                    <h4 class="head-page">Group Name</h4>
+                </div>
             </div>
         </nav>
         <div class="container-fluid" style="min-width: 330px;">
@@ -94,7 +97,7 @@
             </div>
 
             <div class="col-md-12" style="box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);border-radius: 5px;padding: 1%; background-color:#FFFFFF;margin-top: 1%;">
-                <h4 style="padding-left: 1%;"><img src="img/group.png" style="width: 20px;">Your Groups</h4>
+                <h4 style="padding-left: 1%;"><img src="img/group.png" style="width: 20px;"> Sub Groups</h4>
                 <hr style="margin-top:0%">
 
                 <!-- list group-->
@@ -102,7 +105,7 @@
 
 
                     <!-- Start callapse 1-->
-<!-- 
+                    <!-- 
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="panel-title" style="display: inline-block;">
@@ -119,8 +122,8 @@
                             </div>
                         </div>
 -->
-                        <!-- body callapse 1 lv0.1-->
-<!--
+                    <!-- body callapse 1 lv0.1-->
+                    <!--
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <div class="panel panel-default">
@@ -168,10 +171,10 @@
                                 </div>
                             </div>
 -->
-                            <!-- close callapse 1 lv0.1-->
+                    <!-- close callapse 1 lv0.1-->
 
-                            <!-- body callapse 1 lv0.2-->
-<!--
+                    <!-- body callapse 1 lv0.2-->
+                    <!--
                             <div id="collapseOne" class="panel-collapse collapse in">
                                 <div class="panel-body">
                                     <div class="panel panel-default">
@@ -196,20 +199,20 @@
                                 </div>
                             </div>
 -->
-                            <!-- close callapse 1 lv0.2-->
-<!--
+                    <!-- close callapse 1 lv0.2-->
+                    <!--
                         </div>
 -->
-                        <!-- close callapse 1 lv0-->
+                    <!-- close callapse 1 lv0-->
 
 
-<!--
+                    <!--
                     </div> 
 -->
                     <!-- close callapse 1-->
-                    
-                    <!-- Start callapse 2-->
 
+                    <!-- Start callapse 2-->
+                    <!--
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -224,44 +227,44 @@
 
                         <div id="collapse1" class="panel-collapse collapse in">
                             <div class="panel-body">
-                                Description : Anim pariatur cliche
+                                Anim pariatur cliche
                                 <button class="btn-xs btn-primary" style="float:right"> view child</button>
                             </div>
                             
                         </div>
                     </div>
-
+-->
                     <!-- close callapse 2-->
+                    <!--
+                </div>
+-->
+                    <!-- close panel-group-->
 
                 </div>
-
-                <!-- close panel-group-->
+                <!-- close div large-->
 
             </div>
-            <!-- close div large-->
+            <!-- close container-->
+
+
 
         </div>
-        <!-- close container-->
+        <!-- close wrapper-->
 
+        <!-- /#wrapper -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="cordova_plugins.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/navigatorbar.js"></script>
+        <script src="js/subgroup.js"></script>
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
 
-
-    </div>
-    <!-- close wrapper-->
-
-    <!-- /#wrapper -->
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="cordova_plugins.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/navigatorbar.js"></script>
-    <script src="js/group.js"></script>
-    <script>
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-
-    </script>
+        </script>
 </body>
 
 </html>
