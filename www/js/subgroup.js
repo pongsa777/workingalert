@@ -7,7 +7,6 @@ $(document).ready(function () {
         type: "GET",
         dataType: "json",
         success: function (data) {
-            alert(JSON.stringify(data));
             document.getElementById('groupname').innerHTML = '<h4 class="head-page">' + data.parentname + '</h4>';
             if (data.status == 'success') {
                 for (var i = 0; i < data.group.length; i++) {
