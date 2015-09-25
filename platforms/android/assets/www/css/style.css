@@ -144,7 +144,36 @@ div#wrapper {
     margin-right: 8%;
     margin-top: -3%;
 }
+.body{
+	overflow: visible;
+}
+.box-edit{
+	padding-left: 40%;
+}
+.box-pic{
+	margin-top: -4%;
+}
+.box-edit{
+	float: right;
+}
 
+.add-friend{
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+}
+.box-friend{
+	padding-top: 3%;
+	padding-top: 0%;
+}
+.btn-accept{
+	margin-top: -22%;
+}
+
+.btn-position{
+	padding-top: 3%;
+
+}
 
 @media (max-width: 768px) {
 	.grouping {
@@ -230,6 +259,36 @@ div#wrapper {
 		float: right !important; 
 	    margin-right: 8%;
 	    margin-top: -3%;
-}
+	}
+	.box-edit{
+		padding-left: 40%;
+	}
+	.box-pic{
+		margin-top: -4%;
+	}
+	.box-edit{
+		float: right;
+	}
+
+	.add-friend{
+	    padding-top: 3%;
+	    padding-bottom: 3%;
+
+	}
+	.box-friend{
+		padding-top: 3%;
+		padding-top: 0%;
+	}
+	.btn-accept{
+	 margin-top: -22%;
+	}
+	.btn-position{
+		padding-top: 3%;
+
+	}
+
+
+
+
 
 }

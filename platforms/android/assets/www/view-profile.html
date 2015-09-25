@@ -18,10 +18,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <title>Search Group</title>
+    <title>View Profile</title>
 </head>
 
 <body style="background-color:#E8E8E8">
+
     <div class="wrapper-test">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
@@ -35,7 +36,7 @@
                     </div>
                     <div class="col-md-10" style="text-align:right;">
                         <h6 style="color:#FFFFFF"> Firstname  Lastname</h6>
-                        <a><small>View your profile</small></a>
+                        <a href="view-profile.html"><small>View your profile</small></a>
 
                     </div>
                 </div>
@@ -86,7 +87,7 @@
                 </div>
             </div>
             <div>
-                <h4 class="head-page">Search</h4>
+                <h4 class="head-page">Your Profile</h4>
             </div>
         </div>
 
@@ -101,50 +102,93 @@
         </div>
 
         <!--Start box search -->
-        <div class="col-md-8 pull-right div-search">
-            <h6 style="text-align: left;">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>  
-                        Search groups
+        <div class="col-md-8 pull-right div-search" style="padding-bottom: 12%;">
+            <div id="editpanel">
+                <h6 style="text-align: left;">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  
+                        Profile
+                    <button type="button" id="editbtn" class="btn btn-default btn-xs box-edit" style="margin-top: -1%;">
+                            Edit Profile
+                    </button>
                 </h6>
-            <div class="input-group box-search">
-                <input type="search" id="searchinput" class="form-control" placeholder="Group name">
+            </div>
+            <hr width="95%" style="margin-top: 1%;">
+
+            <!-- <div class="col-xs-4 box-pic">
+                        <img src="img/user.png" class="img-circle" style="width: 80px;height: 80px;">
+                        <a class="box-edit" href="#"> Edit</a>
+                    </div>
+
+                    <br> -->
+
+
+            <div class="col-xs-4" style="margin-left: 30%;">
+                <img src="img/user.png" class="img-circle" id="profilepic" style="width: 80px;height: 80px;">
 
             </div>
-            <div class="col-md-12 btn-search">
-                <div class="row">
-                    <button type="button" id="searchbtn" class="btn btn-success"> Search</button>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- Name -->
+
+            <div class="col-md-12">
+                <div class="col-xs-4">
+                    <h6>Name :</h6>
+                </div>
+
+                <div class="col-xs-4">
+                    <h6 id="firstname">XXXXXXXXX</h6>
+                </div>
+
+                <div class="col-xs-4">
+                    <h6 id="lastname">XXXXXXXX</h6>
+                </div>
+
+            </div>
+
+            <!-- Nick name-->
+            <div class="col-md-12">
+                <div class="col-xs-6">
+                    <h6>Nick Name :</h6>
+                </div>
+
+                <div class="col-xs-6" style="margin-left: -17%;">
+                    <h6 id="nickname">XXXXX</h6>
+                </div>
+
+            </div>
+
+            <!-- Phone -->
+            <div class="col-md-12">
+                <div class="col-xs-6">
+                    <h6>Phone :</h6>
+                </div>
+
+                <div class="col-xs-6" style="margin-left: -17%;">
+                    <h6 id="phone">XXX-XXXX-XXX</h6>
+                </div>
+
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-12">
+                <div class="col-xs-6">
+                    <h6>E-mail :</h6>
+                </div>
+
+                <div class="col-xs-6" style="margin-left: -17%;">
+                    <h6 id="email">xxxxxx@xxxx.xxx</h6>
                 </div>
             </div>
+
 
         </div>
         <!--End box search -->
-        <div id="listresult">
 
-        </div>
-        <!--Start box Result -->
-<!--
-        <div class="col-md-8 pull-right div-search">
-            <div class="col-md-8">
-                <h5 style="text-align:left;">
-                        Group Name
-                    </h5>
-            </div>
-            <div class="col-md-8">
-                <div class="row btn-join">
-                    <img src="pic/lock.png" width="25px">
-                    <button type="button" class="btn btn-primary btn-s"> Join</button>
-                </div>
-            </div>
-            <div class="col-md-8" id="description">
-                desc
-            </div>
-            <hr>
-            <div class="col-md-8" id="path">
-                path ->
-            </div>
-        </div>
--->
-        <!--End box Result -->
+
 
 
 
@@ -158,7 +202,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/navigatorbar.js"></script>
-    <script src="js/search-group.js"></script>
+    <script src="js/view-profile.js"></script>
     <script>
         $("#togglebtn").click(function() {
             $('.wrapper-test').addClass('active');

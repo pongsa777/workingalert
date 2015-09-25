@@ -12,13 +12,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <title>Search Group</title>
+
+    <title>Edit Profile</title>
 </head>
 
 <body style="background-color:#E8E8E8">
@@ -35,7 +30,7 @@
                     </div>
                     <div class="col-md-10" style="text-align:right;">
                         <h6 style="color:#FFFFFF"> Firstname  Lastname</h6>
-                        <a><small>View your profile</small></a>
+                        <a href="view-profile.html"><small>View your profile</small></a>
 
                     </div>
                 </div>
@@ -86,7 +81,7 @@
                 </div>
             </div>
             <div>
-                <h4 class="head-page">Search</h4>
+                <h4 class="head-page">Edit Profile</h4>
             </div>
         </div>
 
@@ -100,57 +95,45 @@
             <br>
         </div>
 
-        <!--Start box search -->
-        <div class="col-md-8 pull-right div-search">
-            <h6 style="text-align: left;">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>  
-                        Search groups
-                </h6>
-            <div class="input-group box-search">
-                <input type="search" id="searchinput" class="form-control" placeholder="Group name">
-
-            </div>
-            <div class="col-md-12 btn-search">
-                <div class="row">
-                    <button type="button" id="searchbtn" class="btn btn-success"> Search</button>
+        <!--Start -->
+        <div class="col-md-8 pull-right div-search" style="padding-bottom: 12%;">
+            <form class="form-inline" style="padding-top: 5%;">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="firstname" class="form-control">
+                    <br>
+                    <input type="text" class="form-control" id="lastname">
                 </div>
-            </div>
 
-        </div>
-        <!--End box search -->
-        <div id="listresult">
-
-        </div>
-        <!--Start box Result -->
-<!--
-        <div class="col-md-8 pull-right div-search">
-            <div class="col-md-8">
-                <h5 style="text-align:left;">
-                        Group Name
-                    </h5>
-            </div>
-            <div class="col-md-8">
-                <div class="row btn-join">
-                    <img src="pic/lock.png" width="25px">
-                    <button type="button" class="btn btn-primary btn-s"> Join</button>
+                <div class="form-group">
+                    <label>Nickname</label>
+                    <input type="text" id="nickname" class="form-control">
                 </div>
-            </div>
-            <div class="col-md-8" id="description">
-                desc
-            </div>
-            <hr>
-            <div class="col-md-8" id="path">
-                path ->
-            </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="number" id="phone" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Upload Picture</label>
+                    <img src="" style="width:180px;height:180px;" id="profilepic" class="img-responsive" alt="profile">
+                    <input type="button" value="select picture" id="selectphoto">
+
+                </div>
+                <div class="form-group" style="margin-left: 38%;">
+                    <button type="button" id="savebtn" class="btn btn-success">Save</button>
+                </div>
+
+            </form>
+
         </div>
--->
-        <!--End box Result -->
-
-
-
+        <!--End -->
     </div>
-
-
 
     <!-- /#wrapper -->
     <script type="text/javascript" src="cordova.js"></script>
@@ -158,7 +141,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/navigatorbar.js"></script>
-    <script src="js/search-group.js"></script>
+    <script src="js/edit-profile.js"></script>
     <script>
         $("#togglebtn").click(function() {
             $('.wrapper-test').addClass('active');

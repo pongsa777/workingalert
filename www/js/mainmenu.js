@@ -2,7 +2,7 @@ $(document).ready(function () {
     sessionid = localStorage.getItem("sessionid");
     localStorage.removeItem('parentgroupid');
     alert(localStorage.getItem("data title") + '  ' + localStorage.getItem("data message"));
-    var url = "http://workingalert.tk/api/getgroup.php?sessionid=" + sessionid;
+    var url = "http://workingalert.tk/api/getgroup.php?type=app&sessionid=" + sessionid;
     alert(url);
     $.get(url, function (data, status) {
         alert(JSON.stringify(data));

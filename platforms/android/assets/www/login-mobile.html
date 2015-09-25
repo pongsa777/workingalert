@@ -97,7 +97,7 @@
                     path: '/me',
                     success: function(response) {
                         var fbid = response.id;
-                        var url = "http://workingalert.tk/api/authenfb.php?fbid=" + fbid;
+                        var url = "http://workingalert.tk/api/authenfb.php?fbid=" + fbid +"&type=app";
                         $.get(url, function(data, status) {
                             if (data.status == 'success') {
                                 localStorage.setItem("sessionid", data.sessionid);
@@ -133,7 +133,7 @@
             $("#loginbtn").on("click", function(e) {
                 var email = $("#email").val();
                 var password = $("#pass").val();
-                var url = "http://workingalert.tk/api/authen.php?email=" + email + "&pass=" + password;
+                var url = "http://workingalert.tk/api/authen.php?email=" + email + "&pass=" + password + "&type=app";
                 $.get(url, function(data, status) {
                     if (data.status == 'success') {
                         localStorage.setItem("sessionid", data.sessionid);

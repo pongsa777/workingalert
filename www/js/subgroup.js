@@ -1,9 +1,8 @@
 $(document).ready(function () {
     sessionid = localStorage.getItem("sessionid");
     groupid = localStorage.getItem("parentgroupid");
-    //var url = "http://workingalert.tk/api/getsubgroup.php?sessionid=" + sessionid + "&groupid=" + groupid;
     $.ajax({
-        url: "http://workingalert.tk/api/getsubgroup.php?sessionid=" + sessionid + "&groupid=" + groupid,
+        url: "http://workingalert.tk/api/getsubgroup.php?type=app&sessionid=" + sessionid + "&groupid=" + groupid,
         type: "GET",
         dataType: "json",
         success: function (data) {
@@ -55,7 +54,7 @@ $(document).ready(function () {
     $(document).on("click", ".join", function () {
         var pos3 = $(this).attr("class").replace("btn-xs btn-primary join ", "");
         var regisgroup = $("#groupid2" + pos3).val();
-        var url2 = "http://workingalert.tk/api/joingroup.php?sessionid="+sessionid+"&groupid="+regisgroup;
+        var url2 = "http://workingalert.tk/api/joingroup.php?type=app&sessionid="+sessionid+"&groupid="+regisgroup;
         $.get(url2, function (data, status) {
             alert(JSON.stringify(data));
             document.location.href = "subgroup.html";

@@ -2,7 +2,7 @@ $(document).ready(function () {
     sessionid = localStorage.getItem("sessionid");
     groupid = localStorage.getItem("parentgroupid");
 
-    var url = "http://workingalert.tk/api/getmessage.php?sessionid=" + sessionid + "&groupid=" + groupid + "&x=" + Math.random();
+    var url = "http://workingalert.tk/api/getmessage.php?type=app&sessionid=" + sessionid + "&groupid=" + groupid + "&type=app";
     $.get(url, function (data, status) {
         //ใส่ชื่อกลุ่ม
         document.getElementById('groupname').innerHTML = '<h4 class="head-page">' + data.groupname + '</h4>';
@@ -44,7 +44,7 @@ $(document).ready(function () {
         var messageid = $("#msgid" + pos).val();
         var sessionid = localStorage.getItem('sessionid');
         var groupid = localStorage.getItem('parentgroupid');
-        var urll2 = "http://workingalert.tk/api/confirmread.php?sessionid=" + sessionid + "&groupid=" + groupid + "&messageid=" + messageid;
+        var urll2 = "http://workingalert.tk/api/confirmread.php?type=app&sessionid=" + sessionid + "&groupid=" + groupid + "&messageid=" + messageid;
         $.ajax({
             url: urll2,
             dataType:"JSON",
@@ -60,7 +60,7 @@ $(document).ready(function () {
         var groupid = localStorage.getItem('parentgroupid');
         var payload = $("#Inputmessage").val();
         var priority = $("#priority").val();
-        var url = "http://workingalert.tk/api/createmessage.php?sessionid=" + sessionid + "&groupid=" + groupid + "&msgpayload=" + payload + "&priority=" + priority;
+        var url = "http://workingalert.tk/api/createmessage.php?type=app&sessionid=" + sessionid + "&groupid=" + groupid + "&msgpayload=" + payload + "&priority=" + priority;
         $.get(url, function (data, status) {
             //alert(JSON.stringify(data));
             document.location.href = "in-group.html";

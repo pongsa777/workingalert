@@ -1,6 +1,6 @@
 $(document).ready(function () {
     sessionid = localStorage.getItem("sessionid");
-    var url = "http://workingalert.tk/api/getallmessage.php?sessionid=" + sessionid;
+    var url = "http://workingalert.tk/api/getallmessage.php?type=app&sessionid=" + sessionid +"&x="+Math.random();
     $.get(url, function (data, status) {
         if (data.status == 'success') {
             for (var i = 0; i < data.message.length; i++) {
@@ -35,7 +35,9 @@ $(document).ready(function () {
                 document.getElementById('listmessage').appendChild(div);
             }
         } else {
-
+            alert("you can't login more than 1 device");
+            localStorage.clear();
+            navigator.app.exitApp();
         }
     });
 
@@ -48,7 +50,7 @@ $(document).ready(function () {
         var pos = $(this).attr("class").replace("btn btn-default confirmread ", "");
         var messageid = $("#msgid" + pos).val();
         var sessionid = localStorage.getItem('sessionid');
-        var urll2 = "http://workingalert.tk/api/confirmreadall.php?sessionid="+sessionid+"&messageid="+messageid;
+        var urll2 = "http://workingalert.tk/api/confirmreadall.php?type=app&sessionid="+sessionid+"&messageid="+messageid;
         $.ajax({
             url: urll2,
             dataType:"JSON",
