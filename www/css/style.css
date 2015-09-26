@@ -40,7 +40,8 @@ div#wrapper {
 
 .size-box{
 	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
-	border-radius: 5px;padding: 1%; 
+	border-radius: 3px;
+	padding: 1%; 
 	background-color:#FFFFFF;
 	margin-right: 25%;
 	margin-top: 1%;
@@ -174,6 +175,241 @@ div#wrapper {
 	padding-top: 3%;
 
 }
+.btn-member{
+	margin-top: -13%;
+    margin-left: 46%;
+    padding-left: 35%;
+   
+
+}
+.box-name{
+	padding-left: 3%;
+}
+
+.name-box{
+	padding-top: 3% !important;
+	padding-bottom: 3%;
+}
+.box-set{
+	float: right !important;
+    margin-top: -8%;
+    color: #e8e8e8;
+}
+.tab-member{
+	padding-top: 10%;
+    margin-top: -1%;
+    background-color: #FFFFFF;
+    margin-left: 0.4%;
+    padding-bottom: 10%;
+    box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+	border-radius: 5px;
+
+}
+
+.box-action{
+	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+	border-radius: 5px;
+	padding: 1%; 
+	background-color:#FFFFFF;
+	margin-right: 25%;
+	margin-top: 1%;
+	margin-right: 18%;
+	width: 100%;
+	padding-bottom: 5%;
+}
+.box-leave{
+	margin-top: -3%;
+    padding-left: 13% !important;
+
+}
+
+.menu-dropdown{
+	padding-left: 85%;
+    margin-top: -7.5%;
+    color: #e8e8e8;
+}
+.positon-menulist{
+	 margin-left: 44%;
+}
+
+.btn-ack{
+	float: right;
+    margin-top: -14%;
+
+}
+
+.size-img{
+	width: 50px;
+	height: 50px;
+}
+
+.position-pannel{
+	width: 80%;
+	margin-left: 3%;
+	margin-top: 3%;
+}
+.text-pannel-header{
+	margin-top: -10% !important;
+    margin-left: 15%;
+    margin-bottom: -1% !important;
+}
+
+
+.style-panel-footer{
+	background-color: #FFFFFF !important; 
+    /*border-top:#FFFFFF!important;*/
+
+}
+.name-sent{
+	margin-top: -14%;
+    margin-left: 14%;
+
+}
+
+.navbar-second{
+	min-width: 1280px;
+	background-color: #FFFFFF !important;
+	position: fixed !important;
+	margin-top: 2%;
+	border-color: #FFFFFF !important; 
+	
+
+}
+.icon-head{
+	text-align: center;
+    padding-top: 1%;
+}
+.headposition{
+	text-align: center;
+    margin-left: 1%;
+}
+
+
+.priorityset{
+	margin-top: -1%;
+	display: inline-flex;
+	margin-bottom: 1%;
+}
+.btn-sent{
+	margin-top: -28%;
+	margin-left: 4%;
+}
+.name-ack{
+	margin-top: -10%;
+    margin-left: 20%;
+}
+.position-li{
+	padding-top: 2%;
+	border-bottom: 1px solid #d6e9c6;
+    padding-bottom: 5%;
+}
+.position-default{
+	padding-top: 2%;
+	border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 5%;
+}
+.position-ul{
+	padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.tab-seen{
+	padding-top: 10%;
+    margin-top: -1%;
+    background-color: #FFFFFF;
+    margin-left: 0.4%;
+    padding-bottom: 10%;
+    box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+	border-radius: 3px;
+
+}
+.tab-style{
+	border-bottom: 1px solid rgba(221, 221, 221, 0) !important;
+	text-align:center;
+
+}
+.box-mem{
+	margin-top: -10%;
+}
+.border-mem{
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.phone-set{
+	float: right;
+    margin-top: -8%;
+    margin-right: 5%;
+    color: #e8e8e8;
+}
+
+.set-send{
+	float: right;
+    margin-top: -10%;
+}
+
+.editbug-wrapper{
+	min-height: 700px;
+}
+
+.icon-size{
+	width: 25px;
+    height: 25px;
+}
+.panel-set{
+	margin-top: -7% !important;
+    margin-left: 12%;
+}
+.panel-h4{
+	margin-left: 2%;
+}
+
+.btn-right{
+	padding-right: 1%
+}
+
+.btn-left{
+	padding-left: 1%
+}
+.tab-size{
+	width: 108px !important;
+
+}
+.style-badge{
+	float: right;
+    background-color: #3c763d;
+}
+.a-style{
+	color: #000;
+}
+
+.send-search{
+	width: 82% !important;
+}
+.btn-send-search{
+	float: right;
+    margin-top: -11%;
+}
+.span-down{
+	float: right;
+}
+.layout-search{
+	
+    padding-left: 10% !important;
+}
+.icon-size-send{
+	width: 20px;
+	height: 20px;
+}
+.set-search-name{
+	padding-top: 1%;
+}
+
+.layout-leave{
+	margin-top: 5%;
+
+}
+
+
 
 @media (max-width: 768px) {
 	.grouping {
@@ -188,7 +424,7 @@ div#wrapper {
 	}
 	.size-box{
 		width: 80% !important;
-		margin-top: 3%;
+		margin-top: 8%;
 		margin-right: 17%;
 		padding-top: 2%;
 
@@ -286,8 +522,23 @@ div#wrapper {
 		padding-top: 3%;
 
 	}
+	.box-name{
+		padding-left: 3%;
+	}
 
-
+	.name-box{
+		padding-top: 3% !important; 
+		padding-bottom: 3%;
+	}
+	.box-set{
+	float: right !important;
+    margin-top: -8%;
+    color: #e8e8e8;
+	}
+	.set-writemsg{
+	  margin-top: 7%;
+	}
+	
 
 
 

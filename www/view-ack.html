@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <title>View member ack</title>
+</head>
+
+<body style="background-color:#E8E8E8">
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
+        <div class="col-xs-6">
+            <div class="navbar-header nav-search">
+
+            </div>
+            <div>
+                <h4 class="head-page">WorkingAlert</h4>
+            </div>
+        </div>
+
+    </nav>
+    <!--end Navbar -->
+    <!--Start contend -->
+    <div class="container-fluid" style="min-width: 330px;">
+        <div class="col-md-12" style="">
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-success">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title panel-h4">
+                            <div role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="glyphicon glyphicon-ok"></span>
+                                People who ack this
+                            <span class="badge style-badge" id="countack">4</span>
+                            </div>
+                        </h4>
+                </div>
+
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <ul class="list-unstyled" id="listreaduser">
+                             <!--
+                            <li class="position-default">
+                                <img src="img/user-b.png" class="img-circle size-img">
+                                <h6 class="name-ack">Yothika  Phinyophol</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+
+                            <li class="position-default">
+                                <img src="img/user-a.png" class="img-circle size-img">
+                                <h6 class="name-ack">Pawat  Puttaruksa</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+
+                            <li class="position-default">
+                                <img src="img/user-b.png" class="img-circle size-img">
+                                <h6 class="name-ack">Yothika  Phinyophol</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+                            <li class="position-ul">
+                                <img src="img/user.png" class="img-circle size-img">
+                                <h6 class="name-ack">Firstname  Lastname</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                                <div class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                     People who not ack this
+                                    <span class="badge style-badge" id="countunack">7</span>
+                                </div>
+                            </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <ul class="list-unstyled" id="listunreaduser">
+                            <!--
+                            <li class="position-default">
+                                <img src="img/user-b.png" class="img-circle size-img">
+                                <h6 class="name-ack">Yothika  Phinyophol</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+                            <li class="position-default">
+                                <img src="img/user.png" class="img-circle size-img">
+                                <h6 class="name-ack">Firstname  Lastname</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+
+                            <li class="position-default">
+                                <img src="img/user.png" class="img-circle size-img">
+                                <h6 class="name-ack">Pongsakorn  Yeanyang</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+
+                            <li class="position-default">
+                                <img src="img/user-a.png" class="img-circle size-img">
+                                <h6 class="name-ack">Pawat  Puttaruksa</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+
+                            <li class="position-default">
+                                <img src="img/user-b.png" class="img-circle size-img">
+                                <h6 class="name-ack">Yothika  Phinyophol</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+                            <li class="position-default">
+                                <img src="img/user.png" class="img-circle size-img">
+                                <h6 class="name-ack">Pongsakorn  Yeanyang</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+
+                            <li class="position-ul">
+                                <img src="img/user-a.png" class="img-circle size-img">
+                                <h6 class="name-ack">Pawat  Puttaruksa</h6>
+                                <span class="glyphicon glyphicon-earphone phone-set"></span>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- /#wrapper -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/navigatorbar.js"></script>
+    <script src="js/view-ack.js"></script>
+    <script>
+        $("#togglebtn").click(function() {
+            $('.wrapper-test').addClass('active');
+            $('body').css('overflow', 'hidden');
+        });
+
+        $("#toggleclose , .div-remove").click(function() {
+            $('.wrapper-test').removeClass('active');
+            $('body').css('overflow', 'visible');
+        });
+
+
+        $('#myTabs a[href="#notack"]').click(function(e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+
+    </script>
+
+</body>
+
+</html>

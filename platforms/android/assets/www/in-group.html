@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -12,33 +12,29 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
     <title>in-group</title>
 </head>
 
 <body style="background-color:#E8E8E8">
-    <div class="wrapper-test">
-        <div id="sidebar-wrapper">
+        <div class="wrapper-test" >
+            <div id="sidebar-wrapper" class=" editbug-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">WorkingAlert </a>
+                     
                 </li>
                 <div class="col-lg-12">
-                    <div class="col-xs-2">
-                        <img src="img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
+                     <div class="col-xs-2">
+                         <img src="img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
                     </div>
                     <div class="col-md-10" style="text-align:right;">
                         <h6 style="color:#FFFFFF"> Firstname  Lastname</h6>
                         <a><small>View your profile</small></a>
-
+                        
                     </div>
                 </div>
-                <br>
+               <br>
                 <li>
                     <a id="dashboard" href="#" style="color:#FFFFFF;">
                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dashboard
@@ -59,11 +55,7 @@
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create Group
                     </a>
                 </li>
-                <li>
-                    <a id="setting" style="color:#FFFFFF;">
-                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Setting
-                    </a>
-                </li>
+                
                 <li>
                     <a id="logout" style="color:#FFFFFF;">
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout
@@ -73,23 +65,25 @@
         </div>
         <div class="div-remove"></div>
     </div>
-    <div id="wrapper">
+    <div id="wrapper"> 
         <!--start navbar-->
-        <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
-            <div class="col-xs-6">
-                <div class="navbar-header nav-search">
-                    <div class="col-md-3" style="margin-top:10%;margin-left:-30%">
-                        <div class="btn btn-default" id="togglebtn">
-                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
+                <div class="col-xs-6">
+                    <div class="navbar-header nav-search">
+                        <div class="col-md-3" style="margin-top:10%;margin-left:-30%">
+                            <div class="btn btn-default" id="togglebtn">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                            </div>
                         </div>
                     </div>
+                    <div id="groupname">
+                        <h4 class="head-page">Group Name</h4>
+                    </div>
                 </div>
-                <div id="groupname">
-                    <h4 class="head-page">Group Name</h4>
-                </div>
-            </div>
-        </nav>
-        <!--end navbar-->
+
+                
+
+            </nav> <!--end navbar-->
 
         <div class="container grouping" id="listmessage">
             <div class="col-md-12">
@@ -97,113 +91,120 @@
                 <br>
             </div>
             <!--Start head menu-->
-            <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #FFFFFF;position: fixed;margin-top: 2%;">
-                <div class="col-xs-12" style="text-align: center;padding-left: 0%;margin-left: 2%;">
-                    <div class="col-xs-1">
-                        <img src="./img/addpeople.png" style="width: 33%;padding-top: 10%;margin-left: 12%;">
+            <nav class="navbar navbar-default navbar-static-top navbar-second">
+
+                    <div class="col-xs-1 icon-head" style="margin-left: 2%;">
+                        <span class="glyphicon glyphicon-plus"></span>  
                         <h6> Add member</h6>
                     </div>
-                    <div class="col-xs-1">
-                        <img src="./img/people.png" style="width: 30%;padding-top: 10%;text-align: center;">
+
+                    <div class="col-xs-1 icon-head">
+                        <span class="glyphicon glyphicon-user"></span> 
                         <h6> View member</h6>
                     </div>
-                    <div class="col-xs-1">
-                        <img src="./img/setting.png" style="width: 30%;padding-top: 10%;text-align: center;">
-                        <h6> Setting group</h6>
+
+                    <div class="col-xs-1 icon-head">
+                        <span class="glyphicon glyphicon-cog"></span> 
+                        <h6> Setting</h6>
                     </div>
-                </div>
+                
             </nav>
-            <!--End head menu-->
-            <!--Start write message-->
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="col-md-8 pull-right size-box">
-                <h6 style="text-align: left;">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Send Message
-                    </h6>
-                <textarea id="Inputmessage" class="form-control" rows="3" style="border-color:#DFDFDF">
-                </textarea>
+            <div class="col-md-12">
                 <br>
-
-                <div class="col-md-12" style="margin-top: -1%;display: inline-flex;margin-bottom: 1%;">
-                    <div class="col-md-4" style="margin-left: -4%;">
-                        <h6 class="text-left" style="text-align: left;margin-left: -2%;">
-                                <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span> 
+                <br>
+                <br>
+                <br>
+            </div>
+        
+        <!--start write message-->
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default position-pannel">
+                <div class="panel-body" role="tab" id="headingOne">
+                    <h4 class="panel-title panel-h4">
+                            <div role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="glyphicon glyphicon-edit"></span>
+                                Write Message
+                            <span class="glyphicon glyphicon-triangle-bottom span-down"></span>
+                            </div>
+                        </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <textarea class="form-control" id="Inputmessage" rows="3" placeholder="Write Message">
+                        </textarea>
+                        <h6 class="text-left">
+                                <span class="glyphicon glyphicon-bullhorn"></span> 
                                 Message Priority
-                            </h6>
+                        </h6>
 
-                        <select id="priority" class="form-control input-sm" style="width: 150px;margin-left: 3%;">
+                        <select class="form-control input-sm" id="priority" style="width: 150px">
                             <option value="N">Normal</option>
                             <option value="H">Important</option>
                         </select>
+                        <button type="button" id="sendmsg" class="btn btn-success set-send"> Send</button>
                     </div>
                 </div>
-
-                <div class="col-md-12 box-sent">
-                    <div class="row">
-                        <button type="button" id="submitbtn" class="btn btn-success" style="margin-top: -1%;margin-left: 4%;">Send</button>
-                    </div>
-                </div>
-
             </div>
-            <!--end write message-->
-            <br>
-
-
-            <!--start message1-->
-            <!--
-                <div class="col-md-8 pull-right size-box">
-                    <div class="col-xs-1">
-                        <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
+        </div>
+        <!--end write message-->
+        <div id="listmessage">
+<!-- start message 
+            <div class="panel panel-success position-pannel">
+                <img src="img/bookmark.png" class="size-img" style="float: right;">
+                <div class="panel-heading">
+                    <img src="img/icon/ball.png" class="icon-size">
+                    <h3 class="panel-title panel-set">Football Team</h3>
+                    <input type="hidden" value="" id="msgid">
+                </div>
+                <div class="panel-body">
+                    For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.
+                </div>
+                <div class="panel-footer style-panel-footer">
+                    <img src="img/user-a.png" class="img-circle size-img">
+                    <div class="col-md-4 name-sent">
+                        <b>Pongsakorn  Yeanyang</b>
+                        <br>
+                        <small> August 30 at 5:30 pm</small>
+                        <br>
+                        <a href="#">People who ack this</a>
                     </div>
-                    
-                    <div class="col-xs-1 bookmark-position">
-                        <img src="img/bookmark.png" style="width: 50px;height: 50px;">
-                    </div>
-                    
-                    <div class="col-lg-6 textbox-dashboard">
-                        <h6 style="padding-left: 17%;"> Pongsakorn  Yeanyang</h6>
-                        <h6 style="margin-top: -2%;padding-left: 14%;"><small> August 30 at 5:30 pm</small></h6>
-                        <div class="col-md-12">
-                            <h5>ขอเลื่อนการประชุมในวันอังคาร</h5>
-                        </div>
-                    </div>
-
-                    <div class="btn-group btn-group-justified" role="group" aria-label="..." style="padding-bottom: 3%;">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default"><b> Confirm</b></button>
-                        </div>
-                    </div>
-
-                    <hr width="95%" style="margin-top: 1%;">
-
-                    <div class="btn-group btn-group-justified" role="group" style="margin-top: -5%;margin-bottom: 1%;">
-                        <div id="callbtn" class="btn-group" role="group">
-                            <button type="button" class="btn btn-default"  style="border-color: #FFFFFF;color: #808080;border-right: 1px solid #808080;">
-                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Call</button>
-                        </div>
-                        <div id="seenbtn" class="btn-group" role="group">
-                            <button type="button" class="btn btn-default"  style="border-color: #FFFFFF;color: #808080;">Seen</button>
-                        </div>
+                    <div class="btn-group btn-ack">
+                        <button type="button" class="btn btn-default"><b>Ack</b></button>
                     </div>
                 </div>
+            </div>
+
+
+
+            <div class="panel panel-default position-pannel">
+                <div class="panel-heading">
+                    <img src="img/icon/ball-b.png" class="icon-size">
+                    <h3 class="panel-title panel-set"> Football Team</h3>
+                    <input type="hidden" value="" id="msgid">
+                </div>
+                <div class="panel-body">
+                    การจัดการทรัพยากรอย่างยืดหยุ่นเป็นปัจจัยสำคัญ ในความสำเร็จของระบบประมวลผลแบบกลุ่มเมฆ หัวใจสำคัญคือการจัดสรรทรัพยากรให้กับผู้ใช้งานได้รวดเร็วและตรงตามความต้องการ โดยปกติแล้วการจัดสรรทรัพยากรบนระบบประมวลผลแบบกลุ่มเมฆนั้นทำได้ โดยการเพิ่มจำนวนเซิร์ฟเวอร์เสมือน แต่เนื่องจากวิธีนี้ระบบจำเป็นที่จะต้องใช้เวลาคัดลอกอิมเมจไฟล์ การเตรียมระบบรวมถึงการเริ่มต้นระบบใหม่ ซึ่งใช้เวลารวมกันประมาณ 2-5 นาที ในงานวิจัยฉบับนี้นำเสนอการจัดสรรทรัพยากรบน
+                </div>
+                <div class="panel-footer style-panel-footer">
+                    <img src="img/user-a.png" class="img-circle size-img">
+                    <div class="col-md-4 name-sent">
+                        <b>Pongsakorn  Yeanyang</b>
+                        <br>
+                        <small> August 30 at 5:30 pm</small>
+                        <br>
+                        <a href="#">People who saw this</a>
+                    </div>
+                </div>
+            </div>
 -->
-            <!--end message1-->
-
         </div>
-        <!--end contend-->
+
+
     </div>
-    <!--end wrapper-->
+    <!-- end big wrapper -->
 
 
 
-
-
-
-
-    <!-- /#wrapper -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="cordova_plugins.js"></script>
     <script src="js/jquery.min.js"></script>

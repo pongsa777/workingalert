@@ -14,7 +14,7 @@ $(document).ready(function () {
                     var path = data.data[i].path;
                     lock = data.data[i].lock;
                     if(lock != ''){
-                        lock = '<img src="pic/lock.png" width="15px">';
+                        lock = '<img src="pic/lock.png" width="15px" class="lock">';
                     }else{
                         lock = '';    
                     }
@@ -31,15 +31,19 @@ $(document).ready(function () {
     });
     
     $(document).on("click", ".detail", function () {
-        var havePriority = $(this).siblings('.bookmark-position').length;
+        //var havePriority = $(this).siblings('.lock').length;
         var pos = $(this).attr("class").replace("btn btn-primary btn-xs detail ", "");
         var groupid = $("#groupid" + pos).val();
         var url2 = "http://workingalert.tk/api/joingroup.php?type=app&sessionid="+sessionid+"&groupid="+groupid;
         $.get(url2, function (data, status) {
             if(data.status=='success'){
-                alert('join success');    
+                alert('join success'+data.description);    
+            }else if(data.status=='password'){
+                alert('join success'+data.description);
+                localStorage.setItem("accessgroupid",groupid)
+                document.location.href = 'join-group.html';
             }else{
-                alert('some problem');   
+                alert('some problem can not join');    
             }
         });
     });

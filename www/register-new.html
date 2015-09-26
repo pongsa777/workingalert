@@ -5,81 +5,97 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <title>Register</title>
 </head>
 
-<body>
-    <div align="center" class="container-fluid" style="width: 80%;margin-top: 5%;">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-						Register
-					</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <label for="exampleInputName2">Name</label>
-                                <input id="InputFirstName" type="text" class="form-control" placeholder="Firstname">
+<body style="background-color:#E8E8E8">
 
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail2"></label>
-                                <input id="InputLastName" type="text" class="form-control" placeholder="Lastname">
-                            </div>
-                            <br>
+    <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
+        <div class="col-xs-6">
+            <div class="navbar-header nav-search">
 
-                            <div class="form-group" style="padding-top: 2%;">
-
-                                <label for="exampleInputEmail2">Nickname</label>
-                                <input type="text" class="form-control" id="InputNickName" placeholder="ex.John">
-                            </div>
-                            <br>
-
-                            <div class="form-group" style="padding-top: 2%;">
-                                <label>Phone Number</label>
-                                <input id="InputPhone" type="number" class="form-control" placeholder="xxx-xxxx-xxx">
-
-                            </div>
-                            <br>
-
-                            <div class="form-group" style="padding-top: 2%;">
-                                <label>Email address</label>
-                                <input id="InputEmail" type="email" class="form-control" placeholder="exaple@wka.com">
-                            </div>
-                            <br>
-
-
-                            <div class="form-group" style="padding-top: 2%;">
-                                <label>Password</label>
-                                <input id="InputPassword" type="password" class="form-control" placeholder="password"><br>
-                                <input id="InputPassword2" type="password" class="form-control" placeholder="password again">
-                            </div>
-
-
-                        </form>
-                        <button id="submitbtn" type="button" class="btn btn-success" style="margin-top: 10%">Register</button>
-
-                    </div>
-
-                </div>
+            </div>
+            <div>
+                <h4 class="head-page">Register</h4>
             </div>
         </div>
+
+    </nav>
+    <!--end Navbar -->
+    <!--Start contend -->
+    <div class="container-fluid" style="min-width: 330px;">
+        <div class="col-md-12" style="">
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <!--Start -->
+        <div class="col-md-8 pull-right div-search" style="padding-bottom: 12%;">
+            <form class="form-inline" style="padding-top: 5%;">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="InputFirstName" class="form-control" placeholder="Fistname">
+                    <br>
+                    <input type="text" class="form-control" id="InputLastName" placeholder="Lastname">
+                </div>
+
+                <div class="form-group">
+                    <label>Nickname</label>
+                    <input type="text" id="InputNickName" class="form-control" placeholder="ex.John">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="number" id="InputPhone" class="form-control" placeholder="xxx-xxxx-xxx">
+                </div>
+
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" id="InputEmail" class="form-control" placeholder="example@wka.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="InputPassword" class="form-control" placeholder="Password">
+                    <br>
+                    <input type="password" id="InputPassword2" class="form-control" placeholder="Password agin">
+
+                </div>
+
+                <div class="form-group" style="margin-left: 38%;">
+                    <button type="button" id="submitbtn" class="btn btn-success"> Register</button>
+                </div>
+
+            </form>
+
+        </div>
+        <!--End -->
+
     </div>
 
+
+
+    <!-- /#wrapper -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="cordova_plugins.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
         $(document).ready(function() {
-            // start of backend script
-
             $("#submitbtn").on("click", function(e) {
-                alert('eiei');
                 var email = $("#InputEmail").val();
                 var password = $("#InputPassword").val();
                 var password2 = $("#InputPassword2").val();
@@ -87,17 +103,38 @@
                 var lastname = $("#InputLastName").val();
                 var nickname = $("#InputNickName").val();
                 var phone = $("#InputPhone").val();
-                var url = "http://workingalert.tk/api/register.php?email=" + email + "&pass=" + password + "&repass=" + password2 + "&firstname=" + firstname + "&lastname=" + lastname + "&nickname=" + nickname + "&phone=" + phone;
-                $.get(url, function(data, status) {
-                    alert(JSON.stringify(data));
-                    document.location.href = "index.html";
-                });
-                }else{
-                    alert('password is not match');    
+                if (firstname == "") {
+                    alert('please input firstname');
+                } else if (lastname == "") {
+                    alert('please input lastname');
+                } else if (nickname == "") {
+                    alert('please input nickname');
+                } else if (phone == "") {
+                    alert('please input phone NO.');
+                } else if (email == "") {
+                    alert('please input email');
+                } else if (password == "") {
+                    alert('please input password');
+                } else if (password2 == "") {
+                    alert('please input password again');
+                } else if (password !== password2) {
+                    alert('password not match');
+                } else {
+                    var url = "http://workingalert.tk/api/register.php?email=" + email + "&pass=" + password + "&repass=" + password2 + "&firstname=" + firstname + "&lastname=" + lastname + "&nickname=" + nickname + "&phone=" + phone;
+                    $.get(url, function(data, status) {
+                        if(data.status == 'success'){
+                            alert('register successfull, now you can login');
+                            document.location.href = "index.html";
+                        }else{
+                            alert(data.description);    
+                        }
+                    });
                 }
             });
         });
+
     </script>
+
 </body>
 
 </html>

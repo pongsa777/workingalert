@@ -93,7 +93,7 @@ $(document).ready(function () {
                 success: function (response) { //แสดงข้อมูลเมื่อทำงานเสร็จ 
                     //alert(JSON.stringify(response));
                     alert('save successfull');
-                    document.location.href = 'view-profile.php';
+                    document.location.href = 'view-profile.html';
                 }
             });
 
@@ -129,7 +129,7 @@ $(document).ready(function () {
                 //localStorage.setItem("userid", userid); //Send data between pages
                 alert(r.response + "\n" + r.responseCode);
                 alert("save successfull");
-                document.location.href = 'view-profile.php';
+                document.location.href = 'view-profile.html';
             }
 
             function fail(error) {
