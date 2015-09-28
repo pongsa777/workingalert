@@ -127,7 +127,7 @@ $(document).ready(function () {
                 //userid = r.user_id;
                 //alert("User ID: "+userid);
                 //localStorage.setItem("userid", userid); //Send data between pages
-                alert(r.response + "\n" + r.responseCode);
+                //alert(r.response + "\n" + r.responseCode);
                 alert("save successfull");
                 document.location.href = 'view-profile.html';
             }

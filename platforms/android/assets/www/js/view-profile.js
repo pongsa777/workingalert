@@ -12,7 +12,11 @@ $(document).ready(function () {
                 document.getElementById('nickname').innerHTML = result.user.nickname;
                 document.getElementById('phone').innerHTML = result.user.phone;
                 document.getElementById('email').innerHTML = result.user.email;
-                document.getElementById('profilepic').src = result.user.picture;
+                pict = result.user.picture;
+                if(pict == "" || pict == null){
+                    pict = 'img/user-a.png';
+                }
+                document.getElementById('profilepic').src = pict;
                 if (result.user.password != "") {
                     document.getElementById('editpanel').innerHTML = '<h6 style="text-align: left;"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Profile<button type="button" id="editbtn" class="btn btn-default btn-xs box-edit" style="margin-top: -1%;">Edit Profile</button><button type="button" id="changepassbtn" class="btn btn-default btn-xs box-edit" style="margin-top: -1%;margin-right:10px;">Change Password</button></h6>';
                 }

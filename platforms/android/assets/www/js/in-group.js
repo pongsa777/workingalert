@@ -13,6 +13,9 @@ $(document).ready(function () {
             var priority = data.message[i].priority;
             var from = data.message[i].fromname;
             var pict = data.message[i].pict;
+            if(data.message[i].pict == "" || data.message[i].pict == null){
+                    pict = 'img/user-a.png';
+            }
             var read = data.message[i].read;
             if(read == 'y' || read == 'Y'){
                 var btnack = '';

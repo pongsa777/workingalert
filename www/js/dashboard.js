@@ -9,6 +9,9 @@ $(document).ready(function () {
                 var priority = data.message[i].priority;
                 var fromid = data.message[i].formid;
                 var pict = data.message[i].pict;
+                if(data.message[i].pict == "" || data.message[i].pict == null){
+                    pict = 'img/user-a.png';
+                }
                 var fromname = data.message[i].formname;
                 var read = data.message[i].read;
                 var datetime = data.message[i].date + ' ' + data.message[i].time;

@@ -14,6 +14,9 @@ $(document).ready(function () {
                         var name = result.readuser[i].firstname+' '+result.readuser[i].lastname;
                         var nickname = result.readuser[i].nickname;
                         var picture = result.readuser[i].picture;
+                        if(result.readuser[i].picture == "" || result.readuser[i].picture == null){
+                            picture = 'img/user-a.png';
+                        }
                         var phone = result.readuser[i].phone;
                         var phonetel = "'tel:"+phone+"'";
                         var li = document.createElement('li');
@@ -30,6 +33,9 @@ $(document).ready(function () {
                         var name2 = result.unreadmember[j].firstname+' '+result.unreadmember[j].lastname;
                         var nickname2 = result.unreadmember[j].nickname;
                         var picture2 = result.unreadmember[j].picture;
+                        if(result.unreadmember[j].picture == "" || result.unreadmember[j].picture == null){
+                            picture2 = 'img/user.png';
+                        }
                         var phone2 = result.unreadmember[j].phone;
                         var phonetel2 = "'tel:"+phone2+"'";
                         var li2 = document.createElement('li');

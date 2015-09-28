@@ -106,7 +106,7 @@
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                         <div class="panel-body">
-                            <textarea class="form-control" id="Inputmessage" rows="3" placeholder="Write Message">
+                            <textarea class="form-control" id="Inputmessage" rows="3" placeholder="Write Message" onfocus="makeblank()">
                             </textarea>
                             <h6 class="text-left">
                                 <span class="glyphicon glyphicon-bullhorn"></span> 
@@ -188,32 +188,35 @@
             </div>
 -->
             </div>
-
-
         </div>
-        <!-- end big wrapper -->
+
+    </div>
+    <!-- end big wrapper -->
 
 
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="cordova_plugins.js"></script>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/navigatorbar.js"></script>
-        <script src="js/in-group.js"></script>
-        <script src="js/profilepict.js"></script>
-        <script>
-            $("#togglebtn").click(function() {
-                $('.wrapper-test').addClass('active');
-                $('body').css('overflow', 'hidden');
-            });
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/navigatorbar.js"></script>
+    <script src="js/in-group.js"></script>
+    <script src="js/profilepict.js"></script>
+    <script>
+        $("#togglebtn").click(function() {
+            $('.wrapper-test').addClass('active');
+            $('body').css('overflow', 'hidden');
+        });
 
-            $("#toggleclose , .div-remove").click(function() {
-                $('.wrapper-test').removeClass('active');
-                $('body').css('overflow', 'visible');
-            });
+        $("#toggleclose , .div-remove").click(function() {
+            $('.wrapper-test').removeClass('active');
+            $('body').css('overflow', 'visible');
+        });
 
-        </script>
+        function makeblank() {
+            document.getElementById('Inputmessage').value = '';
+        }
+    </script>
 </body>
 
 </html>
