@@ -48,7 +48,7 @@ var app = {
             //alert(JSON.stringify(data));
             sessionid = localStorage.getItem("sessionid");
             localStorage.setItem("registrationId",data.registrationId);
-            var url2 = "http://workingalert.tk/api/registerpushid.php?sessionid="+sessionid+"&pushid="+data.registrationId;
+            var url2 = "http://workingalert.tk/api/registerpushid.php?type=app&sessionid="+sessionid+"&pushid="+data.registrationId;
             $.get(url2, function(data, status) {
                 if(status=='failed'){
                     alert('GCM Register fail');    

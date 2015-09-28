@@ -13,7 +13,6 @@ $(document).ready(function () {
             document.getElementById('repassword').value = "";
         }else{
             var url = 'http://workingalert.tk/api/creategroup.php?type=app&sessionid=' + sessionid + '&parentgroupid=' + parentid + '&groupname=' + groupname + '&description=' + desc + '&password=' + pass;
-            alert(url);
             $.get(url, function (data, status) {
                 if (data.status == 'success') {
                     document.location.href = "dashboard.html";

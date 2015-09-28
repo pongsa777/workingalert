@@ -37,13 +37,14 @@ $(document).ready(function () {
         var url2 = "http://workingalert.tk/api/joingroup.php?type=app&sessionid="+sessionid+"&groupid="+groupid;
         $.get(url2, function (data, status) {
             if(data.status=='success'){
-                alert('join success'+data.description);    
+                alert(data.description);
+                document.location.href = 'search-group.html';
             }else if(data.status=='password'){
-                alert('join success'+data.description);
+                alert('This group require password, '+data.description);
                 localStorage.setItem("accessgroupid",groupid)
                 document.location.href = 'join-group.html';
             }else{
-                alert('some problem can not join');    
+                alert('some problem can not join');
             }
         });
     });

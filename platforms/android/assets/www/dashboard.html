@@ -5,37 +5,41 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
     <title>Dashboard</title>
 </head>
 
 <body style="background-color:#E8E8E8">
-    <!--start sidebar-->
     <div class="wrapper-test">
-        <div id="sidebar-wrapper">
+        <div id="sidebar-wrapper" class=" editbug-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">WorkingAlert</a>
+                    <a href="#">WorkingAlert </a>
 
                 </li>
-
                 <div class="col-lg-12">
                     <div class="col-xs-2">
-                        <img src="img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
+                        <img id="profilepict" src="img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
                     </div>
-
                     <div class="col-md-10" style="text-align:right;">
-                        <h6 style="color:#FFFFFF"> Firstname  Lastname</h6>
+                        <h6 id="profilename" style="color:#FFFFFF"> Firstname  Lastname</h6>
                         <a href="view-profile.html"><small>View your profile</small></a>
 
                     </div>
                 </div>
                 <br>
-
-
-                <!--start sidebar menu-->
                 <li>
                     <a id="dashboard" href="#" style="color:#FFFFFF;">
                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dashboard
@@ -56,11 +60,7 @@
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create Group
                     </a>
                 </li>
-                <li>
-                    <a id="setting" style="color:#FFFFFF;">
-                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Setting
-                    </a>
-                </li>
+
                 <li>
                     <a id="logout" style="color:#FFFFFF;">
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout
@@ -68,12 +68,8 @@
                 </li>
             </ul>
         </div>
-        <!--end sidebar menu-->
         <div class="div-remove"></div>
     </div>
-    <!--end sidebar-->
-
-    <!--start wrapper-->
     <div id="wrapper">
         <!--start navbar-->
         <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
@@ -85,173 +81,165 @@
                         </div>
                     </div>
                 </div>
-                <div id="dashboard">
+                <div>
                     <h4 class="head-page">Dashboard</h4>
                 </div>
             </div>
+
+
+
         </nav>
         <!--end navbar-->
 
-        <!--start content-->
         <div class="container grouping" id="listmessage">
-
-            <div class="col-md-12" style="">
-                <br>
+            <div class="col-md-12">
                 <br>
                 <br>
             </div>
+            <!--Start head menu-->
 
-            <!--start message1-->
-            <!--          
-                <div class="col-md-8 pull-right size-box">
-                    <div class="col-xs-1">
-                        <img src="./img/user-a.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
-                    </div>
 
-                    <div class="col-lg-6 textbox-dashboard">
-                        <h6> Pongsakorn  Yeanyang</h6>
-                        <h6 style="margin-top: -2%;"><small> August 30 at 5:30 pm</small></h6>
-                        <div class="col-md-12">
-                            <h5>ขอเลื่อนการประชุมในวันอังคาร</h5>
-                        </div>
+            <!-- <div class="panel-group" >
+                <div class="panel panel-default position-pannel set-writemsg">
+                    <div class="panel-body">
+                        <h4 class="panel-title panel-h4">
+                            <div role="button">
+                            <span class="glyphicon glyphicon-edit"></span>
+                                Write Message
+                            </div>
+                        </h4>
                     </div>
-
-                    <hr width="95%" style="margin-top: 9%;">
-
-                    <div class="col-lg-12" style="margin-top: -2%;">
-                        <h6><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Group : 
--->
-            <!--start link path-->
-            <!--
-                            <ol class="breadcrumb" style="background-color: #FFFFFF;text-align: right;display: inline-block;">
-                                
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Library</a></li>
-                                <li class="active">Data</li>
-                            </ol>
-                        </h6>
--->
-            <!--end link path-->
-            <!--
-                    </div>
-                    <div class="col-md-12" style="text-align:right;margin-top: -5%;">
-                        <div>
-                            <label>
-                                <input type="radio"> Read
-                            </label>
-                        </div>
-                    </div>
+        
+                   
                 </div>
-                <br>
--->
-            <!--end message1-->
-<!--
-            <div class="col-md-8 pull-right size-box">
-                <div class="col-xs-1">
-                    <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
-                </div>
-
-                <div class="col-xs-1 bookmark-position">
-                    <img src="img/bookmark.png" style="width: 50px;height: 50px;">
-                </div>
-
-                <div class="col-lg-6 textbox-dashboard">
-                    <h6 style="padding-left: 17%;"> Pongsakorn  Yeanyang</h6>
-                    <h6 style="margin-top: -2%;padding-left: 14%;"><small> August 30 at 5:30 pm</small></h6>
-                    <div class="col-md-12">
-                        <h5>ขอเลื่อนการประชุมในวันอังคาร</h5>
-                    </div>
-                </div>
-
-                <hr width="95%" style="margin-top: 9%;">
-
-                <div class="col-xs-12" style="text-align:left">
-
-                    <h6><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Group :
-                            <ol class="breadcrumb" style="background-color: #FFFFFF;text-align: right;display: inline-block;">
-                                <li>Home</li>
-                                <li>Library</li>
-                                <li>Data</li>
-                                
-                            </ol>
-                            <ol class="breadcrumb" style="background-color: #FFFFFF;text-align: right;">
-                                <li>Home</li>
-                                <li>Library</li>
-                                <li>Data</li>
-                            </ol>
-                            <ol class="breadcrumb" style="background-color: #FFFFFF;text-align: right;">
-                                <li>Home</li>
-                                <li>Library</li>
-                                <li>Data</li>
-                            </ol>
-                        </h6>
-                </div>
-
-                <div class="btn-group btn-group-justified" role="group" aria-label="..." style="padding-bottom: 3%;">
-                    <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default"><b> Confirm</b></button>
-                    </div>
-                </div>
-
-                <hr width="95%" style="margin-top: 1%;">
-
-                <div class="btn-group btn-group-justified" role="group" style="margin-top: -5%;margin-bottom: 1%;">
-                    <div id="callbtn" class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" style="border-color: #FFFFFF;color: #808080;border-right: 1px solid #808080;">
-                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Call</button>
-                    </div>
-                    <div id="seenbtn" class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" style="border-color: #FFFFFF;color: #808080;">Seen</button>
-                    </div>
-                </div>
-           
-            
-            
             </div>
  -->
-        </div>
-        <!--end contend-->
-    </div>
-    <!--end wrapper-->
+            <div id="listmessage">
+                <!--
+                <div class="panel panel-success position-pannel set-writemsg">
+                    <img src="img/bookmark.png" class="size-img" style="float: right;">
+                    <div class="panel-heading">
+                        <img src="img/icon/ball.png" class="icon-size">
+                        <h3 class="panel-title panel-set">Football Team</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.
+                    </div>
+
+                    <div class="panel-footer style-panel-footer">
+                        <img src="img/user-a.png" class="img-circle size-img">
+                        <div class="col-md-4 name-sent">
+                            <b>Pongsakorn  Yeanyang</b>
+                            <br>
+                            <small> August 30 at 5:30 pm</small>
+                            <br>
+                            <a href="#">People who ack this</a>
+                        </div>
+                        <div class="btn-group btn-ack">
+                            <button type="button" class="btn btn-default"><b> Ack</b></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-success position-pannel">
+                    <img src="img/bookmark.png" class="size-img" style="float: right;">
+                    <div class="panel-heading">
+                        <img src="img/icon/web.png" class="icon-size">
+                        <h3 class="panel-title panel-set"> Web Developer</h3>
+                    </div>
+                    <div class="panel-heading">
+                        <img src="img/icon/com.png" class="icon-size">
+                        <h3 class="panel-title panel-set">Designer</h3>
+                    </div>
+                    <div class="panel-body">
+                        For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.
+                    </div>
+                    <div class="panel-footer style-panel-footer">
+                        <img src="img/user-a.png" class="img-circle size-img">
+                        <div class="col-md-4 name-sent">
+                            <b>Pongsakorn  Yeanyang</b>
+                            <br>
+                            <small> August 30 at 5:30 pm</small>
+                            <br>
+                            <a href="#">People who ack this</a>
+                        </div>
+                        <div class="btn-group btn-ack">
+                            <button type="button" class="btn btn-default"><b> Ack</b></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default position-pannel">
 
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="cordova_plugins.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/dashboard.js"></script>
-    <script src="js/navigatorbar.js"></script>
-    <script type="text/javascript" src="js/push.js"></script>
-    <script type="text/javascript" src="js/disableBackbutton.js"></script>
+                    <div class="panel-heading">
+                        <img src="img/icon/school-b.png" class="icon-size">
+                        <h3 class="panel-title panel-set"> KMUTT</h3>
+                    </div>
 
-    <script>
-        document.addEventListener("deviceready", onDeviceReady, false);
+                    <div class="panel-body">
+                        การจัดการทรัพยากรอย่างยืดหยุ่นเป็นปัจจัยสำคัญ ในความสำเร็จของระบบประมวลผลแบบกลุ่มเมฆ หัวใจสำคัญคือการจัดสรรทรัพยากรให้กับผู้ใช้งานได้รวดเร็วและตรงตามความต้องการ โดยปกติแล้วการจัดสรรทรัพยากรบนระบบประมวลผลแบบกลุ่มเมฆนั้นทำได้ โดยการเพิ่มจำนวนเซิร์ฟเวอร์เสมือน แต่เนื่องจากวิธีนี้ระบบจำเป็นที่จะต้องใช้เวลาคัดลอกอิมเมจไฟล์ การเตรียมระบบรวมถึงการเริ่มต้นระบบใหม่ ซึ่งใช้เวลารวมกันประมาณ 2-5 นาที ในงานวิจัยฉบับนี้นำเสนอการจัดสรรทรัพยากรบน
+                    </div>
 
-        function onDeviceReady() {
-            document.addEventListener("backbutton", function(e) {
-                if (confirm('exit application ?')) {
-                    navigator.app.exitApp();
-                } else {
-                    e.preventDefault();
+                    <div class="panel-footer style-panel-footer">
+                        <img src="img/user-b.png" class="img-circle size-img">
+                        <div class="col-md-4 name-sent">
+                            <b>Pongsakorn  Yeanyang</b>
+                            <br>
+                            <small> August 30 at 5:30 pm</small>
+                            <br>
+                            <a href="#">People who saw this</a>
+                        </div>
+
+                    </div>
+
+                </div>
+-->
+            </div>
+            <!--close list msg -->
+
+
+
+
+
+
+
+
+
+
+            <!-- /#wrapper -->
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="cordova_plugins.js"></script>
+            <script src="js/jquery.min.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/navigatorbar.js"></script>
+            <script src="js/dashboard.js"></script>
+            <script src="js/push.js"></script>
+            <script src="js/profilepict.js"></script>
+            <script>
+                $("#togglebtn").click(function() {
+                    $('.wrapper-test').addClass('active');
+                    $('body').css('overflow', 'hidden');
+                });
+
+                $("#toggleclose , .div-remove").click(function() {
+                    $('.wrapper-test').removeClass('active');
+                    $('body').css('overflow', 'visible');
+                });
+                
+                document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function(e) {
+                        if (confirm('exit application ?')) {
+                            navigator.app.exitApp();
+                        } else {
+                            e.preventDefault();
+                        }
+                    }, false);
                 }
-            }, false);
-        }
 
-
-
-
-
-        $("#togglebtn").click(function() {
-            $('.wrapper-test').addClass('active');
-            $('body').css('overflow', 'hidden');
-        });
-
-        $("#toggleclose , .div-remove").click(function() {
-            $('.wrapper-test').removeClass('active');
-            $('body').css('overflow', 'visible');
-        });
-
-    </script>
+            </script>
 </body>
 
 </html>

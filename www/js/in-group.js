@@ -14,10 +14,10 @@ $(document).ready(function () {
             var from = data.message[i].fromname;
             var pict = data.message[i].pict;
             var read = data.message[i].read;
-            if(read === 'y' || read === 'Y'){
+            if(read == 'y' || read == 'Y'){
                 var btnack = '';
             }else{
-                var btnack = '<button type="button" class="btn btn-default ack "><b>Ack</b></button>';
+                var btnack = '<button type="button" class="btn btn-default ack ' + i + '"><b>Ack</b></button>';
             }
             
             var datetime = data.message[i].date + ' ' + data.message[i].time;
@@ -64,7 +64,7 @@ $(document).ready(function () {
                 +'<div class="col-md-4 name-sent">'
                 +'<b>'+from+'</b><br>'
                 +'<small>'+datetime+'</small><br>'
-                +'<div id="seeack" class="seeack ' + i + '"><a href="#">People who ack this</a></div>'
+                //+'<div id="seeack" class="seeack ' + i + '"><a href="#">People who ack this</a></div>'
                 +'</div>'
                 +'<div class="btn-group btn-ack">'
                 +'</div>'
@@ -116,7 +116,6 @@ $(document).ready(function () {
         
     });
 
-
     $("#sendmsg").on("click", function (e) {
         var sessionid = localStorage.getItem('sessionid');
         var groupid = localStorage.getItem('parentgroupid');
@@ -125,12 +124,13 @@ $(document).ready(function () {
         var url = "http://workingalert.tk/api/createmessage.php?type=app&sessionid=" + sessionid + "&groupid=" + groupid + "&msgpayload=" + payload + "&priority=" + priority;
         $.get(url, function (data, status) {
             //alert(JSON.stringify(data));
+            alert('send message successfull');
             document.location.href = "in-group.html";
         });
     });
 
+    $("#groupsetting").on("click", function (e) {
+        document.location.href = "setting-group.html";
+    });
     
-    
-    
-
 });
