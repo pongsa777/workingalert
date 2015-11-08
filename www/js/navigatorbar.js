@@ -12,6 +12,7 @@ $(document).ready(function () {
     });
 
     $("#creategroup").on("click", function (e) {
+        localStorage.removeItem('parentgroupid');
         document.location.href = "create-group.html";
     });
 

@@ -181,6 +181,8 @@ $(document).ready(function () {
                 var msgreadstatus = data.message[i].read;
                 var msgreachstatus = data.message[i].reach;
                 var msgdatetime = data.message[i].date + ' ' + data.message[i].time;
+                var to_id = data.message[i].to_id;
+                var to_name = data.message[i].to_name;
                 
 
 
@@ -189,6 +191,12 @@ $(document).ready(function () {
                 if(msgpriority=='H' || msgpriority=='h'){ //แบบข้อความ high priority
                     //generate header
                     var inheadcollapse = "";
+                    
+                    var headvisible = '<img src="./icon/normal/12.png" class="icon-size">'
+                                            + '<h3 class="panel-title panel-set">'
+                                            + to_name
+                                            + '</h3>'
+                                            + '<span class="glyphicon glyphicon-chevron-down down-span" role="button" data-toggle="collapse" data-target="#snd'+(i+5)+'" aria-expanded="false" aria-controls="collapseExample"></span>';
                     for(var j = 0 ; j < data.message[i].grouppath.length ; j++){
                         var temppath = data.message[i].grouppath[j].path;
                         var grouppathid = data.message[i].grouppath[j].id;
@@ -196,17 +204,6 @@ $(document).ready(function () {
                         var grouppathfirst = temppath.substr(0,temppath.indexOf('>')-1);
                         var grouppathlast = temppath.substr(temppath.lastIndexOf('>')+1);
                         
-                        if(j == 0){
-                            //generate visible
-                            var headvisible = '<img src="./icon/normal/12.png" class="icon-size">'
-                                            + '<h3 class="panel-title panel-set">'
-                                            + grouppathlast
-                                            + '</h3>'
-                                            + '<span class="glyphicon glyphicon-chevron-down down-span" role="button" data-toggle="collapse" data-target="#snd'+(i+5)+'" aria-expanded="false" aria-controls="collapseExample"></span>'
-                                            + '<p class="h6-group">via<span class="glyphicon glyphicon-triangle-right"></span>'
-                                            + grouppathfirst
-                                            + '</p>';
-                        }else{
                             //generate collapse
                             inheadcollapse = inheadcollapse 
                                             +'<div class="panel-heading group-margin">'
@@ -218,7 +215,6 @@ $(document).ready(function () {
                                                 +'<span class="glyphicon glyphicon-triangle-right"></span>'
                                                 +grouppathfirst
                                             +'</p></div>';
-                        }
                     }
                     var headerbox = '<div class="panel-heading">'
                                         + headvisible
@@ -254,6 +250,11 @@ $(document).ready(function () {
                     
                     //generate header
                     var inheadcollapse = "";
+                    var headvisible = '<img src="./icon/normal/12.png" class="icon-size">'
+                                            + '<h3 class="panel-title panel-set">'
+                                            + to_name
+                                            + '</h3>'
+                                            + '<span class="glyphicon glyphicon-chevron-down down-span" role="button" data-toggle="collapse" data-target="#snd'+(i+5)+'" aria-expanded="false" aria-controls="collapseExample"></span>';
                     for(var j = 0 ; j < data.message[i].grouppath.length ; j++){
                         var temppath = data.message[i].grouppath[j].path;
                         var grouppathid = data.message[i].grouppath[j].id;
@@ -261,29 +262,18 @@ $(document).ready(function () {
                         var grouppathfirst = temppath.substr(0,temppath.indexOf('>')-1);
                         var grouppathlast = temppath.substr(temppath.lastIndexOf('>')+1);
                         
-                        if(j == 0){
-                            //generate visible
-                            var headvisible = '<img src="./icon/normal/12.png" class="icon-size">'
-                                            + '<h3 class="panel-title panel-set">'
-                                            + grouppathlast
-                                            + '</h3>'
-                                            + '<span class="glyphicon glyphicon-chevron-down down-span" role="button" data-toggle="collapse" data-target="#snd'+(i+5)+'" aria-expanded="false" aria-controls="collapseExample"></span>'
-                                            + '<p class="h6-group">via<span class="glyphicon glyphicon-triangle-right"></span>'
-                                            + grouppathfirst
-                                            + '</p>';
-                        }else{
-                            //generate collapse
-                            inheadcollapse = inheadcollapse 
+                        //generate collapse
+                        inheadcollapse = inheadcollapse 
                                             +'<div class="panel-heading group-margin">'
-                                                +'<h3 class="panel-title">'
-                                                +'<img src="icon/normal/20.png" class="icon-size">'
-                                                + grouppathlast
-                                                +'</h3>'
-                                                +'<p class="h6-group">via'
-                                                +'<span class="glyphicon glyphicon-triangle-right"></span>'
-                                                +grouppathfirst
-                                            +'</p></div>';
-                        }
+                                            +'<h3 class="panel-title">'
+                                            +'<img src="icon/normal/20.png" class="icon-size">'
+                                            + grouppathlast
+                                            +'</h3>'
+                                            +'<p class="h6-group">via'
+                                            +'<span class="glyphicon glyphicon-triangle-right"></span>'
+                                            +grouppathfirst
+                                        +'</p></div>';
+                        
                     }
                     var headerbox = '<div class="panel-heading">'
                                         + headvisible
