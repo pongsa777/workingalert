@@ -106,6 +106,44 @@ div#wrapper {
 	margin-top: 1%;
 	margin-right: 0%;
 	width: 80%;
+
+}
+.badge-sett{
+	margin-top: -5% !important;
+    float: right !important;
+}
+
+.btn-joinn{
+	 margin-left: 74%;
+
+}
+.set-buttom{
+	margin-top: 3%;
+    margin-bottom: 3% !important;
+}
+.check-test{
+	display: none;
+}
+
+.photo-size{
+	width: 50px;
+	height: 50px;
+}
+
+.set-layoutlock{
+	float: right;
+    margin-bottom: -6%;
+    margin-right: 28%;
+}
+
+.div-search2{
+	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
+	border-radius: 5px;padding: 1%; 
+	background-color:#FFFFFF;
+	margin-top: 1%;
+	margin-right: 0%;
+	width: 80%;
+
 }
 .box-search{
 	padding-top: 1%;
@@ -129,6 +167,22 @@ div#wrapper {
 	padding-left: 45%;
     padding-bottom: 3%;
 }
+.head-style{
+	min-width: 1280px !important;
+	background-color: #2C876A !important;
+	position: fixed!important;
+}
+.iconlayout{
+	margin: 5px;
+}
+.iconpic:hover{
+	background-color: #999999;
+}
+.div-icon{
+	width: 40px;
+    height: 34px;
+}
+
 
 .choice-ingroup{
 	box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
@@ -244,9 +298,8 @@ div#wrapper {
 }
 
 .position-pannel{
-	width: 80%;
-	margin-left: 3%;
-	margin-top: 3%;
+	width: 85%;
+	
 }
 .text-pannel-header{
 	margin-top: -10% !important;
@@ -334,6 +387,15 @@ div#wrapper {
 	text-align:center;
 
 }
+
+.name-search{
+	 margin-top: -6%;
+    padding-left: 12%;
+
+}
+.join-btn{
+	margin-left: 34%;
+}
 .box-mem{
 	margin-top: -10%;
 }
@@ -414,8 +476,63 @@ div#wrapper {
 	margin-top: 5%;
 
 }
+.dis-navtab{
+	border-bottom: 0px !important;
+}
+.m-size{
+	width: 40%!important;
+    margin-left: 1.5%;
+	color: #333;
+    background-color: #e6e6e6!important;
+    border-color: #adadad !important;
+}
+.m-size:focus{
+	background: #FFFFFF!important;
+	border-color: #FFFFFF !important;
+}
+.div-mar{
+	margin-top: 3%;
+}
 
+.div-panel{
+	width: 85%;
+}
+.down-span{
+	float: right;
+    margin-top: -5%;
 
+}
+.h6-group{
+	padding-left: 15%;
+    margin-bottom: -2%;
+
+}
+.group-margin{
+	margin-left: -4%;
+}
+
+.setmargintop{
+	margin-top: -5%;
+}
+
+.setenter{
+	text-align: center !important;
+}
+.input-set{
+	margin-top: 2%;
+    width: 93% !important;
+    margin-left: 7%;
+}
+.input-set2{
+	margin-top: 2%;
+   
+    
+}
+
+.setpadbox{
+	padding: 3% !important;
+
+}
 
 @media (max-width: 768px) {
 	.grouping {
@@ -475,8 +592,18 @@ div#wrapper {
 
     .div-search{
 		width: 100% !important;
-		margin-top: 3%;
+		margin-top: 3%;	
+		padding: 8%!important;
+
 	}
+
+	.div-search2{
+		width: 100% !important;
+		margin-top: 3%;	
+		padding: 3%!important;
+
+	}
+
 
 	.btn-search{
 		margin-top: -1%;
@@ -544,6 +671,8 @@ div#wrapper {
 	.set-writemsg{
 	  margin-top: 7%;
 	}
+
+
 	
 
 

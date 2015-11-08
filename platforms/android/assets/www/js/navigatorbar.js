@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#dashboard").on("click", function (e) {
-        document.location.href = "dashboard.html";
+        document.location.href = "dashboard_new.html";
     });
 
     $("#group").on("click", function (e) {

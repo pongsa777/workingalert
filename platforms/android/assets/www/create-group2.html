@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Create Group </title>
+</head>
+
+<body style="background-color:#E8E8E8">
+        <div class="wrapper-test" >
+            <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">WorkingAlert </a>
+                </li>
+                <div class="col-lg-12">
+                    <div class="col-xs-2">
+                        <img src="img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
+                    </div>
+                    <div class="col-md-10" style="text-align:right;">
+                        <h6 style="color:#FFFFFF"> Firstname  Lastname</h6>
+                        <a><small>View your profile</small></a>
+                    </div>
+                </div>
+                <br>
+
+
+                <li>
+                    <a id="dashboard" href="#" style="color:#FFFFFF;">
+                        <span class="glyphicon glyphicon-home"></span> 
+                        Dashboard
+                    </a>
+                </li>
+
+
+                <li>
+                    <a id="group">
+                        <span class="glyphicon glyphicon-user"></span> 
+                        Group
+                    </a>
+                </li>
+
+
+                <li style="margin-left: 10%;">
+                    <a id="searchgroup">
+                        <span class="glyphicon glyphicon-search"></span> 
+                        Search Group
+                    </a>
+                </li>
+
+
+                <li style="margin-left: 10%;">
+                    <a id="creategroup">
+                        <span class="glyphicon glyphicon-plus"></span> 
+                        Create Group
+                    </a>
+                </li>
+
+
+                <li>
+                    <a id="group">
+                        <span class="glyphicon glyphicon-tags"></span> 
+                        Attribute
+                    </a>
+                </li>
+
+
+                <li style="margin-left: 10%;">
+                    <a id="creategroup">
+                        <span class="glyphicon glyphicon-search"></span> 
+                        Search Attribute
+                    </a>
+                </li>
+
+
+                <li style="margin-left: 10%;">
+                    <a id="creategroup">
+                        <span class="glyphicon glyphicon-plus"></span> 
+                        Create Attribute
+                    </a>
+                </li>
+
+
+                <li>
+                    <a id="logout" style="color:#FFFFFF;">
+                        <span class="glyphicon glyphicon-off"></span> 
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="div-remove"></div>
+    </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-static-top head-style">
+                <div class="col-xs-6">
+                    <div class="navbar-header nav-search">
+                        <div class="col-md-3" style="margin-top:10%;margin-left:-30%">
+                            <div class="btn btn-default" id="togglebtn">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="head-page">Create Group</h4>
+                    </div>
+            </div>
+        </nav>
+        <!--end Navbar -->
+        <!--Start contend -->
+        <div class="container-fluid" style="min-width: 330px;">
+            <div class="col-md-12" style="">
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <!--Start box search -->
+            <div class="col-md-8 pull-right div-search">
+            <!-- <h4>Create Group</h4> -->
+                <form class="form-horizontal setmargintop">
+                    <div class="form-group">
+                        <label> 
+                            <h5>Name *</h5>
+                        </label>
+
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <div type="button" class="dropdown-toggle div-icon" 
+                                    data-toggle="dropdown" 
+                                    aria-haspopup="true" 
+                                    aria-expanded="false">
+                                    <img src="icon/normal/13.png" class="icon-size">  
+                                </div>
+
+                                <ul class="dropdown-menu select-icon" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <img src="icon/normal/1.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/2.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/3.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/4.png" class="icon-size iconpic iconlayout">
+                                    </li>
+                                    <li>
+                                        <img src="icon/normal/5.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/6.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/7.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/8.png" class="icon-size iconpic iconlayout">
+                                    </li>
+                                    <li>
+                                        <img src="icon/normal/9.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/10.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/11.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/12.png" class="icon-size iconpic iconlayout">
+                                    </li>   
+                                    <li>
+                                        <img src="icon/normal/13.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/14.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/15.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/16.png" class="icon-size iconpic iconlayout">
+                                    </li>
+                                    <li>
+                                        <img src="icon/normal/17.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/18.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/19.png" class="icon-size iconpic iconlayout">
+                                        <img src="icon/normal/20.png" class="icon-size iconpic iconlayout">
+                                    </li>       
+                                                
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Group Name">
+
+                        </div>
+                  
+                        <div class="form-group col-sm-10">
+                            <label  class="control-label">Description</label>
+                            <textarea id="description" class="form-control" rows="3" placeholder="Description..."></textarea>
+                           
+                        </div>
+                     </div> 
+
+                     <div class="form-group">
+                        <label for="inputEmail3" class="control-label">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            Group Privacy*
+                        </label>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" 
+                                        name="optionsRadios" 
+                                        id="optionsRadios1" 
+                                        value="option1" checked
+                                        class="example checkbox-y">
+                                        <b>Public Group</b>
+                                        <br>
+                                        <small>Anyone can join group because this group don't have password.</small>
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" 
+                                            name="optionsRadios" 
+                                            id="optionsRadios2" 
+                                            value="option2"
+                                            class="checkbox-x">
+                                        <b>Closed Group</b>
+                                        <br>
+                                        <small>Anyone can join by password or join by admin and both of joining group</small>
+
+                                        <div class="check-test check-test" id="autoUpdate">
+                                            <label>
+                                                <input type="checkbox" class="example2">
+                                                    
+                                                    <b>Approve</b>
+                                            </label>
+                                            <br>        
+                                            <label class="set-buttom">
+                                                <input type="checkbox" id="checkbox1" class="example3">
+                                                
+                                                    <b>Password</b>
+                                            </label>  
+
+                                            <div>
+                                        <label>
+                                            <input type="password" class="form-control" placeholder="Password">
+                                        </label>
+                                        <label class="set-buttom">
+                                            <input type="password" class="form-control" placeholder="Password agin">
+                                        </label>
+
+                                    </div>
+ 
+                                        </div>         
+                                    </label>
+                                    
+                                    
+
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+                     </div>
+                    <div class="form-group">
+                                <label for="inputEmail3" class="control-label">
+                                    <span class="glyphicon glyphicon-new-window"></span>
+                                        Permission Send Message *
+                                </label>
+                                <div class="panel panel-default">
+                                    <div class="panel-body permissed checkbox">
+                                        
+                                            <label>
+                                                <input checked="" type="checkbox" id="blankCheckbox" value="option1">
+                                                Admin
+                                            </label>
+                                            <br>
+                                            <label class="set-buttom">
+                                                <input checked="" type="checkbox" id="blankCheckbox" value="option1">
+                                                Member
+                                            </label>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                    
+                    <div class="panel-body setenter">
+                        
+                        <button type="button" id="createbtn" class="btn btn-success">Create Group</button>
+                    </div>
+           
+                </div>
+                
+                
+        
+                </form>
+
+                
+            </div>
+            <!--End box search -->
+
+            
+
+    </div>
+
+
+
+    <!-- /#wrapper -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/navigatorbar.js"></script>
+    <script src="js/create-group.js"></script>
+    <script>
+
+    $("#togglebtn").click(function(){
+        $('.wrapper-test').addClass('active');
+        $('body').css('overflow','hidden');
+    });
+
+    $("#toggleclose , .div-remove").click(function(){
+        $('.wrapper-test').removeClass('active');
+        $('body').css('overflow','visible');
+    });
+
+
+    $('.div-icon').click(function(){
+        $('.select-icon img').click(function(){
+            var img = $(this).attr('src');
+            $('.div-icon img').attr('src',img); 
+        });
+    });
+
+    $('input.checkbox-x').change(function(){
+        var c = $(this).is('checked',true);
+        $('.check-test').css('display','block');
+    });
+
+    
+     $('.checkbox-x').change(function () {
+        var check = $(this).prop('checked', true);
+        $('#autoUpdate').fadeIn();
+    });
+
+     $('.checkbox-y').change(function () {
+        var check = $(this).prop('checked', true);
+        $('#autoUpdate').fadeOut();
+    });
+
+    $('input.example').on('change', function() {
+        var check = $(this).prop('checked', true);  
+        $('input.example2').not(this).prop('checked', false);  
+        $('input.example3').not(this).prop('checked', false);  
+    });
+
+     $('input.example2').on('change', function() {
+        var check = $(this).is('checked', true);  
+        $('input.example').not(this).prop('checked', false);  
+     
+    });
+
+     $('input.example3').on('change', function() {
+        var check = $(this).is('checked', true);  
+        $('input.example').not(this).prop('checked', false);  
+     
+    });
+
+ 
+    
+    
+
+
+
+    </script>
+</body>
+
+</html>
