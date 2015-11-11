@@ -16,11 +16,18 @@ $(document).ready(function () {
         document.location.href = "create-group.html";
     });
 
-    $("#setting").on("click", function (e) {
-        alert('soonnnn');
-        //document.location.href = ".html";
+    $("#attribute").on("click", function (e) {
+        
     });
 
+    $("#searchattribute").on("click", function (e) {
+        
+    });
+    
+    $("#createattribute").on("click", function (e) {
+        
+    });
+    
     $("#logout").on("click", function (e) {
         if (confirm('Do you want to logout and exit application')) {
             localStorage.clear();

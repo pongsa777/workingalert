@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <title>Write Message</title>
+</head>
+
+<body style="background-color:#E8E8E8">
+
+    <div class="wrapper-test">
+        <div id="sidebar-wrapper">
+
+        </div>
+        <div class="div-remove"></div>
+    </div>
+    <!--start navbar-->
+
+
+    <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
+        <div class="col-xs-6">
+            <div class="navbar-header nav-search">
+
+            </div>
+            <div>
+                <h4 class="head-page">WorkingAlert</h4>
+            </div>
+        </div>
+
+
+
+    </nav>
+    <!--end navbar-->
+
+
+    <div class="container" id="listmessage">
+        <div class="col-md-12">
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                            <span class="glyphicon glyphicon-edit"></span>
+                                Write Message
+                            
+                        </h4>
+                </div>
+
+
+                <div class="panel-body button-line">
+                    <h5>Send Group *</h5>
+
+
+                    <input id="groupnamesend" type="text" class="form-control search-box" disabled="disabled" placeholder="Press the button for search groups">
+                    <input type="hidden" id="groupidsend" value="0">
+
+                    <button type="button" class="btn btn-default search-btnn" data-toggle="modal" data-target="#search-send">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </div>
+                <div class="panel-body button-line">
+                    <h5>Attribute</h5>
+                    <div class="panel-body ness-set un-none" id="addattrbox">
+                        <div class="ness pset">
+                            <p><span class="glyphicon glyphicon-plus"></span> Add Attribute</p>
+
+                        </div>
+                    </div>
+
+                    <div class="panel-body ness-set dis-non">
+                        <div class="ness pset">
+                            <p><span class="glyphicon glyphicon-minus"></span>Cancel</p>
+                        </div>
+                    </div>
+
+
+                    <div class="ackness ness-hide">
+                        <div>
+                            <select id="attrcondition1" class="form-control operator-set2">
+                                <option value=""></option>
+                                <option value="and">AND</option>
+                                <option value="not">NOT</option>
+                            </select>
+                            <input id="sendattr1" type="text" class="form-control search-box2" disabled="disabled"> 
+                            <input id="sendattrid1" type="hidden" value=""> 
+
+                            <button type="button" class="btn btn-default search-btnn" data-toggle="modal" data-target="#search-adsend1">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+
+                        <div class="mar-top">
+                            <select id="attrcondition2" class="form-control operator-set2">
+                                <option value=""></option>
+                                <option value="and">AND</option>
+                                <option value="not">NOT</option>
+                            </select>
+                            <input id="sendattr2" type="text" class="form-control search-box2" disabled="disabled">
+                            <input id="sendattrid2" type="hidden" value=""> 
+
+                            <button type="button" class="btn btn-default search-btnn" data-toggle="modal" data-target="#search-adsend2">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+
+                        <div class="mar-top">
+                            <select id="attrcondition3" class="form-control operator-set2">
+                                <option value=""></option>
+                                <option value="and">AND</option>
+                                <option value="not">NOT</option>
+                            </select>
+                            <input id="sendattr3" type="text" class="form-control search-box2" disabled="disabled">
+                            <input id="sendattrid3" type="hidden" value=""> 
+
+                            <button type="button" class="btn btn-default search-btnn" data-toggle="modal" data-target="#search-adsend3">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+
+                        <div class="mar-top">
+                            <select id="attrcondition4" class="form-control operator-set2">
+                                <option value=""></option>
+                                <option value="and">AND</option>
+                                <option value="not">NOT</option>
+                            </select>
+                            <input id="sendattr4" type="text" class="form-control search-box2" disabled="disabled">
+                            <input id="sendattrid4" type="hidden" value=""> 
+
+                            <button type="button" class="btn btn-default search-btnn" data-toggle="modal" data-target="#search-adsend4">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+
+                        <div class="mar-top">
+                            <select id="attrcondition5" class="form-control operator-set2">
+                                <option value=""></option>
+                                <option value="and">AND</option>
+                                <option value="not">NOT</option>
+                            </select>
+                            <input id="sendattr5" type="text" class="form-control search-box2" disabled="disabled">
+                            <input id="sendattrid5" type="hidden" value=""> 
+
+                            <button type="button" class="btn btn-default search-btnn" data-toggle="modal" data-target="#search-adsend5">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel-body">
+                    <h5>Write Message *</h5>
+                    <textarea id="Inputmessage" class="form-control" rows="3" placeholder="Write Message" style="margin-top: 5px;"></textarea>
+                    <br>
+
+                    <h5>
+                            <span class="glyphicon glyphicon-bullhorn"></span> 
+                            Message Priority  
+                        </h5>
+
+                    <span class="glyphicon glyphicon-info-sign info-set" type="button" data-toggle="modal" data-target="#info-modal"></span>
+
+
+                    <select id="priority" class="form-control input-sm" style="width: 150px">
+                        <option value="N">Normal</option>
+                        <option value="H">Important</option>
+                    </select>
+
+
+                    <button type="button" id="sendmsg" class="btn btn-success set-send"> Send</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- Model Search group for send-->
+    <div class="modal fade" id="search-send">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modol-set">
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Send to Groups</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input id="groupsearchmsg" type="text" class="form-control" placeholder="Group Name" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="searchgroupbtn">
+                <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                    </div>
+                    <h4 style="text-align: center;">Search  Result</h4>
+                    <p style="text-align: center;">Select the group that you want to send the message.</p>
+
+                    <div id="listsearchgroup">
+
+                        <!-- result search >
+                <div class="radio">
+                    <ul class="list-group">
+                        <li class="list-group-item ul-set">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                Senior Project
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="radio">
+                    <ul class="list-group">
+                        <li class="list-group-item ul-set">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                Running Club
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="radio">
+                    <ul class="list-group">
+                        <li class="list-group-item ul-set">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                KMUTT
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end result search -->
+
+                    </div>
+                    <!-- listsearchgroup -->
+
+                </div>
+                <!-- modal body -->
+
+                <div class="modal-footer footer-set">
+                    <div class="submit">
+                        <button type="button" id="okgroupbtn" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Model Search attribute1 for ad-send-->
+    <div class="modal fade" id="search-adsend1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modol-set">
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Send to Attribute</h3>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="input-group">
+                        <input id="msgsearchattrbtn1" type="text" class="form-control" placeholder="Attribute Name" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="searchattrbtn1">
+                <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                    </div>
+
+                    <div id="listattribute1">
+                        <!-- attr list >
+            <div class="radio">
+                <ul class="list-group">
+                    <li class="list-group-item ul-set">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionradio" value="option1" checked>
+                            Senior Project
+                        </label>
+                        <input type="hidden" id="groupid" value="">
+                    </li>
+                </ul>
+            </div>
+            <!--  end attr list -->
+                    </div>
+                </div>
+                <div class="modal-footer footer-set">
+                    <div class="submit">
+                        <button id="btndelattr1" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Model Search attribute2 for ad-send-->
+    <div class="modal fade" id="search-adsend2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modol-set">
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Send to Attribute</h3>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="input-group">
+                        <input id="msgsearchattrbtn2" type="text" class="form-control" placeholder="Attribute Name" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="searchattrbtn2">
+                <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                    </div>
+                    
+                    <div id="listattribute2">
+                        <!-- attr list >
+            <div class="radio">
+                <ul class="list-group">
+                    <li class="list-group-item ul-set">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionradio" value="option1" checked>
+                            Senior Project
+                        </label>
+                        <input type="hidden" id="groupid" value="">
+                    </li>
+                </ul>
+            </div>
+            <!--  end attr list -->
+                    </div>
+
+                </div>
+                <div class="modal-footer footer-set">
+                    <div class="submit">
+                        <button id="btndelattr2" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Model Search attribute3 for ad-send-->
+    <div class="modal fade" id="search-adsend3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modol-set">
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Send to Attribute</h3>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="input-group">
+                        <input id="msgsearchattrbtn3" type="text" class="form-control" placeholder="Attribute Name" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="searchattrbtn3">
+                <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                    </div>
+
+                    <div id="listattribute3">
+                        <!-- attr list >
+            <div class="radio">
+                <ul class="list-group">
+                    <li class="list-group-item ul-set">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionradio" value="option1" checked>
+                            Senior Project
+                        </label>
+                        <input type="hidden" id="groupid" value="">
+                    </li>
+                </ul>
+            </div>
+            <!--  end attr list -->
+                    </div>
+
+                </div>
+                <div class="modal-footer footer-set">
+                    <div class="submit">
+                        <button id="btndelattr3" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Model Search attribute4 for ad-send-->
+    <div class="modal fade" id="search-adsend4">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modol-set">
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Send to Attribute</h3>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="input-group">
+                        <input id="msgsearchattrbtn4" type="text" class="form-control" placeholder="Attribute Name" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="searchattrbtn4">
+                <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                    </div>
+
+                    <div id="listattribute4">
+                        <!-- attr list >
+            <div class="radio">
+                <ul class="list-group">
+                    <li class="list-group-item ul-set">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionradio" value="option1" checked>
+                            Senior Project
+                        </label>
+                        <input type="hidden" id="groupid" value="">
+                    </li>
+                </ul>
+            </div>
+            <!--  end attr list -->
+                    </div>
+
+                </div>
+                <div class="modal-footer footer-set">
+                    <div class="submit">
+                        <button id="btndelattr4" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Model Search attribute5 for ad-send-->
+    <div class="modal fade" id="search-adsend5">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modol-set">
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Send to Attribute</h3>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="input-group">
+                        <input id="msgsearchattrbtn5" type="text" class="form-control" placeholder="Attribute Name" aria-describedby="basic-addon2">
+                        <span class="input-group-addon" id="searchattrbtn5">
+                <span class="glyphicon glyphicon-search"></span>
+                        </span>
+                    </div>
+                    
+                    <div id="listattribute5">
+                        <!-- attr list >
+            <div class="radio">
+                <ul class="list-group">
+                    <li class="list-group-item ul-set">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionradio" value="option1" checked>
+                            Senior Project
+                        </label>
+                        <input type="hidden" id="groupid" value="">
+                    </li>
+                </ul>
+            </div>
+            <!--  end attr list -->
+                    </div>
+
+                </div>
+                <div class="modal-footer footer-set">
+                    <div class="submit">
+                        <button id="btndelattr5" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Model info -->
+    <div class="modal fade" id="info-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modol-set">
+
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3><span class="glyphicon glyphicon-info-sign"></span>   Information</h3>
+
+                </div>
+                <div class="modal-body">
+                    <h4 class="font-c">Normal message</h4>
+                    <p>เป็นการส่งข้อความที่ไม่สามารถส่งข้อความซ้ำได้ในภายหลัง และไม่สามารถตรวจสอบได้ว่าใครตอบรับข้อความที่ส่งไปแล้วบ้าง</p>
+                    <h4 class="font-c">Important message</h4>
+                    <p>เป็นการส่งข้อความที่สามารถส่งซ้ำได้ในภายหลัง และสามารถตรวจสอบได้ว่า ใครตอบรับข้อความที่ส่งไปแล้วบ้าง</p>
+                </div>
+                <div class="modal-footer footer-set">
+                    <div class="submit">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success">OK</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- /#wrapper -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/navigatorbar.js"></script>
+    <script src="js/write-message.js"></script>
+    <script>
+        $("#togglebtn").click(function() {
+            $('.wrapper-test').addClass('active');
+            $('body').css('overflow', 'hidden');
+        });
+
+        $("#toggleclose , .div-remove").click(function() {
+            $('.wrapper-test').removeClass('active');
+            $('body').css('overflow', 'visible');
+        });
+
+        $('.ness').click(function() {
+            var nes = $(this).prop('active')
+            $('.ackness').fadeToggle('1000');
+        });
+
+        $('.ness1').click(function() {
+            var nes = $(this).prop('active')
+            $('.ackness1').fadeToggle('1000');
+        });
+
+    </script>
+</body>
+
+</html>

@@ -35,20 +35,24 @@ $(document).ready(function () {
                         
                         if(j == 0){
                             //generate visible
-                            var headvisible = '<img src="./icon/normal/12.png" class="icon-size">'
+                            var viabox = "";
+                            if(grouppathfirst != ""){
+                                viabox = '<p class="h6-group">via<span class="glyphicon glyphicon-triangle-right"></span>'
+                                            + grouppathfirst
+                                            + '</p>';
+                            }
+                            var headvisible = '<img src="./icon/important/'+grouppathpict+'" class="icon-size">'
                                             + '<h3 class="panel-title panel-set">'
                                             + grouppathlast
                                             + '</h3>'
                                             + '<span class="glyphicon glyphicon-chevron-down down-span" role="button" data-toggle="collapse" data-target="#msg'+(i+5)+'" aria-expanded="false" aria-controls="collapseExample"></span>'
-                                            + '<p class="h6-group">via<span class="glyphicon glyphicon-triangle-right"></span>'
-                                            + grouppathfirst
-                                            + '</p>';
+                                            + viabox;
                         }else{
                             //generate collapse
                             inheadcollapse = inheadcollapse 
                                             +'<div class="panel-heading group-margin">'
                                                 +'<h3 class="panel-title">'
-                                                +'<img src="icon/normal/20.png" class="icon-size">'
+                                                +'<img src="./icon/important/'+grouppathpict+'" class="icon-size">'
                                                 + grouppathlast
                                                 +'</h3>'
                                                 +'<p class="h6-group">via'
@@ -102,20 +106,24 @@ $(document).ready(function () {
                         
                         if(j == 0){
                             //generate visible
-                            var headvisible = '<img src="./icon/normal/12.png" class="icon-size">'
+                            var viabox = "";
+                            if(grouppathfirst != ""){
+                                viabox = '<p class="h6-group">via<span class="glyphicon glyphicon-triangle-right"></span>'
+                                        + grouppathfirst
+                                        + '</p>';
+                            }
+                            var headvisible = '<img src="./icon/normal/'+grouppathpict+'" class="icon-size">'
                                             + '<h3 class="panel-title panel-set">'
                                             + grouppathlast
                                             + '</h3>'
                                             + '<span class="glyphicon glyphicon-chevron-down down-span" role="button" data-toggle="collapse" data-target="#msg'+(i+5)+'" aria-expanded="false" aria-controls="collapseExample"></span>'
-                                            + '<p class="h6-group">via<span class="glyphicon glyphicon-triangle-right"></span>'
-                                            + grouppathfirst
-                                            + '</p>';
+                                            + viabox;
                         }else{
                             //generate collapse
                             inheadcollapse = inheadcollapse 
                                             +'<div class="panel-heading group-margin">'
                                                 +'<h3 class="panel-title">'
-                                                +'<img src="icon/normal/20.png" class="icon-size">'
+                                                +'<img src="icon/normal/'+grouppathpict+'" class="icon-size">'
                                                 + grouppathlast
                                                 +'</h3>'
                                                 +'<p class="h6-group">via'
@@ -183,6 +191,8 @@ $(document).ready(function () {
                 var msgdatetime = data.message[i].date + ' ' + data.message[i].time;
                 var to_id = data.message[i].to_id;
                 var to_name = data.message[i].to_name;
+                var to_grouppict = data.message[i].to_grouppict;
+                if(to_grouppict == "NULL"){ to_grouppict = '11.png'; }
                 
 
 
@@ -190,58 +200,32 @@ $(document).ready(function () {
                 var div = document.createElement('div');
                 if(msgpriority=='H' || msgpriority=='h'){ //แบบข้อความ high priority
                     //generate header
-                    var inheadcollapse = "";
-                    
-                    var headvisible = '<img src="./icon/normal/12.png" class="icon-size">'
-                                            + '<h3 class="panel-title panel-set">'
-                                            + to_name
-                                            + '</h3>'
-                                            + '<span class="glyphicon glyphicon-chevron-down down-span" role="button" data-toggle="collapse" data-target="#snd'+(i+5)+'" aria-expanded="false" aria-controls="collapseExample"></span>';
-                    for(var j = 0 ; j < data.message[i].grouppath.length ; j++){
-                        var temppath = data.message[i].grouppath[j].path;
-                        var grouppathid = data.message[i].grouppath[j].id;
-                        var grouppathpict = data.message[i].grouppath[j].pict;
-                        var grouppathfirst = temppath.substr(0,temppath.indexOf('>')-1);
-                        var grouppathlast = temppath.substr(temppath.lastIndexOf('>')+1);
-                        
-                            //generate collapse
-                            inheadcollapse = inheadcollapse 
-                                            +'<div class="panel-heading group-margin">'
-                                                +'<h3 class="panel-title">'
-                                                +'<img src="icon/normal/20.png" class="icon-size">'
-                                                + grouppathlast
-                                                +'</h3>'
-                                                +'<p class="h6-group">via'
-                                                +'<span class="glyphicon glyphicon-triangle-right"></span>'
-                                                +grouppathfirst
-                                            +'</p></div>';
-                    }
                     var headerbox = '<div class="panel-heading">'
-                                        + headvisible
-                                        + '<div class="collapse" id="snd'+(i+5)+'">'
-                                        + inheadcollapse
-                                        + '</div>'
-                                    +'</div>';
-                    
+                                + '<img src="./icon/important/'+to_grouppict+'" class="icon-size">'
+                                + '<h3 class="panel-title panel-set">'+to_name+'</h3>'
+                                + '</div>';
                     
                     //generate body
                     var bodybox = '<div class="panel-body">'+msgbody+'</div>'
                                 + '<input type="hidden" value="' + msgid + '" id="msgidread' + i + '">';
                     
                     //generate footer
-                    var ackbtnhtml = "";
-                        ackbtnhtml = '<div class="btn-group btn-resend resend ' + i + '"><button type="button" class="btn btn-default"><b> Send Again </b></button></div>';
-                    var footerbox = '<div class="panel-footer style-panel-footer">'
-                                        +'<img src="'+msgpict+'" class="img-circle size-img">'
-                                        +'<div class="col-md-4 name-sent">'
-                                            +'<b>'+msgfromname+'</b><br>'
-                                            +'<small>'+msgdatetime+'</small><br>'
-                                            +'<div id="seeack" class="seeack ' + i + '"><a href="#">People who ack this</a></div>'
-                                        +'</div>'
-                                        +ackbtnhtml
-                                    +'</div>';
+                    var resendbtnhtml = '<div class="btn-group btn-ack resend ' + i + '">'
+                                        +'<button type="button" class="btn btn-primary btn-xs">'
+                                        +'<b> Send Again</b></button>'
+                                        +'</div>';
                     
-                    div.className = 'panel panel-success position-pannel';
+                    var footerbox = '<div class="panel-footer style-panel-footer">'
+                                    +'<img src="'+msgpict+'" class="img-circle size-img">'
+                                    +'<div class="col-md-4 name-sent">'
+                                        +'<b>'+msgfromname+'</b><br>'
+                                        +'<small>'+msgdatetime+'</small><br>'
+                                        +'<div id="seeack" class="seeack2 ' + i + '"><a href="#">People who ack this</a></div>'
+                                    +'</div>'
+                                    +resendbtnhtml
+                                    +'</div>';
+                                    
+                    div.className = 'panel panel-success position-pannel2';
                     div.innerHTML = headerbox + bodybox + footerbox;
                     
                     document.getElementById('profile').appendChild(div);
@@ -249,38 +233,11 @@ $(document).ready(function () {
                 }else{ //แบบข้อความธรรมดา
                     
                     //generate header
-                    var inheadcollapse = "";
-                    var headvisible = '<img src="./icon/normal/12.png" class="icon-size">'
-                                            + '<h3 class="panel-title panel-set">'
-                                            + to_name
-                                            + '</h3>'
-                                            + '<span class="glyphicon glyphicon-chevron-down down-span" role="button" data-toggle="collapse" data-target="#snd'+(i+5)+'" aria-expanded="false" aria-controls="collapseExample"></span>';
-                    for(var j = 0 ; j < data.message[i].grouppath.length ; j++){
-                        var temppath = data.message[i].grouppath[j].path;
-                        var grouppathid = data.message[i].grouppath[j].id;
-                        var grouppathpict = data.message[i].grouppath[j].pict;
-                        var grouppathfirst = temppath.substr(0,temppath.indexOf('>')-1);
-                        var grouppathlast = temppath.substr(temppath.lastIndexOf('>')+1);
-                        
-                        //generate collapse
-                        inheadcollapse = inheadcollapse 
-                                            +'<div class="panel-heading group-margin">'
-                                            +'<h3 class="panel-title">'
-                                            +'<img src="icon/normal/20.png" class="icon-size">'
-                                            + grouppathlast
-                                            +'</h3>'
-                                            +'<p class="h6-group">via'
-                                            +'<span class="glyphicon glyphicon-triangle-right"></span>'
-                                            +grouppathfirst
-                                        +'</p></div>';
-                        
-                    }
                     var headerbox = '<div class="panel-heading">'
-                                        + headvisible
-                                        + '<div class="collapse" id="snd'+(i+5)+'">'
-                                        + inheadcollapse
-                                        + '</div>'
-                                    +'</div>';
+                                + '<img src="./icon/normal/'+to_grouppict+'" class="icon-size">'
+                                + '<h3 class="panel-title panel-set">'+to_name+'</h3>'
+                                + '</div>';
+                        
                     
                     
                     //generate body
@@ -290,18 +247,19 @@ $(document).ready(function () {
                     
                     //generate footer
                     var footerbox = '<div class="panel-footer style-panel-footer">'
-                                +'<img src="'+msgpict+'" class="img-circle size-img">'
-                                +'<div class="col-md-4 name-sent">'
-                                    +'<b>'+msgfromname+'</b><br>'
-                                    +'<small>'+msgdatetime+'</small>'
-                                +'</div></div>';
+                                    +'<img src="'+msgpict+'" class="img-circle size-img">'
+                                    +'<div class="col-md-4 name-sent">'
+                                        +'<b>'+msgfromname+'</b><br>'
+                                        +'<small>'+msgdatetime+'</small><br>'
+                                    +'</div>'
+                                    +'</div>';
 
-                    div.className = 'panel panel-default position-pannel';
+                    div.className = 'panel panel-default position-pannel2';
                     div.innerHTML = headerbox + bodybox + footerbox;
                     
                     document.getElementById('profile').appendChild(div);
                 }
-            }
+            } //close for loop each message
         }else{
             alert("you can't login more than 1 device");
             localStorage.clear();
@@ -318,7 +276,7 @@ $(document).ready(function () {
     
     
     $(document).on("click", ".resend", function () {
-        var pos = $(this).attr("class").replace("btn-group btn-resend resend ", "");
+        var pos = $(this).attr("class").replace("btn-group btn-ack resend ", "");
         var messageid = $("#msgidread" + pos).val();
         var sessionid = localStorage.getItem('sessionid');
         var urll2 = "http://workingalert.tk/api/resendpush.php?type=app&sessionid="+sessionid+"&msgid="+messageid;
@@ -347,15 +305,32 @@ $(document).ready(function () {
     });
     
     
+    $(document).on("click", ".seeack2", function () {
+        var pos = $(this).attr("class").replace("seeack2 ", "");
+        var messageid = $("#msgidread" + pos).val();
+        if(messageid != ""){
+            localStorage.setItem('msgid',messageid);
+            document.location.href = 'view-ack.html';
+        }else{
+            alert('can not recieve group id');
+        }
+        
+    });
+    
     $(document).on("click", ".seeack", function () {
         var pos = $(this).attr("class").replace("seeack ", "");
         var messageid = $("#msgid" + pos).val();
         if(messageid != ""){
             localStorage.setItem('msgid',messageid);
-            document.location.href = 'view-ack.html'
+            document.location.href = 'view-ack.html';
         }else{
             alert('can not recieve group id');
         }
         
+    });
+    
+    $(document).on("click", "#writemessage", function () {
+        localStorage.removeItem('groupid');
+        document.location.href = 'write-message.html';
     });
 });

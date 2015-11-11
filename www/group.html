@@ -18,228 +18,205 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <title>Group</title>
+    <title>Groups</title>
+    
 </head>
 
 <body style="background-color:#E8E8E8">
-    <div id="wrapper">
-        <!-- Sidebar -->
+    <div class="wrapper-test" >
         <div id="sidebar-wrapper">
+
+        
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">WorkingAlert </a>
+                     
                 </li>
                 <div class="col-lg-12">
-                    <div class="col-xs-2">
-                        <img id="profilepict" src="img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
+                     <div class="col-xs-2">
+                         <img src="img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
                     </div>
                     <div class="col-md-10" style="text-align:right;">
-                        <h6 id="profilename" style="color:#FFFFFF"> Firstname  Lastname</h6>
-                        <a href="view-profile.html"><small>View your profile</small></a>
-
+                        <h6 style="color:#FFFFFF"> Firstname  Lastname</h6>
+                        <a><small>View your profile</small></a>
+                        
                     </div>
                 </div>
-                <br>
+               <br>
                 <li>
                     <a id="dashboard" href="#" style="color:#FFFFFF;">
-                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dashboard
+                        <span class="glyphicon glyphicon-home"></span> 
+                        Dashboard
                     </a>
                 </li>
+
+
                 <li>
                     <a id="group">
-                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Group
+                        <span class="glyphicon glyphicon-user"></span> 
+                        Group
                     </a>
                 </li>
+
+
                 <li style="margin-left: 10%;">
                     <a id="searchgroup">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Group
+                        <span class="glyphicon glyphicon-search"></span> 
+                        Search Group
                     </a>
                 </li>
+
+
                 <li style="margin-left: 10%;">
                     <a id="creategroup">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create Group
+                        <span class="glyphicon glyphicon-plus"></span> 
+                        Create Group
                     </a>
                 </li>
+
+
+                <li>
+                    <a id="group">
+                        <span class="glyphicon glyphicon-tags"></span> 
+                        Attribute
+                    </a>
+                </li>
+
+
+                <li style="margin-left: 10%;">
+                    <a id="creategroup">
+                        <span class="glyphicon glyphicon-search"></span> 
+                        Search Attribute
+                    </a>
+                </li>
+
+
+                <li style="margin-left: 10%;">
+                    <a id="creategroup">
+                        <span class="glyphicon glyphicon-plus"></span> 
+                        Create Attribute
+                    </a>
+                </li>
+
+
                 <li>
                     <a id="logout" style="color:#FFFFFF;">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout
+                        <span class="glyphicon glyphicon-off"></span> 
+                        Logout
                     </a>
                 </li>
+
             </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
-        <!-- Page Content -->
-        <nav class="navbar navbar-default navbar-static-top" style="
-    min-width: 1280px;background-color: #2C876A;position: fixed;">
-            <div class="col-xs-6">
-                <div class="navbar-header nav-search">
-                    <div class="col-md-3" style="margin-top:10%;margin-left:-30%">
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
-                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="container-fluid" style="min-width: 330px;">
-            <div class="col-md-12" style="">
-                <br>
-                <br>
-                <br>
-            </div>
-
-            <div class="col-md-12" style="box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);border-radius: 5px;padding: 1%; background-color:#FFFFFF;margin-top: 1%;">
-                <h4 style="padding-left: 1%;"><img src="img/group.png" style="width: 20px;">Your Groups</h4>
-                <hr style="margin-top:0%">
-
-                <!-- list group-->
-                <div class="panel-group" id="accordion">
-                    <!-- Start callapse 1-->
-                    <!-- 
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="panel-title" style="display: inline-block;">
-                                <h6 class="panel-title"><a href="#">Group #1 </a></h6>
-                                <div class="col-xs-12" style="margin-top: -15%;margin-left: 100%;display: inline-flex;">
-                                    <div class="col-md-2">
-                                        <span class="badge" style="margin-left: 150%;">42</span>
-                                    </div>
-                                    <div class="col-md-2" style="margin-left: 14%;">
-                                        <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
--->
-                    <!-- body callapse 1 lv0.1-->
-                    <!--
-                        <div id="collapseOne" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <div class="panel-title" style="display: inline-block;">
-                                            <h6 class="panel-title"><a href="#">Group #1-lv1 </a></h6>
-
-                                            <div class="col-xs-12" style="margin-top: -15%;margin-left: 90%;display: inline-flex;">
-                                                <div class="col-md-2">
-                                                    <span class="badge" style="margin-left: 150%;">42</span>
-                                                </div>
-                                                <div class="col-md-2" style="margin-left: 14%;">
-                                                    <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" role="button" style="" data-toggle="collapse" data-parent="#collapseOne" href="#collapseOnelv1-01">
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div id="collapseOnelv1-01" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h4 class="panel-title">
-                                                        <a role="button" 
-                                                        data-toggle="collapse" 
-                                                        data-parent="#collapseOnelv1-01" 
-                                                        href="#collapseOnelv2-01">
-                                                        Group #1-lv2
-                                                        </a>
-                                                    </h4>
-                                                </div>
-                                                <div id="collapseOnelv2-01" class="panel-collapse collapse in">
-                                                    <div class="panel-body">
-                                                        Anim pariatur
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
--->
-                    <!-- close callapse 1 lv0.1-->
-
-                    <!-- body callapse 1 lv0.2-->
-                    <!--
-                            <div id="collapseOne" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h4 class="panel-title">
-                                                <a role="button" 
-                                                data-toggle="collapse" 
-                                                data-parent="#collapseOne" 
-                                                href="#collapseOnelv1-02">
-                                                Group #1-lv1-2
-                                                </a>
-                                            </h4>
-                                        </div>
-
-                                        <div id="collapseOnelv1-02" class="panel-collapse collapse in">
-                                            <div class="panel-body">
-                                                Anim pariatur
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
--->
-                    <!-- close callapse 1 lv0.2-->
-                    <!--
-                        </div>
--->
-                    <!-- close callapse 1 lv0-->
-
-
-                    <!--
-                    </div> 
--->
-                    <!-- close callapse 1-->
-
-                    <!-- Start callapse 2-->
-                    <!--
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a role="button" 
-                                    data-toggle="collapse" 
-                                    data-parent="#accordion" 
-                                    href="#collapse1">
-                                    Group #2
-                                </a>
-                            </h4>
-                        </div>
-
-                        <div id="collapse1" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                Description : Anim pariatur cliche
-                                <button class="btn-xs btn-primary" style="float:right"> view child</button>
-                            </div>
-                            
-                        </div>
-                    </div>
--->
-                    <!-- close callapse 2-->
+        <div class="div-remove"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-static-top head-style">
+        
+        <div class="col-xs-6">
+            <div class="navbar-header nav-search">
+                <div class="col-md-3" style="margin-top:10%;margin-left:-30%">
+                    
+                    <div class="btn btn-default" id="togglebtn">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </div>  
 
                 </div>
-
-                <!-- close panel-group-->
-
             </div>
-            <!-- close div large-->
+            
+            <div>
+                <h4 class="head-page">Groups</h4>
+            </div>
 
         </div>
-        <!-- close container-->
+    </nav>
+    <!--end Navbar -->
+    <!--Start contend -->
+    <div class="container-fluid" style="min-width: 330px;">
+        <div class="col-md-12" style="">
+            <br>
+            <br>
+            <br>
+        </div>
+        
+
+        <!--Start box group -->
+        <div id="listgroup">
+            <!-- list group box >
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    
+                    <h4 class="panel-title">
+                        <img src="./icon/normal/1.png" class="icon-size">
+                        KMUTT
+                    </h4>
+                    <span class="glyphicon glyphicon-chevron-right down-span"></span>
+                </div>
+
+                <div class="panel-body">
+                    <b class="des-style">Group Description: </b>
+                        enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
+                    <input type="hidden" value="groupid" id="groupid">
+                </div>
+                <div class="panel-footer footer-stylee">
+                    <ol class="breadcrumb">
+                        <li>Group</li>
+                        <li>Group</li>
+                        <li>Group</li>
+                    </ol>   
+                </div>    
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <img src="./icon/normal/1.png" class="icon-size">
+                        Senior Project
+                    </h4>
+                    <span class="glyphicon glyphicon-chevron-right down-span"></span>
+                </div>
+
+                <div class="panel-body">
+                    <b class="des-style">Description Group: </b>
+                        enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
+                        
+                </div>
+                <div class="panel-footer footer-stylee">
+                    <ol class="breadcrumb">
+                        <li>Group</li>
+                        <li>Group</li>
+                        <li>Group</li>
+                    </ol>   
+                </div>    
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <img src="./icon/normal/1.png" class="icon-size">
+                        IT 18
+                    </h4>
+                    <span class="glyphicon glyphicon-chevron-right down-span"></span>
+                </div>
+
+                <div class="panel-body">
+                    <b class="des-style">Description Group: </b>
+                        enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
+                        
+                </div>
+                <div class="panel-footer footer-stylee">
+                    <ol class="breadcrumb">
+                        <li>Group</li>
+                        <li>Group</li>
+                        <li>Group</li>
+                    </ol>   
+                </div>    
+            </div>
+            <!-- end list group box -->
+     </div>
 
 
-
-    </div>
-    <!-- close wrapper-->
 
     <!-- /#wrapper -->
     <script type="text/javascript" src="cordova.js"></script>
@@ -247,13 +224,18 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/navigatorbar.js"></script>
-    <script src="js/group.js"></script>
-    <script src="js/profilepict.js"></script>
+    <script src="js/group2.js"></script>
     <script>
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
+
+    $("#togglebtn").click(function(){
+        $('.wrapper-test').addClass('active');
+        $('body').css('overflow','hidden');
+    });
+
+    $("#toggleclose , .div-remove").click(function(){
+        $('.wrapper-test').removeClass('active');
+        $('body').css('overflow','visible');
+    });
 
     </script>
 </body>

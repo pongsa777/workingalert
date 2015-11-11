@@ -24,6 +24,8 @@
 <body style="background-color:#E8E8E8">
     <div class="wrapper-test">
         <div id="sidebar-wrapper">
+
+
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">WorkingAlert </a>
@@ -36,55 +38,88 @@
                     <div class="col-md-10" style="text-align:right;">
                         <h6 id="profilename" style="color:#FFFFFF"> Firstname  Lastname</h6>
                         <a href="view-profile.html"><small>View your profile</small></a>
-
                     </div>
                 </div>
                 <br>
                 <li>
                     <a id="dashboard" href="#" style="color:#FFFFFF;">
-                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Dashboard
+                        <span class="glyphicon glyphicon-home"></span> Dashboard
                     </a>
                 </li>
+
+
                 <li>
                     <a id="group">
-                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Group
+                        <span class="glyphicon glyphicon-user"></span> Group
                     </a>
                 </li>
+
+
                 <li style="margin-left: 10%;">
                     <a id="searchgroup">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Group
+                        <span class="glyphicon glyphicon-search"></span> Search Group
                     </a>
                 </li>
+
+
                 <li style="margin-left: 10%;">
                     <a id="creategroup">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Create Group
+                        <span class="glyphicon glyphicon-plus"></span> Create Group
                     </a>
                 </li>
+
+
+                <li>
+                    <a id="group">
+                        <span class="glyphicon glyphicon-tags"></span> Attribute
+                    </a>
+                </li>
+
+
+                <li style="margin-left: 10%;">
+                    <a id="creategroup">
+                        <span class="glyphicon glyphicon-search"></span> Search Attribute
+                    </a>
+                </li>
+
+
+                <li style="margin-left: 10%;">
+                    <a id="creategroup">
+                        <span class="glyphicon glyphicon-plus"></span> Create Attribute
+                    </a>
+                </li>
+
+
                 <li>
                     <a id="logout" style="color:#FFFFFF;">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout
+                        <span class="glyphicon glyphicon-off"></span> Logout
                     </a>
                 </li>
+
             </ul>
         </div>
         <div class="div-remove"></div>
     </div>
-    <!-- /#sidebar-wrapper -->
+
     <!-- Navbar -->
-    <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
+    <nav class="navbar navbar-default navbar-static-top head-style">
+
         <div class="col-xs-6">
             <div class="navbar-header nav-search">
                 <div class="col-md-3" style="margin-top:10%;margin-left:-30%">
+
                     <div class="btn btn-default" id="togglebtn">
-                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
                     </div>
+
                 </div>
             </div>
-            <div>
-                <h4 class="head-page">Search</h4>
-            </div>
-        </div>
 
+            <div>
+                <h4 class="head-page">Search Group</h4>
+            </div>
+
+        </div>
     </nav>
     <!--end Navbar -->
     <!--Start contend -->
@@ -95,51 +130,77 @@
             <br>
         </div>
 
+
         <!--Start box search -->
         <div class="col-md-8 pull-right div-search">
-            <h6 style="text-align: left;">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>  
-                        Search groups
-                </h6>
+
+            <!-- <h5 style="text-align: left;">
+                <span class="glyphicon glyphicon-search"></span>  
+                Search groups
+            </h5> -->
+            Your can input group name for search group.
             <div class="input-group box-search">
-                <input type="search" id="searchinput" class="form-control" placeholder="Group name">
+                <input id="searchinput" type="text" class="form-control" placeholder="Group Name" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="searchbtn">
+                        <span class="glyphicon glyphicon-search"></span>
+                </span>
 
             </div>
-            <div class="col-md-12 btn-search">
-                <div class="row">
-                    <button type="button" id="searchbtn" class="btn btn-success"> Search</button>
-                </div>
-            </div>
-
         </div>
         <!--End box search -->
-        <div id="listresult">
 
-        </div>
+
+
+
+
         <!--Start box Result -->
-<!--
-        <div class="col-md-8 pull-right div-search">
-            <div class="col-md-8">
-                <h5 style="text-align:left;">
-                        Group Name
-                    </h5>
-            </div>
-            <div class="col-md-8">
-                <div class="row btn-join">
-                    <img src="pic/lock.png" width="25px">
-                    <button type="button" class="btn btn-primary btn-s"> Join</button>
-                </div>
-            </div>
-            <div class="col-md-8" id="description">
-                desc
-            </div>
-            <hr>
-            <div class="col-md-8" id="path">
-                path ->
-            </div>
+        <div class="col-md-8 pull-right div-search2">
+            <h4 style="text-align: center;">Search Result</h4>
+
+            <ul class="list-group" id="grouplist">
+                <!--
+                <li class="list-group-item">
+                    <img src="icon/normal/1.png" class="icon-size">
+                    <h5 class="name-search">Group Name 0</h5>
+                    <ol class="breadcrumb">
+                        <li>Group</li>
+                        <li>Group</li>
+                        <li>Group</li>
+                    </ol>
+                    <button type="button" class="btn btn-primary btn-xs btn-joinn">Join Group</button>
+                </li>
+
+
+                <li class="list-group-item">
+                    <img src="icon/normal/13.png" class="icon-size">
+                    <h5 class="name-search">Group Name 1</h5>
+                    <ol class="breadcrumb">
+                        <li>Group</li>
+                        <li>Group</li>
+                        <li>Group</li>
+                    </ol>
+                    <span class="glyphicon glyphicon-lock set-layoutlock"></span>
+                    <button type="button" class="btn btn-primary btn-xs btn-joinn">Join Group</button>
+
+                </li>
+
+                <li class="list-group-item">
+                    <img src="icon/normal/10.png" class="icon-size">
+                    <h5 class="name-search">Group Name 2</h5>
+                    <ol class="breadcrumb">
+                        <li>Group</li>
+                        <li>Group</li>
+                        <li>Group</li>
+                    </ol>
+                    <button type="button" class="btn btn-primary btn-xs btn-joinn">Join Group</button>
+                </li>
+                -->
+            </ul>
+            
+            
         </div>
--->
-        <!--End box Result -->
+
+
 
 
 
@@ -153,7 +214,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/navigatorbar.js"></script>
-    <script src="js/search-group.js"></script>
+    <script src="js/search-group2.js"></script>
     <script src="js/profilepict.js"></script>
     <script>
         $("#togglebtn").click(function() {
@@ -165,7 +226,6 @@
             $('.wrapper-test').removeClass('active');
             $('body').css('overflow', 'visible');
         });
-
     </script>
 </body>
 

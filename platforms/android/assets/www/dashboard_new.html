@@ -69,21 +69,21 @@
 
 
                 <li>
-                    <a id="group">
+                    <a id="attribute">
                         <span class="glyphicon glyphicon-tags"></span> Attribute
                     </a>
                 </li>
 
 
                 <li style="margin-left: 10%;">
-                    <a id="creategroup">
+                    <a id="searchattribute">
                         <span class="glyphicon glyphicon-search"></span> Search Attribute
                     </a>
                 </li>
 
 
                 <li style="margin-left: 10%;">
-                    <a id="creategroup">
+                    <a id="createattribute">
                         <span class="glyphicon glyphicon-plus"></span> Create Attribute
                     </a>
                 </li>
@@ -126,17 +126,27 @@
                 <br>
             </div>
             <!--Start head menu-->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default divpa" id="writemessage">
+                    <div class="panel-body" role="tab" id="headingOne">
+                        <h4 class="panel-title panel-h4">
+                            <div role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="glyphicon glyphicon-edit"></span>
+                                Write Message
+                            <span class="glyphicon glyphicon-chevron-right span-down" style="margin-top: 0% !important;"></span>
+                            </div>
+                        </h4>
+                    </div>
+                </div>
+            </div>
             <div>
                 <!-- Nav tabs -->
                 <a class="btn btn-default m-size" id="msg-tab" href="#home" data-toggle="tab" role="button" aria-controls="home" style="background-color:#FFFFFF !important; border-color:#FFFFFF !important;">
                     <h5>
-                        <span class="glyphicon glyphicon-comment"></span>
+                        <span class="glyphicon glyphicon-comment" style="margin-top:0% !important;"></span>
                         Message
                     </h5>
                 </a>
-
-
-
                 <a class="btn btn-default m-size" id="send-tab" href="#profile" role="button" aria-controls="profile" data-toggle="tab">
                     <h5>
                         <span class="glyphicon glyphicon-new-window"></span>
@@ -144,17 +154,13 @@
                     </h5>
                 </a>
 
-
-
-
                 <!-- Tab panes -->
-                <div class="tab-content">
+                <div class="tab-content" style="padding:1%;!important">
 
                     <!-- tab message -->
                     <div role="tabpanel" class="panel panel-body tab-pane active div-mar" id="home">
 
-
-                        <!-- Start msg1
+                        <!-- Start msg1 ->
                         <div class="panel panel-success position-pannel ">
                             <div class="panel-heading">
                                 <img src="./icon/important/12.png" class="icon-size">
@@ -220,7 +226,7 @@
 
                             </div>
                         </div>
-                        <!- end msg1 -->
+                        <!-- end msg1 -->
 
 
 
@@ -277,63 +283,91 @@
                     </div>
 
 
-
                     <!-- tab your send -->
                     <div role="tabpanel" class="panel panel-body tab-pane div-mar" id="profile">
                         
+                        <!-- Start ysm1 ->
+                        <div class="panel panel-success position-pannel2">
+                            <div class="panel-heading">
+                                <img src="./icon/important/12.png" class="icon-size">
+                                <h3 class="panel-title panel-set">
+                                    Football Team
+                                </h3>
+                            </div>
 
+                            <div class="panel-body">
+                                For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.
+                            </div>
 
+                            <div class="panel-footer style-panel-footer">
+                                <img src="img/user-a.png" class="img-circle size-img">
+                                <div class="col-md-4 name-sent">
+                                    <b>Pongsakorn  Yeanyang</b>
+                                    <br>
+                                    <small> August 30 at 5:30 pm</small>
+                                    <br>
+                                    <a href="#">People who ack this</a>
+                                </div>
+
+                                <div class="btn-group btn-ack">
+                                    <button type="button" class="btn btn-primary btn-xs"><b> Send Again</b></button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end ysm1 -->
                     </div>
                 </div>
+
+
+
             </div>
+            <!-- /#wrapper -->
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="cordova_plugins.js"></script>
+            <script src="js/jquery.min.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/navigatorbar.js"></script>
+            <script type="text/javascript" src="js/dashboard_new.js"></script>
+            <script src="js/profilepict.js"></script>
+            <script>
+                $("#msg-tab").click(function() {
+                    document.getElementById('msg-tab').style.backgroundColor = "#FFFFFF !important";
+                    document.getElementById('msg-tab').style.borderColor = "#FFFFFF !important";
+                    document.getElementById('send-tab').style.backgroundColor = "";
+                    document.getElementById('send-tab').style.borderColor = "";
+                });
 
+                $("#send-tab").click(function() {
+                    document.getElementById('msg-tab').style.backgroundColor = "";
+                    document.getElementById('msg-tab').style.borderColor = "";
+                    document.getElementById('send-tab').style.backgroundColor = "#FFFFFF !important";
+                    document.getElementById('send-tab').style.borderColor = "#FFFFFF !important";
+                });
 
+                $("#togglebtn").click(function() {
+                    $('.wrapper-test').addClass('active');
+                    $('body').css('overflow', 'hidden');
+                });
 
-        </div>
-        <!-- /#wrapper -->
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="cordova_plugins.js"></script>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/navigatorbar.js"></script>
-        <script type="text/javascript" src="js/dashboard_new.js"></script>
-        <script src="js/profilepict.js"></script>
-        <script>
-            $("#msg-tab").click(function() {
-                document.getElementById('msg-tab').style.backgroundColor = "#FFFFFF !important";
-                document.getElementById('msg-tab').style.borderColor = "#FFFFFF !important";
-                document.getElementById('send-tab').style.backgroundColor = "";
-                document.getElementById('send-tab').style.borderColor = "";
-            });
+                $("#toggleclose , .div-remove").click(function() {
+                    $('.wrapper-test').removeClass('active');
+                    $('body').css('overflow', 'visible');
+                });
 
-            $("#send-tab").click(function() {
-                document.getElementById('msg-tab').style.backgroundColor = "";
-                document.getElementById('msg-tab').style.borderColor = "";
-                document.getElementById('send-tab').style.backgroundColor = "#FFFFFF !important";
-                document.getElementById('send-tab').style.borderColor = "#FFFFFF !important";
-            });
+                document.addEventListener("deviceready", onDeviceReady, false);
 
-            $("#togglebtn").click(function() {
-                $('.wrapper-test').addClass('active');
-                $('body').css('overflow', 'hidden');
-            });
+                function onDeviceReady() {
+                    document.addEventListener("backbutton", function(e) {
+                        if (confirm('exit application ?')) {
+                            navigator.app.exitApp();
+                        } else {
+                            e.preventDefault();
+                        }
+                    }, false);
+                }
 
-            $("#toggleclose , .div-remove").click(function() {
-                $('.wrapper-test').removeClass('active');
-                $('body').css('overflow', 'visible');
-            });
-
-            document.addEventListener("deviceready", onDeviceReady, false);
-            function onDeviceReady() {
-                document.addEventListener("backbutton", function(e) {
-                    if (confirm('exit application ?')) {
-                        navigator.app.exitApp();
-                    } else {
-                        e.preventDefault();
-                    }
-                }, false);
-            }
-        </script>
+            </script>
 </body>
 
 </html>

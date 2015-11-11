@@ -18,7 +18,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <title>Search Group</title>
+    <title>Attribute</title>
 </head>
 
 <body style="background-color:#E8E8E8">
@@ -33,11 +33,12 @@
                 </li>
                 <div class="col-lg-12">
                     <div class="col-xs-2">
-                        <img id="profilepict" src="img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
+                        <img src="img/user.png" class="img-circle" style="width: 50px;height: 50px;margin-top: 36%;margin-bottom:10%;">
                     </div>
                     <div class="col-md-10" style="text-align:right;">
-                        <h6 id="profilename" style="color:#FFFFFF"> Firstname  Lastname</h6>
-                        <a href="view-profile.html"><small>View your profile</small></a>
+                        <h6 style="color:#FFFFFF"> Firstname  Lastname</h6>
+                        <a><small>View your profile</small></a>
+
                     </div>
                 </div>
                 <br>
@@ -70,21 +71,21 @@
 
 
                 <li>
-                    <a id="group">
+                    <a id="attribute">
                         <span class="glyphicon glyphicon-tags"></span> Attribute
                     </a>
                 </li>
 
 
                 <li style="margin-left: 10%;">
-                    <a id="creategroup">
+                    <a id="searchattribute">
                         <span class="glyphicon glyphicon-search"></span> Search Attribute
                     </a>
                 </li>
 
 
                 <li style="margin-left: 10%;">
-                    <a id="creategroup">
+                    <a id="createattribute">
                         <span class="glyphicon glyphicon-plus"></span> Create Attribute
                     </a>
                 </li>
@@ -116,7 +117,7 @@
             </div>
 
             <div>
-                <h4 class="head-page">Search Group</h4>
+                <h4 class="head-page">My Attribute</h4>
             </div>
 
         </div>
@@ -130,74 +131,28 @@
             <br>
         </div>
 
-
-        <!--Start box search -->
-        <div class="col-md-8 pull-right div-search">
-
-            <!-- <h5 style="text-align: left;">
-                <span class="glyphicon glyphicon-search"></span>  
-                Search groups
-            </h5> -->
-            Your can input group name for search group.
-            <div class="input-group box-search">
-                <input id="searchinput" type="text" class="form-control" placeholder="Group Name" aria-describedby="basic-addon2">
-                <span class="input-group-addon" id="searchbtn">
-                        <span class="glyphicon glyphicon-search"></span>
-                </span>
-
-            </div>
-        </div>
-        <!--End box search -->
-
-
-
-
-
         <!--Start box Result -->
         <div class="col-md-8 pull-right div-search2">
-            <h4 style="text-align: center;">Search Result</h4>
+            <h4 style="text-align:center;">Your Attribute</h4>
 
-            <ul class="list-group" id="grouplist">
-                <!--
+            <ul class="list-attr">
                 <li class="list-group-item">
-                    <img src="icon/normal/1.png" class="icon-size">
-                    <h5 class="name-search">Group Name 0</h5>
-                    <ol class="breadcrumb">
-                        <li>Group</li>
-                        <li>Group</li>
-                        <li>Group</li>
-                    </ol>
-                    <button type="button" class="btn btn-primary btn-xs btn-joinn">Join Group</button>
+                    <h5 class="">Attribute Name 0</h5>
+                    <input type="hidden" id="attrid" value="0">
+                    <button type="button" class="btn btn-danger btn-xs addatr" id="removeattrbtn">Remove</button>
                 </li>
 
 
                 <li class="list-group-item">
-                    <img src="icon/normal/13.png" class="icon-size">
-                    <h5 class="name-search">Group Name 1</h5>
-                    <ol class="breadcrumb">
-                        <li>Group</li>
-                        <li>Group</li>
-                        <li>Group</li>
-                    </ol>
-                    <span class="glyphicon glyphicon-lock set-layoutlock"></span>
-                    <button type="button" class="btn btn-primary btn-xs btn-joinn">Join Group</button>
-
+                    <h5 class="">Attribute Name 1</h5>
+                    <button type="button" class="btn btn-danger btn-xs addatr">Remove</button>
                 </li>
 
                 <li class="list-group-item">
-                    <img src="icon/normal/10.png" class="icon-size">
-                    <h5 class="name-search">Group Name 2</h5>
-                    <ol class="breadcrumb">
-                        <li>Group</li>
-                        <li>Group</li>
-                        <li>Group</li>
-                    </ol>
-                    <button type="button" class="btn btn-primary btn-xs btn-joinn">Join Group</button>
+                    <h5 class="">Attribute Name 2</h5>
+                    <button type="button" class="btn btn-danger btn-xs addatr">Remove</button>
                 </li>
-                -->
             </ul>
-            
-            
         </div>
 
 
@@ -214,8 +169,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/navigatorbar.js"></script>
-    <script src="js/search-group2.js"></script>
-    <script src="js/profilepict.js"></script>
     <script>
         $("#togglebtn").click(function() {
             $('.wrapper-test').addClass('active');
@@ -226,6 +179,7 @@
             $('.wrapper-test').removeClass('active');
             $('body').css('overflow', 'visible');
         });
+
     </script>
 </body>
 

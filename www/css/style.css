@@ -130,6 +130,11 @@ div#wrapper {
 	height: 50px;
 }
 
+.group-margintop{
+	margin-top: -3%;
+
+}
+
 .set-layoutlock{
 	float: right;
     margin-bottom: -6%;
@@ -254,7 +259,7 @@ div#wrapper {
     margin-top: -1%;
     background-color: #FFFFFF;
     margin-left: 0.4%;
-    padding-bottom: 10%;
+    /*padding-bottom: 10%;*/
     box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.2);
 	border-radius: 5px;
 
@@ -280,7 +285,7 @@ div#wrapper {
 .menu-dropdown{
 	padding-left: 85%;
     margin-top: -7.5%;
-    color: #e8e8e8;
+    color: gray;
 }
 .positon-menulist{
 	 margin-left: 44%;
@@ -299,7 +304,13 @@ div#wrapper {
 
 .position-pannel{
 	width: 85%;
+	/*margin-left: 3%;*/
 	
+}
+
+.position-pannel2{
+	width: 87%;
+    margin-left: -1%;	
 }
 .text-pannel-header{
 	margin-top: -10% !important;
@@ -307,6 +318,23 @@ div#wrapper {
     margin-bottom: -1% !important;
 }
 
+.search-box{
+	width: 85% !important;
+}
+
+.search-box2{
+	width: 50% !important;
+	margin-top: -11.3%;
+    margin-left: 35%;
+}
+
+.search-btnn{
+	float: right;
+    margin-top: -11.3%;
+}
+.mar-top{
+	margin-top: 3% !important;
+}
 
 .style-panel-footer{
 	background-color: #FFFFFF !important; 
@@ -318,6 +346,8 @@ div#wrapper {
     margin-left: 14%;
 
 }
+
+
 
 .navbar-second{
 	min-width: 1280px;
@@ -337,6 +367,8 @@ div#wrapper {
 .icon-head{
 	text-align: center;
     padding-top: 1%;
+    /*width: 7% !important;*/
+    margin-left: 1%;
 }
 .headposition{
 	text-align: center;
@@ -397,10 +429,21 @@ div#wrapper {
 	margin-left: 34%;
 }
 .box-mem{
-	margin-top: -10%;
+	margin-top: -13%;
 }
 .border-mem{
 	border-bottom: 1px solid #e8e8e8;
+}
+
+.footer-stylee{
+	background-color: #FFFFFF !important;
+    padding-bottom: 0% !important;
+}
+
+.down-span{
+	float: right;
+    margin-top: -5%;
+    color: gray;
 }
 
 .phone-set{
@@ -459,7 +502,150 @@ div#wrapper {
 }
 .span-down{
 	float: right;
+	/*margin-top: -15%;*/
+
 }
+.span-down2{
+	float: right;
+	margin-top: -15%;
+
+}
+.dropset{
+	margin-left: 44% !important;
+	margin-top: -5% !important;
+}
+.po-set{
+	margin-left: 27%;
+}
+
+.addatr{
+	float: right;
+    margin-top: -10%;
+}
+.footset{
+	padding-left: 58%;
+    margin-bottom: 8%;
+
+}
+.pic-size{
+	width: 50px;
+	height: 50px;
+}
+.name2{
+	margin-top: -28px !important;
+    padding-left: 65px !important;
+}
+
+.btn-add{
+	float: right;
+    margin-top: -28px;
+}
+.position-h4{
+	padding-bottom: 5%;
+    margin-left: -6%;
+}
+
+.text-h5{
+	text-align: center;
+}
+.tab-set{
+	border-bottom: 1px solid transparent !important;
+}
+.setviewmem{
+	width: 33.3%;
+	background-color: #e6e6e6!important;
+    border-color: #adadad !important;
+    border-bottom-right-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+
+}
+.setviewmem:active{
+	background-color: #FFFFFF!important;
+    border-color: transparent !important;
+    width: 33.3%;
+    border-bottom-right-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.body-set{
+	background-color: #FFFFFF;
+    /*margin-top: 5%;*/
+    border-radius: 4px;
+    padding: 3%;
+    padding-top: 4%;
+    padding-bottom: 1%;
+
+}
+.phone-set{
+	color: Grey;
+    margin-left: 100px;
+
+}
+
+.num-tel{
+	color: #5cb85c;
+	margin-top: -23px;
+    margin-left: 32%;
+    padding-left: 15px;
+}
+
+.spann-set{
+	float: right;
+    margin-top: -10%;
+    color: gray;
+}
+.font-c{
+	color: #5cb85c;
+}
+
+
+.padding-search{
+	padding: 8% !important;
+}
+.pad-result{
+	padding: 3% !important;
+}
+
+.padbtn-left{
+	padding-left: 23% !important;
+}
+.ness-set{
+
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    width: 46%;
+    margin-left: 54%;
+    margin-top: -12%;
+    height: 38px;
+}
+.info-set{
+	float: right;
+    margin-right: 40%;
+    margin-top: 3%;
+    color: gray;
+}
+
+.dis-non{
+	display: none;
+}
+
+
+.button-line{
+	border-bottom: 1px solid #ddd;
+}
+
+.pset{
+	margin-top: -6%;
+}
+.ness-hide{
+	display: none;
+	margin-top: 5%;
+}
+.operator-set2{
+	width: 100px !important;
+	/*height: 30px !important;*/
+}
+
 .layout-search{
 	
     padding-left: 10% !important;
@@ -476,6 +662,11 @@ div#wrapper {
 	margin-top: 5%;
 
 }
+
+.marginn-top{
+	    margin-top: 20%;
+}
+
 .dis-navtab{
 	border-bottom: 0px !important;
 }
@@ -486,6 +677,19 @@ div#wrapper {
     background-color: #e6e6e6!important;
     border-color: #adadad !important;
 }
+.des-style{
+	color: #337ab7;
+}
+.icon-sizegroup{
+	width: 15px;
+    height: 15px;
+}
+
+.btn-n{
+	float: right;
+    margin-top: -6%;
+}
+
 .m-size:focus{
 	background: #FFFFFF!important;
 	border-color: #FFFFFF !important;
@@ -496,6 +700,11 @@ div#wrapper {
 
 .div-panel{
 	width: 85%;
+}
+
+.divpa{
+	width: 83% !important;
+    margin-left: 1% !important;
 }
 .down-span{
 	float: right;
@@ -661,7 +870,7 @@ div#wrapper {
 
 	.name-box{
 		padding-top: 3% !important; 
-		padding-bottom: 3%;
+		padding-bottom: 5% !important;
 	}
 	.box-set{
 	float: right !important;

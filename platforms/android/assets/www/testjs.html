@@ -1,5 +1,22 @@
 <script>
-    var temppath = 'Kmutt -> SIT -> Computer science';
-    alert(temppath.substr(temppath.lastIndexOf('>')+1));
-    alert(temppath.substr(0,temppath.indexOf('>')-1));
+    function validateduplicate(arr) {
+        var sorted_arr = arr.sort(); // You can define the comparing function here. 
+        // JS by default uses a crappy string compare.
+        var results = [];
+        alert(arr.length);
+        for (var i = 0; i < arr.length - 1; i++) {
+            if (sorted_arr[i + 1] == sorted_arr[i]) {
+                results.push(sorted_arr[i]);
+            }
+        }
+        if(results.length == 0){
+            return "true";
+        }else{
+            return "false";
+        }
+    }
+    
+    var arr = [9, 111, 2, 3, 4, 5, 7];
+    alert(validateduplicate(arr));
+
 </script>
