@@ -18,12 +18,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <title>Groups</title>
-    
+    <title>Create Attribute</title>
 </head>
 
 <body style="background-color:#E8E8E8">
-    <div class="wrapper-test" >
+        <div class="wrapper-test" >
         <div id="sidebar-wrapper">
 
         
@@ -107,11 +106,10 @@
         </div>
         <div class="div-remove"></div>
     </div>
-    
-    <!-- Navbar -->
-    <nav class="navbar navbar-default navbar-static-top head-style">
-        
-        <div class="col-xs-6">
+      
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
+            <div class="col-xs-6">
             <div class="navbar-header nav-search">
                 <div class="col-md-3" style="margin-top:10%;margin-left:-30%">
                     
@@ -123,119 +121,74 @@
             </div>
             
             <div>
-                <h4 class="head-page">Groups</h4>
+                <h4 class="head-page">Create Attribute</h4>
             </div>
 
         </div>
-    </nav>
-    <!--end Navbar -->
-    <!--Start contend -->
-    <div class="container-fluid" style="min-width: 330px;">
-        <div class="col-md-12" style="">
-            <br>
-            <br>
-            <br>
-        </div>
-        
+    
+        </nav>
+        <!--end Navbar -->
+        <!--Start contend -->
+        <div class="container-fluid" style="min-width: 330px;">
+            <div class="col-md-12" style="">
+                <br>
+                <br>
+                <br>
+            </div>
+            
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            
+                            <div class="panel-body padding-search">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Name *</label>
+                                            <input type="text" class="form-control" id="attrname" placeholder="Attribute Name" value="">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" id="accept">
+                                                    Accept for after you create Attribute, Anyone can join this Attribute.
+                                                </label>
+                                            </div>
 
-        <!--Start box group -->
-        <div id="listgroup">
-            <!-- list group box >
-            <div class="panel panel-default">
-                <div class="panel-heading">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="submit footset">
+                                <button type="button" id="createbtn" class="btn btn-success">Create Attritube</button>
+                            </div>
+                        </div>
+                    </div>
+    
                     
-                    <h4 class="panel-title">
-                        <img src="./icon/normal/1.png" class="icon-size">
-                        KMUTT
-                    </h4>
-                    <span class="glyphicon glyphicon-chevron-right down-span"></span>
-                </div>
 
-                <div class="panel-body">
-                    <b class="des-style">Group Description: </b>
-                        enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                    <input type="hidden" value="groupid" id="groupid">
-                </div>
-                <div class="panel-footer footer-stylee">
-                    <ol class="breadcrumb">
-                        <li>Group</li>
-                        <li>Group</li>
-                        <li>Group</li>
-                    </ol>   
-                </div>    
-            </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <img src="./icon/normal/1.png" class="icon-size">
-                        Senior Project
-                    </h4>
-                    <span class="glyphicon glyphicon-chevron-right down-span"></span>
-                </div>
-
-                <div class="panel-body">
-                    <b class="des-style">Description Group: </b>
-                        enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                        
-                </div>
-                <div class="panel-footer footer-stylee">
-                    <ol class="breadcrumb">
-                        <li>Group</li>
-                        <li>Group</li>
-                        <li>Group</li>
-                    </ol>   
-                </div>    
-            </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <img src="./icon/normal/1.png" class="icon-size">
-                        IT 18
-                    </h4>
-                    <span class="glyphicon glyphicon-chevron-right down-span"></span>
-                </div>
-
-                <div class="panel-body">
-                    <b class="des-style">Description Group: </b>
-                        enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                        
-                </div>
-                <div class="panel-footer footer-stylee">
-                    <ol class="breadcrumb">
-                        <li>Group</li>
-                        <li>Group</li>
-                        <li>Group</li>
-                    </ol>   
-                </div>    
-            </div>
-            <!-- end list group box -->
-     </div>
+       
+               
+     
+        </div>
 
 
-
-    <!-- /#wrapper -->
-    <script type="text/javascript" src="cordova.js"></script>
+ 
+   
+</body>
+<script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="cordova_plugins.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/navigatorbar.js"></script>
+    <script src="js/create-attribute.js"></script>
     <script src="js/profilepict.js"></script>
-    <script src="js/group2.js"></script>
     <script>
+        $("#togglebtn").click(function() {
+            $('.wrapper-test').addClass('active');
+            $('body').css('overflow', 'hidden');
+        });
 
-    $("#togglebtn").click(function(){
-        $('.wrapper-test').addClass('active');
-        $('body').css('overflow','hidden');
-    });
-
-    $("#toggleclose , .div-remove").click(function(){
-        $('.wrapper-test').removeClass('active');
-        $('body').css('overflow','visible');
-    });
+        $("#toggleclose , .div-remove").click(function() {
+            $('.wrapper-test').removeClass('active');
+            $('body').css('overflow', 'visible');
+        });
 
     </script>
-</body>
 
 </html>

@@ -18,8 +18,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <title>Groups</title>
-    
+    <title>Search Group</title>
 </head>
 
 <body style="background-color:#E8E8E8">
@@ -123,7 +122,7 @@
             </div>
             
             <div>
-                <h4 class="head-page">Groups</h4>
+                <h4 class="head-page">Search Attribute</h4>
             </div>
 
         </div>
@@ -138,80 +137,66 @@
         </div>
         
 
-        <!--Start box group -->
-        <div id="listgroup">
-            <!-- list group box >
-            <div class="panel panel-default">
-                <div class="panel-heading">
+        <!--Start box search -->
+        <div class="col-md-8 pull-right div-search">
+
+            <!-- <h5 style="text-align: left;">
+                <span class="glyphicon glyphicon-search"></span>  
+                Search groups
+            </h5> -->
+            Your can input Attribute name for search attribute.
+            <div class="input-group box-search" id="searchattrmsg">
+                <input id="attrmsg" value="" type="text" class="form-control"  placeholder="Attribute Name" aria-describedby="basic-addon2">
+                        
+                    <span class="input-group-addon" id="searchbtn">
+                        <span class="glyphicon glyphicon-search"></span> 
+                    </span>
+
+            </div>
+
+
+
+           
+             
+            </div>
+            <!--End box search -->
+
+
+
+
+
+            <!--Start box Result -->
+            <div class="col-md-8 pull-right div-search2">
+                <h4 style="text-align: center;">Result Search</h4>
                     
-                    <h4 class="panel-title">
-                        <img src="./icon/normal/1.png" class="icon-size">
-                        KMUTT
-                    </h4>
-                    <span class="glyphicon glyphicon-chevron-right down-span"></span>
-                </div>
+                    <ul class="list-group" id="listresultattr">
+                        <!-- start list attr result >
+                        <li class="list-group-item">
+                            <h5 class="">Attribute Name 0</h5>
+                            <button type="button" class="btn btn-primary btn-xs addatr">Add Attribute</button>
+                        </li>
 
-                <div class="panel-body">
-                    <b class="des-style">Group Description: </b>
-                        enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                    <input type="hidden" value="groupid" id="groupid">
-                </div>
-                <div class="panel-footer footer-stylee">
-                    <ol class="breadcrumb">
-                        <li>Group</li>
-                        <li>Group</li>
-                        <li>Group</li>
-                    </ol>   
-                </div>    
+
+                        <li class="list-group-item">
+                            <h5 class="">Attribute Name 1</h5>
+                            <button type="button" class="btn btn-primary btn-xs addatr">Add Attribute</button>
+                            
+                        </li>
+
+                        <li class="list-group-item">
+                            <h5 class="">Attribute Name 2</h5>
+                            <button type="button" class="btn btn-primary btn-xs addatr">Add Attribute</button>
+                        </li>
+
+                        <!-- end attr result -->
+                    </ul>
             </div>
+         
+            
+          
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <img src="./icon/normal/1.png" class="icon-size">
-                        Senior Project
-                    </h4>
-                    <span class="glyphicon glyphicon-chevron-right down-span"></span>
-                </div>
 
-                <div class="panel-body">
-                    <b class="des-style">Description Group: </b>
-                        enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                        
-                </div>
-                <div class="panel-footer footer-stylee">
-                    <ol class="breadcrumb">
-                        <li>Group</li>
-                        <li>Group</li>
-                        <li>Group</li>
-                    </ol>   
-                </div>    
-            </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <img src="./icon/normal/1.png" class="icon-size">
-                        IT 18
-                    </h4>
-                    <span class="glyphicon glyphicon-chevron-right down-span"></span>
-                </div>
-
-                <div class="panel-body">
-                    <b class="des-style">Description Group: </b>
-                        enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.
-                        
-                </div>
-                <div class="panel-footer footer-stylee">
-                    <ol class="breadcrumb">
-                        <li>Group</li>
-                        <li>Group</li>
-                        <li>Group</li>
-                    </ol>   
-                </div>    
-            </div>
-            <!-- end list group box -->
-     </div>
+    </div>
 
 
 
@@ -222,7 +207,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/navigatorbar.js"></script>
     <script src="js/profilepict.js"></script>
-    <script src="js/group2.js"></script>
+    <script src="js/search-attribute.js"></script>
     <script>
 
     $("#togglebtn").click(function(){

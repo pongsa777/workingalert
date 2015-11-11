@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $("#searchbtn").on("click", function (e) {
         var searchmsg = $("#searchinput").val();
+        var sessionid = localStorage.getItem("sessionid");
         if(searchmsg == ""){
             alert("please input search message");    
         }
