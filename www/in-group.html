@@ -56,25 +56,22 @@
                 </li>
 
                 <li>
-                    <a id="group">
-                        <span class="glyphicon glyphicon-tags"></span> 
-                        Attribute
+                    <a id="attribute">
+                        <span class="glyphicon glyphicon-tags"></span> Attribute
                     </a>
                 </li>
 
 
                 <li style="margin-left: 10%;">
-                    <a id="creategroup">
-                        <span class="glyphicon glyphicon-search"></span> 
-                        Search Attribute
+                    <a id="searchattribute">
+                        <span class="glyphicon glyphicon-search"></span> Search Attribute
                     </a>
                 </li>
 
 
                 <li style="margin-left: 10%;">
-                    <a id="creategroup">
-                        <span class="glyphicon glyphicon-plus"></span> 
-                        Create Attribute
+                    <a id="createattribute">
+                        <span class="glyphicon glyphicon-plus"></span> Create Attribute
                     </a>
                 </li>
 
@@ -116,21 +113,21 @@
             
             <nav class="navbar navbar-default navbar-static-top navbar-second">
 
-                    <div class="col-xs-1 icon-head">
+                    <!-- <div class="col-xs-1 icon-head">
                         <span class="glyphicon glyphicon-info-sign"></span>  
                         <h6> About group</h6>
-                    </div>
-                    <div class="col-xs-1 icon-head">
+                    </div> -->
+                    <div class="col-xs-1 icon-head" id="goaddmember">
                         <span class="glyphicon glyphicon-plus"></span>  
                         <h6> Add member</h6>
                     </div>
 
-                    <div class="col-xs-1 icon-head">
+                    <div class="col-xs-1 icon-head" id="goviewmember">
                         <span class="glyphicon glyphicon-user"></span> 
                         <h6> View member</h6>
                     </div>
 
-                    <div class="col-xs-1 icon-head">
+                    <div class="col-xs-1 icon-head" id="gosetting">
                         <span class="glyphicon glyphicon-cog"></span> 
                         <h6> Setting</h6>
                     </div>
@@ -140,13 +137,13 @@
 
             <!--start write message-->
             <div class="panel-group marginn-top" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default divpa">
+                <div class="panel panel-default divpa" id="gowritemsg">
                     <div class="panel-body" role="tab" id="headingOne">
                         <h4 class="panel-title panel-h4">
                             <div role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <span class="glyphicon glyphicon-edit"></span>
                                 Write Message
-                            <span class="glyphicon glyphicon-chevron-right span-down" style="margin-top: 0% !important;"></span>
+                            <span class="glyphicon glyphicon-chevron-right span-down"></span>
                             </div>
                         </h4>
                     </div>
@@ -161,6 +158,8 @@
                     </h5>
                 </a>
 
+
+
                 <a class="btn btn-default m-size" id="send-tab" href="#profile" role="button" aria-controls="profile" data-toggle="tab">
                     <h5> 
                         <span class="glyphicon glyphicon-new-window"></span> 
@@ -173,6 +172,7 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
+
                     <!-- tab message -->
                     <div role="tabpanel" class="panel panel-body tab-pane active div-mar" id="home">
 
@@ -202,12 +202,10 @@
                                 <div class="btn-group btn-ack">
                                     <button type="button" class="btn btn-default"><b> Ack</b></button>
                                 </div>
-
                             </div>
                         </div>
                         <!-- end msg1 -->
 
-                        
                         <!-- Start msg3 -->
                         <div class="panel panel-default position-pannel2 ">
                             <div class="panel-heading">
@@ -217,9 +215,11 @@
                                 </h3>
                             </div>
 
+
                             <div class="panel-body">
                                 For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.
                             </div>
+                            
                             <div class="panel-footer style-panel-footer">
                                 <img src="img/user-a.png" class="img-circle size-img">
                                 <div class="col-md-4 name-sent">
@@ -230,7 +230,7 @@
                             </div>
                         </div>
                         <!-- end msg3 -->
-                    </div>
+                    </div><!-- close msg panel -->
 
 
 
@@ -242,34 +242,7 @@
                                 <img src="./icon/important/12.png" class="icon-size">
                                 <h3 class="panel-title panel-set">
                                     Football Team
-                                </h3>
-
-                                <div class="collapse" id="ysm1">
-                                    <div class="panel-heading group-margin">
-                                        <h3 class="panel-title">
-                                            <img src="icon/important/20.png" class="icon-size">
-                                            Back-End
-                                        </h3>
-
-                                        <p class="h6-group">
-                                            via
-                                            <span class="glyphicon glyphicon-triangle-right"></span> KMUTT
-                                        </p>
-                                    </div>
-
-
-                                    <div class="panel-heading group-margin">
-                                        <h3 class="panel-title">
-                                            <img src="icon/important/17.png" class="icon-size">
-                                            Front-End
-                                        </h3>
-
-                                        <p class="h6-group">
-                                            via
-                                            <span class="glyphicon glyphicon-triangle-right"></span> IT18
-                                        </p>
-                                    </div>
-                                </div>
+                                </h3>  
                             </div>
 
                             <div class="panel-body">
@@ -294,40 +267,13 @@
                         </div>
                         <!-- end ysm1 -->
                         
-                        <!-- Start ysm2 -->
+                         <!-- Start ysm2 -->
                         <div class="panel panel-default position-pannel2">
                             <div class="panel-heading">
-                                <img src="./icon/important/12.png" class="icon-size">
+                                <img src="./icon/normal/12.png" class="icon-size">
                                 <h3 class="panel-title panel-set">
                                     Football Team
-                                </h3>
-
-                                <div class="collapse" id="ysm1">
-                                    <div class="panel-heading group-margin">
-                                        <h3 class="panel-title">
-                                            <img src="icon/important/20.png" class="icon-size">
-                                            Back-End
-                                        </h3>
-
-                                        <p class="h6-group">
-                                            via
-                                            <span class="glyphicon glyphicon-triangle-right"></span> KMUTT
-                                        </p>
-                                    </div>
-
-
-                                    <div class="panel-heading group-margin">
-                                        <h3 class="panel-title">
-                                            <img src="icon/normal/17.png" class="icon-size">
-                                            Front-End
-                                        </h3>
-
-                                        <p class="h6-group">
-                                            via
-                                            <span class="glyphicon glyphicon-triangle-right"></span> IT18
-                                        </p>
-                                    </div>
-                                </div>
+                                </h3>  
                             </div>
 
                             <div class="panel-body">
@@ -340,14 +286,83 @@
                                     <b>Pongsakorn  Yeanyang</b>
                                     <br>
                                     <small> August 30 at 5:30 pm</small>
+                                    <br>
+                                    <a href="#">People who ack this</a>
+                                </div>
+
+                                <div class="btn-group btn-ack">
+                                    <button type="button" class="btn btn-primary btn-xs"><b> Send Again</b></button>
                                 </div>
                             </div>
                         </div>
                         <!-- end ysm2 -->
+                        
+                </div><!-- end tab panel -->
+            </div>
+
+            <!-- <div class="panel-group">
+                <div class="panel panel-default position-pannel">
+                    <div id="groupsetting" class="panel-heading">
+                        <h4 class="panel-title panel-h4">
+                            <span class="glyphicon glyphicon-cog"></span>
+                                Setting Group
+                            <span class="glyphicon glyphicon-chevron-right i-color"></span>
+                            
+                        </h4>
+                    </div>
+                </div>
+            </div> -->
+            <!--end write message-->
+            <!-- <div id="listmessage"> -->
+                <!-- start message 
+            <div class="panel panel-success position-pannel">
+                <img src="img/bookmark.png" class="size-img" style="float: right;">
+                <div class="panel-heading">
+                    <img src="img/icon/ball.png" class="icon-size">
+                    <h3 class="panel-title panel-set">Football Team</h3>
+                    <input type="hidden" value="" id="msgid">
+                </div>
+                <div class="panel-body">
+                    For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.
+                </div>
+                <div class="panel-footer style-panel-footer">
+                    <img src="img/user-a.png" class="img-circle size-img">
+                    <div class="col-md-4 name-sent">
+                        <b>Pongsakorn  Yeanyang</b>
+                        <br>
+                        <small> August 30 at 5:30 pm</small>
+                        <br>
+                        <a href="#">People who ack this</a>
+                    </div>
+                    <div class="btn-group btn-ack">
+                        <button type="button" class="btn btn-default"><b>Ack</b></button>
+                    </div>
                 </div>
             </div>
 
-          
+
+
+            <div class="panel panel-default position-pannel">
+                <div class="panel-heading">
+                    <img src="img/icon/ball-b.png" class="icon-size">
+                    <h3 class="panel-title panel-set"> Football Team</h3>
+                    <input type="hidden" value="" id="msgid">
+                </div>
+                <div class="panel-body">
+                    การจัดการทรัพยากรอย่างยืดหยุ่นเป็นปัจจัยสำคัญ ในความสำเร็จของระบบประมวลผลแบบกลุ่มเมฆ หัวใจสำคัญคือการจัดสรรทรัพยากรให้กับผู้ใช้งานได้รวดเร็วและตรงตามความต้องการ โดยปกติแล้วการจัดสรรทรัพยากรบนระบบประมวลผลแบบกลุ่มเมฆนั้นทำได้ โดยการเพิ่มจำนวนเซิร์ฟเวอร์เสมือน แต่เนื่องจากวิธีนี้ระบบจำเป็นที่จะต้องใช้เวลาคัดลอกอิมเมจไฟล์ การเตรียมระบบรวมถึงการเริ่มต้นระบบใหม่ ซึ่งใช้เวลารวมกันประมาณ 2-5 นาที ในงานวิจัยฉบับนี้นำเสนอการจัดสรรทรัพยากรบน
+                </div>
+                <div class="panel-footer style-panel-footer">
+                    <img src="img/user-a.png" class="img-circle size-img">
+                    <div class="col-md-4 name-sent">
+                        <b>Pongsakorn  Yeanyang</b>
+                        <br>
+                        <small> August 30 at 5:30 pm</small>
+                        <br>
+                        <a href="#">People who saw this</a>
+                    </div>
+                </div>
+            </div>
+-->
             </div>
         </div>
 
@@ -361,7 +376,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/navigatorbar.js"></script>
-    <script src="js/in-group.js"></script>
+    <script src="js/in-group2.js"></script>
     <script src="js/profilepict.js"></script>
     <script>
         $("#msg-tab").click(function() {
