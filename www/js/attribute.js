@@ -37,4 +37,8 @@ $(document).ready(function() {
     });// close click remove
     
     
+    document.addEventListener("backbutton", function (e) {
+        document.location.href = 'dashboard_new.html';
+    }, false);
+    
 }); // close doc ready

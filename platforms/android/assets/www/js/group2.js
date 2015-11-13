@@ -52,4 +52,9 @@ $(document).ready(function() {
             document.location.href = "in-group.html";
         }
     });
+    
+    
+    document.addEventListener("backbutton", function (e) {
+        document.location.href = 'dashboard_new.html';
+    }, false);
 }); // close doc ready

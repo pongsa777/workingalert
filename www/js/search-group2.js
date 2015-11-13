@@ -65,4 +65,9 @@ $(document).ready(function () {
             }
         });
     });
+    
+    
+    document.addEventListener("backbutton", function (e) {
+        document.location.href = 'dashboard_new.html';
+    }, false);
 }); //close document ready

@@ -23,5 +23,9 @@ $(document).ready(function () {
     }); // close click event
 
 
+    document.addEventListener("backbutton", function (e) {
+        document.location.href = 'dashboard_new.html';
+    }, false);
+    
 
 }); // close doc ready

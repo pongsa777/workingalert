@@ -16,7 +16,7 @@ $(document).ready(function () {
                 document.getElementById('optionsRadios2').checked = true;
                 // apprive box
                 var approve = data.groupdata.raw_approve;
-                if (approve == null || approve == "null") {
+                if (approve == null || approve == "null" || approve == 0) {
                     document.getElementById('checkbox0').checked = false;
                 } else {
                     document.getElementById('checkbox0').checked = true;
@@ -33,11 +33,11 @@ $(document).ready(function () {
                 }
             }
 
-            var grouppermission = data.groupdata.permission;
-            if (grouppermission == "" || grouppermission == null) {
-                document.getElementById('blankCheckbox2').checked = false;
-            } else {
+            var grouppermission = data.groupdata.raw_permission;
+            if (grouppermission == "" || grouppermission == null || grouppermission == 1) {
                 document.getElementById('blankCheckbox2').checked = true;
+            } else {
+                document.getElementById('blankCheckbox2').checked = false;
             }
 
 
@@ -66,6 +66,8 @@ $(document).ready(function () {
         if (document.getElementById("optionsRadios1").checked) {
             pass = "";
             repass = "";
+            document.getElementById('checkbox0').checked = false;
+            document.getElementById('checkbox1').checked = false;
         } else {
             if (document.getElementById("checkbox0").checked) {
                 approve = 1;
@@ -79,6 +81,7 @@ $(document).ready(function () {
             permissionsend = 2;
         }
 
+        
         if (pass != repass) {
             alert('group password missmatch');
             document.getElementById('password').value = "";
