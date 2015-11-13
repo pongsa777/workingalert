@@ -21,506 +21,228 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 
-  
+
     <title>View member</title>
 </head>
 
 <body style="background-color:#E8E8E8">
-       
-        <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
-            <div class="col-xs-6">
-                    <div class="navbar-header nav-search">
-                        
-                    </div>
-                    <div>
-                        <h4 class="head-page">View Member</h4>
-                    </div>
-            </div>
-    
-        </nav>
-        <!--end Navbar -->
-        <!--Start contend -->
-        <div class="container-fluid" style="min-width: 330px;">
-            <div class="col-md-12" style="">
-                <br>
-                <br>
-                <br>
+
+    <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
+        <div class="col-xs-6">
+            <div class="navbar-header nav-search">
+
             </div>
             <div>
+                <h4 class="head-page">View Member</h4>
+            </div>
+        </div>
 
-  <!-- Nav tabs -->
-                <ul class="nav nav-tabs tab-style" role="tablist" type="button">
-                    <li role="presentation" class="active tab-size">
-                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="a-style">
-                            <b>Member</b>
-                            <br>
-                            <span class="badge">4</span>
-                        </a>
-                    </li>
-                    <li role="presentation" class="tab-size">
-                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="a-style">
-                            <b>Admin</b>
-                            <br>
-                            <span class="badge">1</span>
-                        </a>
-                    </li>
-                    <li role="presentation" class="tab-size">
-                        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="a-style">
-                            <b>Blocked</b>
-                            <br>
-                            <span class="badge">0</span>
-                        </a>
-                    </li>
-    
-                </ul>
+    </nav>
+    <!--end Navbar -->
 
-  <!-- Tab panes -->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active tab-member" id="home">
-                        <div class="panel-body box-mem">
+    <!--Start contend -->
+    <div class="container-fluid" style="min-width: 330px;">
+        <div class="col-md-12" style="">
+            <br>
+            <br>
+            <br>
+        </div>
+        <div>
 
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs tab-style" role="tablist" type="button">
+                <li role="presentation" class="active tab-size">
+                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="a-style">
+                        <b>Member</b>
+                        <br>
+                        <span class="badge" id="countmember">-</span>
+                    </a>
+                </li>
+                <li role="presentation" class="tab-size">
+                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="a-style">
+                        <b>Admin</b>
+                        <br>
+                        <span class="badge" id="countadmin">-</span>
+                    </a>
+                </li>
+                <li role="presentation" class="tab-size">
+                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" class="a-style">
+                        <b>Blocked</b>
+                        <br>
+                        <span class="badge" id="countblock">-</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- close Nav tabs -->
+
+
+            <!-- Tab panes ใหญ่สุด -->
+            <div class="tab-content">
+
+                <!-- start member tab -->
+                <div role="tabpanel" class="tab-pane active tab-member" id="home">
+                    <div class="panel-body box-mem">
+                        <div class="panel-body" id="panelmember">
+
+                            <!-- each member >
                             <div class="row box-name name-box border-mem">
                                 <div class="col-xs-2">
                                     <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;">
                                 </div>
-                    
                                 <div class="col-lg-12 btn-position">
                                     <h6 style="margin-left: 25%;">
                                         Firstname Lastname
                                     </h6>
-                                
                                 </div>
-                            
-                                <div class="dropdown menu-dropdown">
-                           
-                                    <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                                        <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Add to admin
-                                                </a>
-                                            </li>
 
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Permission Denied
-                                                </a>
-                                            </li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                                        </ul>
+                                <div class="dropdown menu-dropdown">
+                                    <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
+                                    <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="#">
+                                                    Add to admin
+                                            </a>
+                                        </li>
+
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="#">
+                                                    Blocked user
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="divider"></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
+                                    </ul>
                                 </div>
                             </div>
+                            <!-- close each member -->
 
-
-
-
-                            <div class="row box-name name-box border-mem">
-                                <div class="col-xs-2">
-                                    <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;">
-                                </div>
-                
-                                <div class="col-lg-12 btn-position">
-                                    <h6 style="margin-left: 25%;">
-                                        Firstname Lastname
-                                    </h6>
-                                
-                                </div>
-                            
-                                <div class="dropdown menu-dropdown">
-                               
-                                    <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                                        <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Add to admin
-                                                </a>
-                                            </li>
-
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Permission Denied
-                                                </a>
-                                            </li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                                        </ul>
-                                </div>
-                            </div>
-
-                             <div class="row box-name name-box border-mem">
-                                <div class="col-xs-2">
-                                    <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;">
-                                </div>
-                    
-                                <div class="col-lg-12 btn-position">
-                                    <h6 style="margin-left: 25%;">
-                                        Firstname Lastname
-                                    </h6>
-                                
-                                </div>
-                                
-                                <div class="dropdown menu-dropdown">
-                               
-                                    <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                                        <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Add to admin
-                                                </a>
-                                            </li>
-
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Permission Denied
-                                                </a>
-                                            </li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                                        </ul>
-                                </div>
-                            </div>
-
-                             <div class="row box-name name-box">
-                                <div class="col-xs-2">
-                                    <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;">
-                                </div>
-                    
-                                <div class="col-lg-12 btn-position">
-                                    <h6 style="margin-left: 25%;">
-                                        Firstname Lastname
-                                    </h6>
-                                
-                                </div>
-                                
-                                <div class="dropdown menu-dropdown">
-                               
-                                    <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                                        <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Add to admin
-                                                </a>
-                                            </li>
-
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Permission Denied
-                                                </a>
-                                            </li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                                        </ul>
-                                </div>
-                            </div>
                         </div>
+                        <!-- close panel body -->
                     </div>
-                
-                    <div role="tabpanel" class="tab-pane tab-member" id="profile">
-                        <div class="panel-body box-mem">
+                </div>
+                <!-- end member tab -->
 
+
+                <!-- start admin tab -->
+                <div role="tabpanel" class="tab-pane tab-member" id="profile">
+                    <div class="panel-body box-mem">
+                        <div class="panel-body" id="paneladmin">
+
+                            <!-- each admin >
                             <div class="row box-name name-box">
                                 <div class="col-xs-2">
                                     <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;">
                                 </div>
-                    
+
                                 <div class="col-lg-12 btn-position">
                                     <h6 style="margin-left: 25%;">
                                         Firstname Lastname
                                     </h6>
-                                
-                                </div>
-                            
-                                <div class="dropdown menu-dropdown">
-                           
-                                    <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                                        <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Add to admin
-                                                </a>
-                                            </li>
 
-                                            <li role="presentation">
-                                                <a role="menuitem" tabindex="-1" href="#">
-                                                    Permission Denied
+                                </div>
+
+                                <div class="dropdown menu-dropdown">
+
+                                    <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
+                                    <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="#">
+                                                    Remove from admin
                                                 </a>
-                                            </li>
-                                            <li role="presentation" class="divider"></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                                        </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
+                            <!-- close each admin -->
+
                         </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane tab-member" id="messages">
-                        No blocked
+                </div>
+                <!-- end admin tab -->
 
+
+                <!-- start block tab -->
+                <div role="tabpanel" class="tab-pane tab-member" id="messages">
+                    <div class="panel-body box-mem">
+                        <div class="panel-body" id="panelblock">
+
+                            <!-- each block >
+                            <div class="row box-name name-box border-mem">
+                                <div class="col-xs-2">
+                                    <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;">
+                                </div>
+
+                                <div class="col-lg-12 btn-position">
+                                    <h6 style="margin-left: 25%;">
+                                        Firstname Lastname
+                                    </h6>
+
+                                </div>
+
+                                <div class="dropdown menu-dropdown">
+
+                                    <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
+                                    <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
+                                        <li role="presentation">
+                                            <a role="menuitem" tabindex="-1" href="#">
+                                                    Unblocked 
+                                                </a>
+                                        </li>
+                                        <li role="presentation" class="divider"></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- close each block -->
+
+
+                        </div>
                     </div>
-                    
                 </div>
+                <!-- close block tab -->
+
             </div>
-
-
-
-            <div class="panel panel-default layout-leave">
-                <div class="panel-body">
-                    <a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Leave Group</a>
-                </div>
-            </div>
-
-
-
-
-
-
+            <!-- close bigger each tab -->
         </div>
+        <!-- close กล่องใหญ่ด้านบน -->
 
+
+
+        <div class="panel panel-default layout-leave" id="leavegroup">
+            <div class="panel-body">
+                <a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Leave Group</a>
+            </div>
+        </div>
         
-     
-        <!-- Nav tabs -->
-        <!-- <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active" id="myTabs">
-                <a href="#home" aria-controls="home" role="tab" data-toggle="tab"
-                style="color:#000;">
-                <b>Member</b> (4)</a>
-            </li>
-            
-            <li role="presentation">
-                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"
-                style="color:#000;">
-                <b>Admin</b> (2)</a>
-            </li>
-            <li role="presentation">
-                <a href="#blocked" aria-controls="blocked" role="tab" data-toggle="tab"
-                style="color:#000;">
-                <b>Blocked</b> (0)</a>
-            </li>
-    
-        </ul> -->
-
-        <!-- Tab panes -->
-        <!-- <div class="tab-content"> -->
-            <!-- Tab Member -->
-           <!--  <div role="tabpanel" class="tab-pane active tab-member" id="home">
-                
-
-                    <div class="row box-name name-box">
-                        <div class="col-xs-2">
-                            <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;">
-                        </div>
-                
-                        <div class="col-lg-12 btn-position">
-                            <h6 style="margin-left: 25%;">
-                                Firstname Lastname
-                            </h6>
-                        
-                        </div>
-                        <div class="dropdown menu-dropdown">
-                           
-                            <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                            <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add to admin</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Permission Denied</a></li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-
-
-
-                    <div class="row box-name name-box">
-                        <div class="col-xs-2">
-                            <img src="img/user.png" class="img-circle" style="width: 50px;height: 50px;">
-                        </div>
-                
-                        <div class="col-lg-12 btn-position">
-                            <h6 style="margin-left: 25%;">
-                                Firstname Lastname
-                            </h6>
-                        
-                        </div>
-                        <div class="dropdown menu-dropdown">
-                           
-                            <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                            <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add to admin</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Permission Denied</a></li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-
-
-                    <div class="row box-name name-box">
-                        <div class="col-xs-2">
-                            <img src="img/user-b.png" class="img-circle" style="width: 50px;height: 50px;">
-                        </div>
-                
-                        <div class="col-lg-12 btn-position">
-                            <h6 style="margin-left: 25%;">
-                                Firstname Lastname
-                            </h6>
-                        
-                        </div>
-                        <div class="dropdown menu-dropdown">
-                           
-                            <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                            <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add to admin</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Permission Denied</a></li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-
-
-                    <div class="row box-name name-box">
-                        <div class="col-xs-2">
-                            <img src="img/user.png" class="img-circle" style="width: 50px;height: 50px;">
-                        </div>
-                
-                        <div class="col-lg-12 btn-position">
-                            <h6 style="margin-left: 25%;">
-                                Firstname Lastname
-                            </h6>
-                        
-                        </div>
-                        <div class="dropdown menu-dropdown">
-                           
-                            <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                            <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add to admin</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Permission Denied</a></li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-
-               
-              
-
-                
-
-
-            </div>  --><!-- end Member -->
-            <!-- Tab admin -->
-            <!-- <div role="tabpanel" class="tab-pane tab-member" id="profile">
-               
-                    <div class="row box-name name-box">
-                        <div class="col-xs-2">
-                            <img src="img/user-b.png" class="img-circle" style="width: 50px;height: 50px;">
-                        </div>
-                
-                        <div class="col-lg-12 btn-position">
-                            <h6 style="margin-left: 25%;">
-                                Firstname Lastname
-                            </h6>
-                        
-                        </div>
-                        <div class="dropdown menu-dropdown">
-                           
-                            <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                            <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Permission Denied</a></li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from admin</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                            </ul>
-                        </div>
-                    </div> 
-
-
-
-                    <div class="row box-name name-box">
-                        <div class="col-xs-2">
-                            <img src="img/user-a.png" class="img-circle" style="width: 50px;height: 50px;">
-                        </div>
-                
-                        <div class="col-lg-12 btn-position">
-                            <h6 style="margin-left: 25%;">
-                                Firstname Lastname
-                            </h6>
-                        
-                        </div>
-                        <div class="dropdown menu-dropdown">
-                           
-                            <span class="glyphicon glyphicon-option-vertical" id="menu1" data-toggle="dropdown"></span>
-                            <ul class="dropdown-menu active" role="menu" aria-labelledby="menu1" style="margin-left: 44%;">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Permission Denied</a></li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from admin</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Remove from group</a></li>
-                            </ul>
-                        </div>
-                    </div> 
-
-
-
-               
-            </div> --> <!-- end admin -->
-
-             <!-- <div role="tabpanel" class="tab-pane tab-member" id="blocked">
-               
-
-              
-
-             </div> -->
-    
-        <!-- </div> -->
-
+        
     </div>
-
-
-            
-            
-                
-                             
-            
-            
-            
-
-
-        
-
-
 
     <!-- /#wrapper -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="cordova_plugins.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/navigatorbar.js"></script>
+    <script src="js/viewmember.js"></script>
     <script>
+        $("#togglebtn").click(function() {
+            $('.wrapper-test').addClass('active');
+            $('body').css('overflow', 'hidden');
+        });
 
-    $("#togglebtn").click(function(){
-        $('.wrapper-test').addClass('active');
-        $('body').css('overflow','hidden');
-    });
+        $("#toggleclose , .div-remove").click(function() {
+            $('.wrapper-test').removeClass('active');
+            $('body').css('overflow', 'visible');
+        });
 
-    $("#toggleclose , .div-remove").click(function(){
-        $('.wrapper-test').removeClass('active');
-        $('body').css('overflow','visible');
-    });
+        $('#myTabs a[href="#profile"]').click(function(e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
 
-    $('#myTabs a[href="#profile"]').click(function (e) {
-      e.preventDefault()
-      $(this).tab('show')
-    })
-
-    $('#myTabs a[href="#blocked"]').click(function (e) {
-      e.preventDefault()
-      $(this).tab('show')
-    })
+        $('#myTabs a[href="#blocked"]').click(function(e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
 
     </script>
 </body>

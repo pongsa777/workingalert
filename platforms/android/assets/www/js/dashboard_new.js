@@ -326,11 +326,11 @@ $(document).ready(function () {
         }else{
             alert('can not recieve group id');
         }
-        
     });
     
     $(document).on("click", "#writemessage", function () {
         localStorage.removeItem('groupid');
+        localStorage.removeItem('groupname');
         document.location.href = 'write-message.html';
     });
 });

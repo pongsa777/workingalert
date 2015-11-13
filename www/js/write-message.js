@@ -1,30 +1,37 @@
 $(document).ready(function() {
     sessionid = localStorage.getItem("sessionid");
-    var url = "http://workingalert.tk/api/getgroup.php?type=app&sessionid=" + sessionid;
-    $.get(url, function (data, status) {
-        if (data.status == 'success') {
-             for (var i = 0; i < data.group.length; i++) {
-                var groupid = data.group[i].id;
-                var name = data.group[i].name;
-                 
-                var div = document.createElement('div');
-                div.className = 'panel panel-default';
-                var div = document.createElement('div');
-                div.className = 'radio';
-                div.innerHTML = '<ul class="list-group">'
-                                    +'<li class="list-group-item ul-set">'
-                                    +'<label>'
-                                    +'<input type="radio" class="optionradio '+i+'" name="optionsRadios" id="groupidradio'+ i +'" value="'+groupid+'" checked>'
-                                    +name
-                                    +'</label>'
-                                    +'</li>'
-                                +'</ul>';
-                
-                document.getElementById('listsearchgroup').appendChild(div);
-             }
-        }
-    }); // close get api
+    groupid = localStorage.getItem("groupid");
+    groupname = localStorage.getItem("groupname");
+    
+    if(groupid != undefined && groupid != null && groupname != undefined && groupname != null ){
+        document.getElementById('groupnamesend').value = groupname;
+        document.getElementById('groupidsend').value = groupid;
+    }else{
+        var url = "http://workingalert.tk/api/getgroup.php?type=app&sessionid=" + sessionid;
+        $.get(url, function (data, status) {
+            if (data.status == 'success') {
+                 for (var i = 0; i < data.group.length; i++) {
+                    var groupid = data.group[i].id;
+                    var name = data.group[i].name;
 
+                    var div = document.createElement('div');
+                    div.className = 'panel panel-default';
+                    var div = document.createElement('div');
+                    div.className = 'radio';
+                    div.innerHTML = '<ul class="list-group">'
+                                        +'<li class="list-group-item ul-set">'
+                                        +'<label>'
+                                        +'<input type="radio" class="optionradio '+i+'" name="optionsRadios" id="groupidradio'+ i +'" value="'+groupid+'" checked>'
+                                        +name
+                                        +'</label>'
+                                        +'</li>'
+                                    +'</ul>';
+
+                    document.getElementById('listsearchgroup').appendChild(div);
+                 }
+            }
+        }); // close get api
+    }
     
     $(document).on("click", ".optionradio", function () {
         var pos = $(this).attr("class").replace("optionradio ", "");

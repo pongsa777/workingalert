@@ -25,7 +25,7 @@ $(document).ready(function() {
                 var bodybox = '<div class="panel-body">'
                                 +'<b class="des-style">Group Description: </b>'
                                 +desc
-                                +'<input type="hidden" value="" id="groupid'+i+'">'
+                                +'<input type="hidden" value="'+groupid+'" id="groupid'+i+'">'
                             + '</div>';
                 //generate footer
                 var pathsection = '<div class="panel-footer footer-stylee"><ol class="breadcrumb">';
@@ -45,7 +45,9 @@ $(document).ready(function() {
     
     $(document).on("click", ".detail", function () {
         var pos = $(this).attr("class").replace("panel-heading detail ", "");
+        var groupid = $("#groupid" + pos).val();
         localStorage.setItem("groupid", $("#groupid" + pos).val());
+        
         if(localStorage.getItem("groupid")!="undefined"){
             document.location.href = "in-group.html";
         }

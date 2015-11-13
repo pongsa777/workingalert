@@ -12,18 +12,18 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <title>Setting group</title>
+    <title>About group</title>
 </head>
 
 <body style="background-color:#E8E8E8">
+
+
     <!-- Navbar -->
     <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
         <div class="col-xs-6">
@@ -49,34 +49,61 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                                    Setting group
+                                    <span class="glyphicon glyphicon-info-sign"></span> About Group
                                 </h4>
                 </div>
                 <div class="panel-body">
-                    <ul class="list-group">
-                        <li class="list-group-item" id="gogroupinfo">
-                            <span class="glyphicon glyphicon-info-sign"></span> About group
-                            <span class="glyphicon glyphicon-chevron-right i-color"></span>
-                        </li>
 
-                        <li class="list-group-item" id="newsubgroup">
-                            <span class="glyphicon glyphicon-plus-sign"></span> New Sub-group
-                            <span class="glyphicon glyphicon-chevron-right i-color"></span>
-                        </li>
-                        <li class="list-group-item" id="deletegroup">
-                            <span class="glyphicon glyphicon-trash"></span> Delete group
-                        </li>
-                    </ul>
+                    <h5>
+                        <img id="groupicon" src="icon/normal/7.png" class="icon-sizegroup"> 
+                        <div id="groupname">Loading..</div>
+                    </h5>
+
+                    <b class="des-style">Description Group: </b>
+                    <div id="groupdesc">
+                        -
+                    </div>
+                    
+                    <br>
+                    <br>
+
+
+                    <b class="des-style">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                        Group Privacy: 
+                    </b> 
+                    <div id="privacy">
+                        -
+                    </div>
+                    
+                    <br>
+                    <br>
+
+
+                    <b class="des-style">
+                        <span class="glyphicon glyphicon-new-window"></span>
+                        Permission:
+                    </b>
+                    <div id="permission">
+                        -
+                    </div>
+                
                 </div>
+
+                <div class="panel-body" style="padding-left: 35%;">
+                    <a href="#" type="button" id="editgroup" class="btn btn-primary btn-sm">
+                        <b>Edit group</b>
+                    </a>
+                </div>
+                
             </div>
         </div>
-    </div>
 </body>
+    
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="cordova_plugins.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/setting-group2.js"></script>
-
+<script src="js/infogroup.js"></script>
 
 </html>

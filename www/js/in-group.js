@@ -1,9 +1,10 @@
 $(document).ready(function () {
-    sessionid = localStorage.getItem("sessionid");
-    groupid = localStorage.getItem("parentgroupid");
+    var sessionid = localStorage.getItem("sessionid");
+    var groupid = localStorage.getItem("groupid");
 
     var url = "http://workingalert.tk/api/getmessage.php?type=app&sessionid=" + sessionid + "&groupid=" + groupid + "&type=app";
     $.get(url, function (data, status) {
+        
         //ใส่ชื่อกลุ่ม
         document.getElementById('groupname').innerHTML = '<h4 class="head-page">'+data.groupname+'</h4>';
         

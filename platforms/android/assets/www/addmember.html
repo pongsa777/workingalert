@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Add member</title>
+</head>
+
+<body style="background-color:#E8E8E8">
+        
+      
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-static-top" style="min-width: 1280px;background-color: #2C876A;position: fixed;">
+            <div class="col-xs-6">
+                    <div class="navbar-header nav-search">
+                        
+                    </div>
+                    <div>
+                        <h4 class="head-page">WorkingAlert</h4>
+                    </div>
+            </div>
+    
+        </nav>
+        <!--end Navbar -->
+        <!--Start contend -->
+        <div class="container-fluid" style="min-width: 330px;">
+            <div class="col-md-12" style="">
+                <br>
+                <br>
+                <br>
+            </div>
+            
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            
+                            <div class="panel-body padding-search">
+                            <h4 style="text-align: center;"><span class="glyphicon glyphicon-plus"></span>  Add Member</h4>
+                            Your can input email address for add member.
+                                <div class="input-group">
+                                    <input id="searchmsg" type="text" class="form-control" placeholder="Email Address">
+                            
+                                        <span class="input-group-addon btn" id="searchbtn">
+                                            <span class="glyphicon glyphicon-search"></span> 
+                                        </span>
+                                </div>
+                                <br>
+                                <h4 style="text-align: center;">Result Search</h4>
+                                
+
+                                <ul class="list-group" id="searchresult">
+                                    
+                                    <!-- start listpending >
+                                        <li class="list-group-item">
+                                            <img src="img/user-a.png" class="img-circle pic-size">
+                                            <h5 class="name2">Firstname  Lastname</h5>
+                                            <input type="hidden" value="" id="useridsearch">
+                                            <button type="button" class="btn btn-primary btn-xs btn-add"><b>Add</b></button>
+                                        </li>
+                                    <!-- start listpending -->
+                                </ul>
+                                
+                            </div> <!-- close top box -->
+
+                        </div>
+                    </div>
+    
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            
+
+                            <div class="panel-body pad-result">
+                            <h4 style="padding-left: 5%;"><span class="glyphicon glyphicon-user"></span>  Pending</h4>
+                                
+
+                                <ul class="list-group" id="listpending">
+                                    
+                                    <!-- start listpending >
+                                    <li class="list-group-item">
+                                        <img src="img/user-a.png" class="img-circle pic-size">
+                                        <h5 class="name2">Firstname  Lastname</h5>
+                                        <input type="hidden" id="userid" value="">
+                                        <div class="padbtn-left">
+                                            <button type="button" class="btn btn-primary btn-xs"><b>Accept</b></button>
+                                            <button type="button" class="btn btn-default btn-xs"><b>Not Now</b></button>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <img src="img/user-a.png" class="img-circle pic-size">
+                                        <h5 class="name2">Firstname  Lastname</h5>
+                                        <div class="padbtn-left">
+                                            <button type="button" class="btn btn-primary btn-xs"><b>Accept</b></button>
+                                            <button type="button" class="btn btn-default btn-xs"><b>Not Now</b></button>
+                                        </div>
+                                    </li>
+                                    <!-- end list pending -->
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+       
+               
+     
+        </div>
+
+
+ 
+   
+</body>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova_plugins.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/navigatorbar.js"></script>
+<script src="js/addmember.js"></script>
+<script type="text/javascript">
+    function myDelete() {
+    confirm("You want to Delete this group");
+}
+</script>
+
+</html>
