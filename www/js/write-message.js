@@ -434,7 +434,7 @@ $(document).ready(function() {
                     alert('send message successfull');
                     document.location.href = 'dashboard_new.html';
                 }else{
-                    alert(JSON.stringify(data));
+                    alert(data.description);
                 }
             });
         }

@@ -8,7 +8,7 @@ $(document).ready(function () {
         $.get(url, function (data, status) {
             if(data.status=="success"){
                 alert(data.description);
-                document.location.href = 'dashboard.html';
+                document.location.href = 'dashboard_new.html';
             }else{
                 alert(data.description);
             }

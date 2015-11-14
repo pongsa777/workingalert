@@ -34,5 +34,8 @@ $(document).ready(function () {
         document.location.href = 'change-password.html';
     });
 
+    document.addEventListener("backbutton", function (e) {
+        document.location.href = 'dashboard_new.html'
+    }, false);
 
 });

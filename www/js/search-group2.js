@@ -8,6 +8,7 @@ $(document).ready(function () {
         var url = "http://workingalert.tk/api/searchgroup.php?type=app&sessionid=" + sessionid + "&searchmsg=" + searchmsg;
         $.get(url, function (data, status) {
             if (data.status == 'success') {
+                document.getElementById('grouplist').innerHTML = '';
                 for (var i = 0; i < data.data.length; i++) { //loop each group
                     //get each data
                     var groupid = data.data[i].groupid;

@@ -2,7 +2,7 @@ $(document).ready(function () {
     sessionid = localStorage.getItem("sessionid");
     groupid = localStorage.getItem("groupid");
     
-    //ดึงคน pending มาโชว์
+    //ดึง member มาโชว์
     var url = 'http://workingalert.tk/api/getmemberingroup.php?type=app&sessionid='+sessionid+'&groupid='+groupid;
     $.get(url, function (data, status) {
         if (data.status == 'success') {
@@ -118,7 +118,7 @@ $(document).ready(function () {
                     var id = data.block[k].id;
                     var role_id =data.block[k].role_id;
                     var email = data.block[k].email;
-                    var name = data.block[k].firstname+' '+data.member[k].lastname;
+                    var name = data.block[k].firstname+' '+data.block[k].lastname;
                     var nickname = data.block[k].nickname;
                     var phone = data.block[k].phone;
                     var pict = data.block[k].picture;
@@ -259,5 +259,8 @@ $(document).ready(function () {
         });
     });
     
+    document.addEventListener("backbutton", function (e) {
+        document.location.href = 'in-group.html';
+    }, false);
     
 }); //close doc ready

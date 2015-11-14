@@ -101,7 +101,7 @@
                         $.get(url, function(data, status) {
                             if (data.status == 'success') {
                                 localStorage.setItem("sessionid", data.sessionid);
-                                document.location.href = "dashboard.html";
+                                document.location.href = "dashboard_new.html";
                             } else {
                                 localStorage.setItem("fbid", fbid);
                                 var fullname = response.name;
@@ -117,7 +117,7 @@
                         openFB.login(
                             function(response) {
                                 if (response.status === 'connected') {
-                                    alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+                                    alert('Facebook login succeeded please press facebook login button again');
                                     localStorage.setItem("fbtoken", response.authResponse.accessToken);
                                 } else {
                                     alert('Facebook login failed: ' + response.error);

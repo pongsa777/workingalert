@@ -8,6 +8,11 @@ $(document).ready(function () {
     $.get(url, function (data, status) {
         if (data.status == 'success') {
             
+//            alert(data.can_send);
+            if(data.can_send == 'no'){
+                document.getElementById('gowritemsg').remove();
+            }
+            
             groupname = data.groupdetail[0].name;
             
             //ใส่ค่า groupname ลง header

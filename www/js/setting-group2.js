@@ -2,6 +2,19 @@ $(document).ready(function () {
     groupid = localStorage.getItem("groupid");
     sessionid = localStorage.getItem("sessionid");
     
+    //check admin show delete & new subgroup
+    var url = 'http://workingalert.tk/api/getmystatusingroup.php?type=app&sessionid='+sessionid+'&groupid='+groupid;
+    $.get(url, function (data, status) {
+        if (data.status == 'success') {
+            var mystatus = data.mystatus;
+            if( mystatus != 'admin' ){
+                document.getElementById('newsubgroup').remove();
+                document.getElementById('deletegroup').remove();
+            }
+        }
+    });
+    
+    
     $("#gogroupinfo").on("click", function (e) {
         document.location.href = 'infogroup.html';
     });
