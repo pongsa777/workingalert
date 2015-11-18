@@ -47,7 +47,11 @@ $(document).ready(function () {
             document.getElementById('groupid').value = groupid;
         }
     }); // close get api
-
+    
+    
+    
+  
+    
 
 
     $("#editbtn").on('click', function (e) {

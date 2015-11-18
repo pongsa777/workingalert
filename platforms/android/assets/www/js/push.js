@@ -35,7 +35,10 @@ var app = {
     onDeviceReady: function() {
         var push = PushNotification.init({
             "android": {
-                "senderID": "628527226316"
+                "senderID": "628527226316",
+                'clearNotifications' : true,
+                'forceShow' : true,
+                'iconColor' : 'green'
             },
             "ios": {}, 
             "windows": {} 
